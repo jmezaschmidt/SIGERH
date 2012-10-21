@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplatePage.master.cs" Inherits="SIGERHSis.TemplatePage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SIGERH System</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="header">
+        <asp:Image ID="imageHeader" runat="server" ImageUrl="~/Images/logo_Empresa.jpg" />
+    </div>
+    <div id="content">
+        <form id="form1" runat="server">
+         <div id="menuContent">
+             <asp:Button ID="botonExpediente" runat="server" Text="Button" CssClass= "botonMenu"/>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+    </div>
+    <div id="footer">
+    </div>
+    
+</body>
+</html>
