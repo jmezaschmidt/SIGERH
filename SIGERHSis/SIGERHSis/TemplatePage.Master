@@ -55,11 +55,12 @@
              <asp:Button ID="botonExpediente7" runat="server" Text="Reportes" 
                  CssClass= "botonMenuTop" BorderStyle="None"/>
         </div>
-        </form>
+        
         <div id="mainContent" class="mainContent" align="center">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        </form>
     </div>
     <div id="footer">
     </div>
