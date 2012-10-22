@@ -13,31 +13,33 @@
         {
             font-family: Arial, Helvetica, sans-serif;
         }
-        .style4
-        {
-            text-align: center;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:GridView ID="GridViewExpedientes" runat="server"                    
-                    style="text-align: left; font-family: Arial, Helvetica, sans-serif">
-                    <Columns>
-                        <asp:TemplateField HeaderText="Ver">
-                          <ItemTemplate> 
-                                <asp:RadioButton ID="RowSelector" runat="server" GroupName="SuppliersGroup" />  
-                          </ItemTemplate>                          
-                        </asp:TemplateField>
-                    </Columns>
-                </asp:GridView>
     <table class="style1">
         <tr>
             <td class="style2">
-                <div class="style4">
+                <div>
                     <span class="style3"><strong>Expedientes</strong></span><strong><br 
                         class="style3" />
                     </strong>
                 </div>
+                <asp:GridView ID="GridViewExpedientes" runat="server"                    
+                    
+    style="text-align: left; font-family: Arial, Helvetica, sans-serif" 
+    AutoGenerateColumns="False" DataKeyNames="idEstado" 
+    DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:BoundField DataField="idEstado" HeaderText="idEstado" 
+                            InsertVisible="False" ReadOnly="True" SortExpression="idEstado" />
+                        <asp:BoundField DataField="EstadoDepto" HeaderText="EstadoDepto" 
+                            SortExpression="EstadoDepto" />
+                    </Columns>
+                </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+    ConnectionString="<%$ ConnectionStrings:DB_SIGERHConnectionString %>" 
+    SelectCommand="SELECT * FROM [EstadoDepartamento]"></asp:SqlDataSource>
+    
                 
             </td>
             <td>
