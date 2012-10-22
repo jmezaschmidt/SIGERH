@@ -13,5 +13,10 @@ namespace SIGERHSis
         {
 
         }
+
+        protected void botonExpediente1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

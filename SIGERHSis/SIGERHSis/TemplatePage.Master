@@ -8,22 +8,58 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="css/Style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #header
+        {
+            height: 130px;
+            width: 655px;
+        }
+        #form1
+        {
+            height: 63px;
+            width: 660px;
+        }
+    </style>
 </head>
 <body>
     <div id="header">
-        <asp:Image ID="imageHeader" runat="server" ImageUrl="~/Images/logo_Empresa.jpg" />
     </div>
     <div id="content">
-        <form id="form1" runat="server">
-         <div id="menuContent">
-             <asp:Button ID="botonExpediente" runat="server" Text="Button" CssClass= "botonMenu"/>
-        </div>
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-            </asp:ContentPlaceHolder>
+        <form id="form2" runat="server">
+         <div id="menuContent" class="menuContent">
+             <asp:Button ID="botonExpediente" runat="server" Text="Expedientes" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente0" runat="server" Text="Solicitudes" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente1" runat="server" Text="Vacaciones" 
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente1_Click"/>
+             <br />
+             <asp:Button ID="botonExpediente2" runat="server" Text="Departamentos" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente3" runat="server" Text="Ausencias" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente4" runat="server" Text="Capacitaciones" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente5" runat="server" Text="Puestos" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente6" runat="server" Text="Proyectos" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
+             <br />
+             <asp:Button ID="botonExpediente7" runat="server" Text="Reportes" 
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
         </div>
         </form>
+        <div id="mainContent" class="mainContent" align="center">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </div>
     <div id="footer">
     </div>
