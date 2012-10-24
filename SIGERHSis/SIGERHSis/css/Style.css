@@ -1,4 +1,9 @@
-﻿body 
+﻿ #header
+        {
+            height: 130px;
+            width: 655px;
+        }
+body 
 {
     background-color: White;
 }
@@ -18,7 +23,7 @@
     font-size:x-large;
     color: #1BA1E2;
     Height: 44px;
-    Width: 310px;
+    Width: 295px;
     margin: 2px;
 }
 .menuContent

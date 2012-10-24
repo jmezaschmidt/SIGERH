@@ -1,21 +1,13 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplatePageExpediente.master.cs" Inherits="SIGERHSis.TemplatePageExpediente" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplatePageUsuario.master.cs" Inherits="SIGERHSis.TemplatePageUsuario" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="css/Style.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="css/Style.css" rel="stylesheet" type="text/css" />
-    
-    <style type="text/css">
-        #header
-        {
-            height: 136px;
-        }
-    </style>
-    
 </head>
 <body>
     <div id="header">
@@ -56,39 +48,15 @@
              <asp:Button ID="botonExpediente" runat="server" Text="Expedientes" 
                  CssClass= "botonMenuTop" BorderStyle="None"/>
              <br />
-             <asp:Button ID="botonExpediente0" runat="server" Text="Solicitudes" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-             <asp:Button ID="botonExpediente1" runat="server" Text="Vacaciones" 
-                 CssClass= "botonMenuTop" BorderStyle="None" 
-                 />
-             <br />
-             <asp:Button ID="botonExpediente2" runat="server" Text="Departamentos" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-             <asp:Button ID="botonExpediente3" runat="server" Text="Ausencias" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-             <asp:Button ID="botonExpediente4" runat="server" Text="Capacitaciones" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-             <asp:Button ID="botonExpediente5" runat="server" Text="Puestos" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-             <asp:Button ID="botonExpediente6" runat="server" Text="Proyectos" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-             <asp:Button ID="botonExpediente7" runat="server" Text="Reportes" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
         </div>
         
         <div id="mainContent" class="mainContent" align="center">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-          </div>
+        </div>
         </form>
- 
+       
     
 </body>
 </html>

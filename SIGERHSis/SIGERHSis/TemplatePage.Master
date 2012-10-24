@@ -9,11 +9,6 @@
     </asp:ContentPlaceHolder>
     <link href="css/Style.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
-        #header
-        {
-            height: 130px;
-            width: 655px;
-        }
         #form1
         {
             height: 63px;

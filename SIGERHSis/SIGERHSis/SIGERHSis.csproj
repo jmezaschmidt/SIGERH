@@ -64,6 +64,7 @@
     <Content Include="Images\foto.JPG" />
     <Content Include="Images\logo_Empresa.jpg" />
     <Content Include="Interface\Menu.aspx" />
+    <Content Include="Interface\WebFormExpUsuario.aspx" />
     <Content Include="Interface\WebFormInfoGeneralExpediente.aspx" />
     <Content Include="Interface\WebFormListaExpedientes.aspx" />
     <Content Include="Web.config">
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="Interface\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormExpUsuario.aspx.cs">
+      <DependentUpon>WebFormExpUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormExpUsuario.aspx.designer.cs">
+      <DependentUpon>WebFormExpUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormInfoGeneralExpediente.aspx.cs">
       <DependentUpon>WebFormInfoGeneralExpediente.aspx</DependentUpon>
@@ -116,6 +124,13 @@
     <Compile Include="TemplatePageExpediente.Master.designer.cs">
       <DependentUpon>TemplatePageExpediente.Master</DependentUpon>
     </Compile>
+    <Compile Include="TemplatePageUsuario.Master.cs">
+      <DependentUpon>TemplatePageUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplatePageUsuario.Master.designer.cs">
+      <DependentUpon>TemplatePageUsuario.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -129,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TemplatePageExpediente.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TemplatePageUsuario.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
