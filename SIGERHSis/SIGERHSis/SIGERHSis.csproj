@@ -13,6 +13,7 @@
     <RootNamespace>SIGERHSis</RootNamespace>
     <AssemblyName>SIGERHSis</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,6 +61,7 @@
   <ItemGroup>
     <Content Include="css\Style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Images\foto.JPG" />
     <Content Include="Images\logo_Empresa.jpg" />
     <Content Include="Interface\Menu.aspx" />
     <Content Include="Interface\WebFormInfoGeneralExpediente.aspx" />
