@@ -105,6 +105,7 @@
     </Compile>
     <Compile Include="Interface\WebFormExpUsuario.aspx.designer.cs">
       <DependentUpon>WebFormExpUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interface\WebFormContrato.aspx.cs">
       <DependentUpon>WebFormContrato.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
