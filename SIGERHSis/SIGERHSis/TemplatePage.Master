@@ -24,6 +24,8 @@
 <body>
     <div id="header">
     </div>
+    <div id="menu_Expediente" class="menu_Expediente">
+    </div>
     <div id="content">
         <form id="form2" runat="server">
          <div id="menuContent" class="menuContent">

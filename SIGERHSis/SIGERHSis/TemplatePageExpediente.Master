@@ -8,23 +8,50 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="css/Style.css" rel="stylesheet" type="text/css" />
+    
     <style type="text/css">
-        #menu_Expediente
+        #header
         {
-            height: 24px;
+            height: 136px;
         }
     </style>
+    
 </head>
 <body>
     <div id="header">
     </div>
     <form id="form2" runat="server" style="padding: 0px; margin: 0px">
-    <div id="menu_Expediente">
+    <div id="menu_Expediente" class="menu_Expediente">
+        <div style="padding: 0px; margin: 0px; float: left;">
         <asp:Button ID="Button_InfoGeneral" runat="server" Text="Información General" 
-            CssClass="expedienteMenuButton" />
+            CssClass="expedienteMenuButton"/>
+        </div>
+        <div style="padding: 0px; margin: 0px; float: left;">
+        <asp:Button ID="Button1" runat="server" Text="Permisos" 
+        CssClass="expedienteMenuButton" />
+        </div>
+        <div style="padding: 0px; margin: 0px; float: left;">
+        <asp:Button ID="Button2" runat="server" Text="Vacaciones" 
+        CssClass="expedienteMenuButton" Width="108px" />
+        </div>
+        <div style="padding: 0px; margin: 0px; float: left;">
+        <asp:Button ID="Button3" runat="server" Text="Incapacidades" 
+        CssClass="expedienteMenuButton" />
+        </div>
+        <div style="padding: 0px; margin: 0px; float: left;">
+         <asp:Button ID="Button4" runat="server" Text="Capacitaciones" 
+        CssClass="expedienteMenuButton" />
+        </div>
+        <div style="padding: 0px; margin: 0px; float: left;">
+         <asp:Button ID="Button5" runat="server" Text="Contrato" 
+        CssClass="expedienteMenuButton" Width="72px" />
+        </div>
+        <div style="padding: 0px; margin: 0px; float: left;">
+         <asp:Button ID="Button6" runat="server" Text="Otros Documentos" 
+        CssClass="expedienteMenuButton" />
+        </div>
     </div>
     <div id="content">
-        
          <div id="menuContent" class="menuContent">
              <asp:Button ID="botonExpediente" runat="server" Text="Expedientes" 
                  CssClass= "botonMenuTop" BorderStyle="None"/>
@@ -60,7 +87,7 @@
             </asp:ContentPlaceHolder>
         </div>
         </form>
-    </div>
+   </div>
     
 </body>
 </html>

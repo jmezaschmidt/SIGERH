@@ -8,7 +8,7 @@
     font-size:x-large;
     color: White;
     Height: 44px;
-    Width: 305px;
+    Width: 290px;
     margin: 2px;
     
 }
@@ -18,35 +18,58 @@
     font-size:x-large;
     color: #1BA1E2;
     Height: 44px;
-    Width: 320px;
+    Width: 310px;
     margin: 2px;
 }
 .menuContent
 {
     float:left;
-    margin-left: 5%;
+    margin-left: 3%;
+    margin-top:3%;
     display:block;
-    width:25%;
+    width:20%;
 }
 .mainContent
 {   
     background:#B0B0B0;
     display: block;
     height: 430px;
-    width: 62%;
-    margin-right: 5%;
+    width: 70%;
+    margin-right: 3%;
     float:right;
-    border: 1px solid #fcfeff;
+    border:0px;
 }
 .expedienteMenuButton
 {
-    background-color:#1BA1E2;
-    font-size:80%;
+    background:#1BA1E2;
+    font-size:100%;
+    font-family:@Arial Unicode MS;
     -moz-border-radius: 15px 15px 0px 0px;
     -webkit-border-radius: 15px 15px 0px 0px;
     border-radius: 15px 15px 0px 0px;
-    width:120px;
     height:40px;
-    float:right;
+    width:100%;
     color: White;
+    border: 1px solid #ffffff;
+    border-bottom:0px;
+}
+.expedienteMenuButton:hover
+{
+    background:#EEEEEE;
+    border: 1px solid #ffffff;
+    border-bottom:0px;
+    font-size:100%;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    height:40px;
+    width:100%;
+    color: #1BA1E2;
+}
+.menu_Expediente
+{
+    width: 70%;
+    height: 40px;
+    margin-right:3%;
+    float:right;
 }
