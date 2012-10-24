@@ -10,6 +10,5 @@ namespace SIGERHSis.Interface
     public partial class WebFormListaExpedientes : System.Web.UI.Page
     {
 
-
     }
 }

@@ -64,6 +64,7 @@
     <Content Include="Images\download.png" />
     <Content Include="Images\foto.JPG" />
     <Content Include="Images\logo_Empresa.jpg" />
+    <Content Include="Interface\WebFormSolicitudes.aspx" />
     <Content Include="Interface\Menu.aspx" />
     <Content Include="Interface\WebFormCapacitacionesExp.aspx" />
     <Content Include="Interface\WebFormDocumentosExp.aspx" />
@@ -88,10 +89,18 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="XML\expedientes.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormSolicitudes.aspx.cs">
+      <DependentUpon>WebFormSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormSolicitudes.aspx.designer.cs">
+      <DependentUpon>WebFormSolicitudes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>

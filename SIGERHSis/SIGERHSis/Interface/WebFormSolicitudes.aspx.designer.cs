@@ -10,25 +10,25 @@
 namespace SIGERHSis.Interface {
     
     
-    public partial class WebFormListaExpedientes {
+    public partial class WebFormSolicitudes {
         
         /// <summary>
-        /// GridViewExpedientes control.
+        /// GridViewSolicitudes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewExpedientes;
+        protected global::System.Web.UI.WebControls.GridView GridViewSolicitudes;
         
         /// <summary>
-        /// Label2 control.
+        /// XmlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSource1;
         
         /// <summary>
         /// ListDepartamento control.
@@ -40,12 +40,21 @@ namespace SIGERHSis.Interface {
         protected global::System.Web.UI.WebControls.DropDownList ListDepartamento;
         
         /// <summary>
-        /// ButtonVerExpediente control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonVerExpediente;
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// ButtonVerSolicitudes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonVerSolicitudes;
     }
 }
