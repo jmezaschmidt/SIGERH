@@ -88,3 +88,15 @@ body
     margin-right: 20%;
     border:0px;
 }
+.textoLogin
+{
+    font-size:x-large;
+    font-family:@Arial Unicode MS;
+    color: Gray;
+}
+.textoInputLogin
+{
+    font-size:large;
+    font-family:@Arial Unicode MS;
+    color: Gray;
+}

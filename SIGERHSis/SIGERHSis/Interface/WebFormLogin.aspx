@@ -12,7 +12,36 @@
     </div>
     <div id="content" class="loginContent">
         <form id="form2" runat="server">
+        <div style=>
+            <div style="float: left; width: 40%; margin-top: 140px; margin-left: 100px; height: 32px;">
+                <asp:Label ID="Label1" runat="server" Text="Usuario: " CssClass="textoLogin"></asp:Label>
+            </div>
+            <div style="width: 45%; float: right; margin-top: 140px;">
+               <asp:TextBox ID="TextBox1" runat="server" CssClass="textoInputLogin"></asp:TextBox>
+            </div>
+        </div>
+       <div>
+            <div style="float: left; width: 40%; margin-top: 30px;margin-left: 100px;">
+                <asp:Label ID="Label2" runat="server" Text="Contraseña: " CssClass="textoLogin"></asp:Label>
+            </div>
+            <div style="width: 45%; float: right; margin-top: 30px;">
+                <asp:TextBox ID="TextBox2" runat="server" CssClass="textoInputLogin" 
+                    TextMode="Password"></asp:TextBox>
+            </div>
+        </div>
+        <div>
+            <div style="float: left; width: 40%; margin-top: 30px;margin-left: 100px;">
+                <asp:Label ID="Label3" runat="server" Text="Tipo de Usuario: " 
+                    CssClass="textoLogin"></asp:Label>
+            </div>
+            <div style="width: 45%; float: right; margin-top: 30px;">
+                <asp:DropDownList ID="DropDownList3" runat="server" CssClass="textoInputLogin" 
+                    Height="16px" Width="121px">
+                </asp:DropDownList>
+            </div>
+        </div>
         </form>
+
     </div>
     <div id="footer">
     </div>
