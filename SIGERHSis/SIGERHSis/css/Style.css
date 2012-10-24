@@ -38,3 +38,15 @@
     float:right;
     border: 1px solid #fcfeff;
 }
+.expedienteMenuButton
+{
+    background-color:#1BA1E2;
+    font-size:80%;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    width:120px;
+    height:40px;
+    float:right;
+    color: White;
+}
