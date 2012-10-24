@@ -69,6 +69,7 @@
     <Content Include="Interface\WebFormContrato.aspx" />
     <Content Include="Interface\WebFormInfoGeneralExpediente.aspx" />
     <Content Include="Interface\WebFormListaExpedientes.aspx" />
+    <Content Include="Interface\WebFormLogin.aspx" />
     <Content Include="Interface\WebFormMenuJefe.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="Interface\WebFormListaExpedientes.aspx.designer.cs">
       <DependentUpon>WebFormListaExpedientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormLogin.aspx.cs">
+      <DependentUpon>WebFormLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormLogin.aspx.designer.cs">
+      <DependentUpon>WebFormLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormMenuJefe.aspx.cs">
       <DependentUpon>WebFormMenuJefe.aspx</DependentUpon>

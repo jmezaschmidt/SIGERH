@@ -78,3 +78,13 @@ body
     margin-right:3%;
     float:right;
 }
+.loginContent
+{   
+    background:#EEEEEE;
+    display: block;
+    height: 430px;
+    width: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    border:0px;
+}
