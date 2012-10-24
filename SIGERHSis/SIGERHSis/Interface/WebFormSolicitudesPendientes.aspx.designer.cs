@@ -10,7 +10,7 @@
 namespace SIGERHSis.Interface {
     
     
-    public partial class WebFormSolicitudes {
+    public partial class WebFormSolicitudesPendientes {
         
         /// <summary>
         /// GridViewSolicitudes control.
@@ -31,6 +31,15 @@ namespace SIGERHSis.Interface {
         protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSource1;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// ListDepartamento control.
         /// </summary>
         /// <remarks>
@@ -40,21 +49,30 @@ namespace SIGERHSis.Interface {
         protected global::System.Web.UI.WebControls.DropDownList ListDepartamento;
         
         /// <summary>
-        /// Label1 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// ButtonVerSolicitudes control.
+        /// ListTipoSolicitud control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonVerSolicitudes;
+        protected global::System.Web.UI.WebControls.DropDownList ListTipoSolicitud;
+        
+        /// <summary>
+        /// ButtonVerSolicitud control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonVerSolicitud;
     }
 }

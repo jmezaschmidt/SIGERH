@@ -1,20 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TemplatePage.Master" AutoEventWireup="true" CodeBehind="WebFormListaExpedientes.aspx.cs" Inherits="SIGERHSis.Interface.WebFormListaExpedientes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TemplatePage.Master" AutoEventWireup="true" CodeBehind="WebFormSolicitudesPendientes.aspx.cs" Inherits="SIGERHSis.Interface.WebFormSolicitudesPendientes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    </asp:Content>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="float: left; width: 49%;">
+<div style="float: left; width: 49%;">
 
         <br />
 
-        <asp:GridView ID="GridViewExpedientes" runat="server"             
+        <asp:GridView ID="GridViewSolicitudes" runat="server"             
             style="font-family: Arial, Helvetica, sans-serif" 
             AutoGenerateColumns="False" DataSourceID="XmlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" 
                     SortExpression="Nombre" />
-                <asp:BoundField DataField="Cedula" HeaderText="Cedula" 
-                    SortExpression="Cedula" />
-              <asp:TemplateField HeaderText="Ver">
+                <asp:BoundField DataField="Solicitud" HeaderText="Solicitud" 
+                    SortExpression="Solicitud" />                
+                <asp:TemplateField HeaderText="Ver">
                 <ItemTemplate>
                     <input name="MyRadioButton" type="radio" />
                 </ItemTemplate>
@@ -25,7 +25,7 @@
         </asp:GridView>
 
         <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
-            DataFile="~/XML/expedientes.xml"></asp:XmlDataSource>
+            DataFile="~/XML/solicitudesPendientes.xml"></asp:XmlDataSource>
 
     </div>
     <div style="float: right; width: 50%;">
@@ -40,13 +40,22 @@
         </asp:DropDownList>
 
         <br />
+
+        <br />
+        <asp:Label ID="Label3" runat="server" 
+            style="font-family: Arial, Helvetica, sans-serif; font-weight: 700" 
+            Text="Elija tipo de solicitud"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="ButtonVerExpediente" runat="server" Text="Ver Expediente" 
+        <asp:DropDownList ID="ListTipoSolicitud" runat="server">
+        </asp:DropDownList>
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="ButtonVerSolicitud" runat="server" Text="Ver Solicitud" 
             style="font-family: Arial, Helvetica, sans-serif" />
 
         <br />
 
     </div>
-
-    </asp:Content>
+</asp:Content>

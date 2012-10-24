@@ -1,0 +1,7 @@
+<Nombre>
+	<Empleado Nombre="Juan" Solicitud="Vacaciones"/>
+	<Empleado Nombre="Maria" Solicitud="Incapacidad"/>
+	<Empleado Nombre="Jorge" Solicitud="Permiso"/>
+	<Empleado Nombre="Pablo" Solicitud="Vacaciones"/>	
+</Nombre>
+

@@ -1,8 +1,7 @@
 <Nombre>
-	<"javi"/>
-	<"javi"/>
-	<"javi"/>
-	<"javi"/>
-	<"javi"/>
-	
+	<Empleado Nombre="Juan" Cedula="123654789"/>
+	<Empleado Nombre="Maria" Cedula="789456123"/>
+	<Empleado Nombre="Jorge" Cedula="78456214"/>
+	<Empleado Nombre="Pablo" Cedula="65231487"/>	
 </Nombre>
+

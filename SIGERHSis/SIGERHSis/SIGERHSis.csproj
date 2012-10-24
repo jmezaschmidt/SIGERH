@@ -68,6 +68,8 @@
     <Content Include="Interface\WebFormInfoGeneralExpedienteJefe.aspx" />
     <Content Include="Interface\WebFormSolicitudes.aspx" />
     <Content Include="Interface\Menu.aspx" />
+    <Content Include="Interface\WebFormAsignarCapacitaciones.aspx" />
+    <Content Include="Interface\WebFormAsignarProyecto.aspx" />
     <Content Include="Interface\WebFormCapacitacionesExp.aspx" />
     <Content Include="Interface\WebFormDocumentosExp.aspx" />
     <Content Include="Interface\WebFormExpJefe.aspx" />
@@ -81,6 +83,7 @@
     <Content Include="Interface\WebFormPermisosExp.aspx" />
     <Content Include="Interface\WebFormReportarAusencia.aspx" />
     <Content Include="Interface\WebFormSolicitarVacaciones.aspx" />
+    <Content Include="Interface\WebFormSolicitudesPendientes.aspx" />
     <Content Include="Interface\WebFormVacacionesExp.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -92,6 +95,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="XML\expedientes.xml" />
+    <Content Include="XML\solicitudesPendientes.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -124,6 +128,20 @@
     </Compile>
     <Compile Include="Interface\Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormAsignarCapacitaciones.aspx.cs">
+      <DependentUpon>WebFormAsignarCapacitaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormAsignarCapacitaciones.aspx.designer.cs">
+      <DependentUpon>WebFormAsignarCapacitaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormAsignarProyecto.aspx.cs">
+      <DependentUpon>WebFormAsignarProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormAsignarProyecto.aspx.designer.cs">
+      <DependentUpon>WebFormAsignarProyecto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormCapacitacionesExp.aspx.cs">
       <DependentUpon>WebFormCapacitacionesExp.aspx</DependentUpon>
@@ -215,6 +233,13 @@
     </Compile>
     <Compile Include="Interface\WebFormSolicitarVacaciones.aspx.designer.cs">
       <DependentUpon>WebFormSolicitarVacaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormSolicitudesPendientes.aspx.cs">
+      <DependentUpon>WebFormSolicitudesPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormSolicitudesPendientes.aspx.designer.cs">
+      <DependentUpon>WebFormSolicitudesPendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormVacacionesExp.aspx.cs">
       <DependentUpon>WebFormVacacionesExp.aspx</DependentUpon>

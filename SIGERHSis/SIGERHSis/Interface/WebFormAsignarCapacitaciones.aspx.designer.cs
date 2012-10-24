@@ -10,16 +10,16 @@
 namespace SIGERHSis.Interface {
     
     
-    public partial class WebFormListaExpedientes {
+    public partial class WebFormAsignarCapacitaciones {
         
         /// <summary>
-        /// GridViewExpedientes control.
+        /// GridViewColaboradores control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewExpedientes;
+        protected global::System.Web.UI.WebControls.GridView GridViewColaboradores;
         
         /// <summary>
         /// XmlDataSource1 control.
@@ -49,12 +49,30 @@ namespace SIGERHSis.Interface {
         protected global::System.Web.UI.WebControls.DropDownList ListDepartamento;
         
         /// <summary>
-        /// ButtonVerExpediente control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonVerExpediente;
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// ListCapacitaciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ListCapacitaciones;
+        
+        /// <summary>
+        /// ButtonAsignar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonAsignar;
     }
 }
