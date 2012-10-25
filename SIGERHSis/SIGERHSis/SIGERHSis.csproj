@@ -64,6 +64,8 @@
     <Content Include="Images\download.png" />
     <Content Include="Images\foto.JPG" />
     <Content Include="Images\logo_Empresa.jpg" />
+    <Content Include="Interface\WebFormInfoGeneralCol.aspx" />
+    <Content Include="Interface\WebFormInfoGeneralExpedienteJefe.aspx" />
     <Content Include="Interface\WebFormSolicitudes.aspx" />
     <Content Include="Interface\Menu.aspx" />
     <Content Include="Interface\WebFormCapacitacionesExp.aspx" />
@@ -94,6 +96,20 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormInfoGeneralCol.aspx.cs">
+      <DependentUpon>WebFormInfoGeneralCol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormInfoGeneralCol.aspx.designer.cs">
+      <DependentUpon>WebFormInfoGeneralCol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormInfoGeneralExpedienteJefe.aspx.cs">
+      <DependentUpon>WebFormInfoGeneralExpedienteJefe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormInfoGeneralExpedienteJefe.aspx.designer.cs">
+      <DependentUpon>WebFormInfoGeneralExpedienteJefe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormSolicitudes.aspx.cs">
       <DependentUpon>WebFormSolicitudes.aspx</DependentUpon>

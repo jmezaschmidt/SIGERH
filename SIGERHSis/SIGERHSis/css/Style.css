@@ -44,6 +44,17 @@ body
     float:right;
     border:0px;
 }
+.mainContentColaborador
+{   
+    background:#EEEEEE;
+    display: block;
+    height: 430px;
+    width: 90%;
+    margin-right: 5%;
+    float:right;
+    border:0px;
+}
+
 .expedienteMenuButton
 {
     background:#1BA1E2;
@@ -71,11 +82,19 @@ body
     width:100%;
     color: #1BA1E2;
 }
+
 .menu_Expediente
 {
     width: 70%;
     height: 40px;
     margin-right:3%;
+    float:right;
+}
+.menu_ExpedienteColaborador
+{
+    width: 90%;
+    height: 40px;
+    margin-right:5%;
     float:right;
 }
 .loginContent

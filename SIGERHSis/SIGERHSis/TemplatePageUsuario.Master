@@ -13,7 +13,8 @@
     <div id="header">
     </div>
     <form id="form2" runat="server" style="padding: 0px; margin: 0px">
-    <div id="menu_Expediente" class="menu_Expediente">
+    <div id="menu_Expediente" class="menu_ExpedienteColaborador">
+        
         <div style="padding: 0px; margin: 0px; float: left;">
         <asp:Button ID="Button_InfoGeneral" runat="server" Text="Información General" 
             CssClass="expedienteMenuButton"/>
@@ -43,14 +44,10 @@
         CssClass="expedienteMenuButton" />
         </div>
     </div>
+    </div>
     <div id="content">
-         <div id="menuContent" class="menuContent">
-             <asp:Button ID="botonExpediente" runat="server" Text="Expedientes" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
-             <br />
-        </div>
         
-        <div id="mainContent" class="mainContent" align="center">
+        <div id="mainContent" class="mainContentColaborador" align="center">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

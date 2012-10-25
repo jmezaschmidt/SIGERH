@@ -25,7 +25,8 @@
         <form id="form2" runat="server">
          <div id="menuContent" class="menuContent">
              <asp:Button ID="botonExpediente" runat="server" Text="Expedientes" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente_Click"/>
              <br />
              <asp:Button ID="botonExpediente0" runat="server" Text="Solicitudes" 
                  CssClass= "botonMenuTop" BorderStyle="None"/>
