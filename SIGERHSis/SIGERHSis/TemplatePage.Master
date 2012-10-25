@@ -32,8 +32,7 @@
                  CssClass= "botonMenuTop" BorderStyle="None"/>
              <br />
              <asp:Button ID="botonExpediente1" runat="server" Text="Vacaciones" 
-                 CssClass= "botonMenuTop" BorderStyle="None" 
-                 onclick="botonExpediente1_Click"/>
+                 CssClass= "botonMenuTop" BorderStyle="None"/>
              <br />
              <asp:Button ID="botonExpediente2" runat="server" Text="Departamentos" 
                  CssClass= "botonMenuTop" BorderStyle="None"/>

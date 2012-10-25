@@ -64,9 +64,9 @@
     <Content Include="Images\download.png" />
     <Content Include="Images\foto.JPG" />
     <Content Include="Images\logo_Empresa.jpg" />
+    <Content Include="Interface\WebFormDepartamentos.aspx" />
     <Content Include="Interface\WebFormInfoGeneralCol.aspx" />
     <Content Include="Interface\WebFormInfoGeneralExpedienteJefe.aspx" />
-    <Content Include="Interface\WebFormSolicitudes.aspx" />
     <Content Include="Interface\Menu.aspx" />
     <Content Include="Interface\WebFormAsignarCapacitaciones.aspx" />
     <Content Include="Interface\WebFormAsignarProyecto.aspx" />
@@ -94,12 +94,20 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="XML\departamentos.xml" />
     <Content Include="XML\expedientes.xml" />
     <Content Include="XML\solicitudesPendientes.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormDepartamentos.aspx.cs">
+      <DependentUpon>WebFormDepartamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormDepartamentos.aspx.designer.cs">
+      <DependentUpon>WebFormDepartamentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormInfoGeneralCol.aspx.cs">
       <DependentUpon>WebFormInfoGeneralCol.aspx</DependentUpon>
@@ -114,13 +122,6 @@
     </Compile>
     <Compile Include="Interface\WebFormInfoGeneralExpedienteJefe.aspx.designer.cs">
       <DependentUpon>WebFormInfoGeneralExpedienteJefe.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\WebFormSolicitudes.aspx.cs">
-      <DependentUpon>WebFormSolicitudes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interface\WebFormSolicitudes.aspx.designer.cs">
-      <DependentUpon>WebFormSolicitudes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
