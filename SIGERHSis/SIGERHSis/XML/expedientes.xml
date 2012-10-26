@@ -1,8 +1,11 @@
 <Nombre>
-	<Departamento Departamento="Recursos Humanos"/>
-	<Departamento Departamento="Recursos Humanos"/>
-	<Departamento Departamento="Recursos Humanos"/>
-	<Departamento Departamento="Recursos Humanos"/>
-	<Departamento Departamento="Recursos Humanos"/>	
+	<Empleado Nombre="Juan" Cedula="15623547"/>
+	<Empleado Nombre="Maria" Cedula="15645899"/>
+	<Empleado Nombre="Pedro" Cedula="87954612"/>
+	<Empleado Nombre="Jorge" Cedula="9632584"/>
+	<Empleado Nombre="Ana" Cedula="789542235"/>
+	<Empleado Nombre="Lucia" Cedula="456125478"/>
+	<Empleado Nombre="Ale" Cedula="785419895"/>
+	
 </Nombre>
 

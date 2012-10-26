@@ -14,11 +14,12 @@
                     SortExpression="Nombre" />
                 <asp:BoundField DataField="Cedula" HeaderText="Cedula" 
                     SortExpression="Cedula" />
-              <asp:TemplateField HeaderText="Ver">
+                <asp:TemplateField HeaderText="Ver">
                 <ItemTemplate>
                     <input name="MyRadioButton" type="radio" />
                 </ItemTemplate>
               </asp:TemplateField>
+              
 
             </Columns>
         

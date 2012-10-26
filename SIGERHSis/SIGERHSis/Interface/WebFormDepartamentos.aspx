@@ -27,6 +27,7 @@
             style="font-family: Arial, Helvetica, sans-serif" 
             AutoGenerateColumns="False" DataSourceID="XmlDataSource1" >
             <Columns>
+                <asp:CommandField ShowEditButton="True" />
                 <asp:BoundField DataField="Departamento" HeaderText="Departamento" 
                     SortExpression="Departamento" />
                 <asp:BoundField DataField="Estado" HeaderText="Estado" 
