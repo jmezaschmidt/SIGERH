@@ -70,6 +70,8 @@ body
     border-bottom-style: none;
     border-bottom-color: inherit;
     border-bottom-width: 0px;
+    height:40px;
+    width:100%;
 }
 .expedienteMenuButton:hover
 {

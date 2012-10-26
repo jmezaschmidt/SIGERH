@@ -44,33 +44,38 @@
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
          <asp:Button ID="Button5" runat="server" Text="Contrato" 
-        CssClass="expedienteMenuButton" Width="72px" />
+        CssClass="expedienteMenuButton" Width="72px" onclick="Button5_Click" />
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
          <asp:Button ID="Button6" runat="server" Text="Otros Documentos" 
-        CssClass="expedienteMenuButton" />
+        CssClass="expedienteMenuButton" onclick="Button6_Click" />
         </div>
     </div>
     <div id="content">
          <div id="menuContent" class="menuContent">
              <asp:Button ID="botonExpediente" runat="server" Text="Expedientes" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente_Click"/>
              <br />
              <asp:Button ID="botonExpediente0" runat="server" Text="Solicitudes" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente0_Click"/>
              <br />
              <asp:Button ID="botonExpediente1" runat="server" Text="Vacaciones" 
-                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 CssClass= "botonMenuTop" BorderStyle="None" onclick="botonExpediente1_Click" 
                  />
              <br />
              <asp:Button ID="botonExpediente2" runat="server" Text="Departamentos" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente2_Click"/>
              <br />
              <asp:Button ID="botonExpediente3" runat="server" Text="Ausencias" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente3_Click"/>
              <br />
              <asp:Button ID="botonExpediente4" runat="server" Text="Capacitaciones" 
-                 CssClass= "botonMenuTop" BorderStyle="None"/>
+                 CssClass= "botonMenuTop" BorderStyle="None" 
+                 onclick="botonExpediente4_Click"/>
              <br />
              <asp:Button ID="botonExpediente5" runat="server" Text="Puestos" 
                  CssClass= "botonMenuTop" BorderStyle="None"/>

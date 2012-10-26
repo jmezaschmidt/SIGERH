@@ -3,7 +3,6 @@
     <style type="text/css">
         #content
         {
-            padding: 20px;
             font-family: Arial;
         }
         #grid 
