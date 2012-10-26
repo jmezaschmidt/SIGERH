@@ -9,7 +9,7 @@
         #sub
         {
             width: 50%;
-            text-align: left;
+            text-align: center;
         }
         #sub h1
         {
@@ -18,6 +18,18 @@
         #sub input
         {
             margin-left: 10px;
+        }
+        table 
+        {
+            margin-bottom: 30px;
+        }
+        #btnSolicitar
+        {
+            margin-top: 30px;
+        }
+        #motivo 
+        {
+            font-family: Arial;
         }
     </style>
 </asp:Content>
@@ -35,7 +47,7 @@
                 <td><input type="date"></td>
               </tr>
             </table>
-            <textarea id="TextArea1" cols="20" rows="2"></textarea>
+            <textarea id="motivo" cols="40" rows="5">Motivo</textarea><br />
             <asp:Button ID="btnSolicitar" runat="server" Text="Solicitar" />
         </div>
         

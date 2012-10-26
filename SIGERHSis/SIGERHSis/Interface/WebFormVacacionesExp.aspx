@@ -9,6 +9,7 @@
         {
             width: 685px;
             height: 200px;
+            overflow: scroll;
         }
         #botones 
         {
@@ -40,12 +41,17 @@
         <div id="grid">
             <asp:GridView ID="GridViewEmpleados" runat="server" BackColor="White" 
                 BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-                Width="685px" Height="80px" >
+                Width="685px" Height="80px" AutoGenerateColumns="False" 
+                DataSourceID="XmlDataSource2" >
                 <Columns>
-                    <asp:BoundField HeaderText="Fecha Solicitud" />
-                    <asp:BoundField HeaderText="Fecha Inicial" />
-                    <asp:BoundField HeaderText="Fecha Final" />
-                    <asp:BoundField HeaderText="Estado" />
+                    <asp:BoundField HeaderText="FechaSolicitud" DataField="FechaSolicitud" 
+                        SortExpression="FechaSolicitud" />
+                    <asp:BoundField HeaderText="FechaInicial" DataField="FechaInicial" 
+                        SortExpression="FechaInicial" />
+                    <asp:BoundField HeaderText="FechaFinal" DataField="FechaFinal" 
+                        SortExpression="FechaFinal" />
+                    <asp:BoundField HeaderText="Estado" DataField="Estado" 
+                        SortExpression="Estado" />
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -57,6 +63,9 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+            <asp:XmlDataSource ID="XmlDataSource2" runat="server" 
+                DataFile="~/XML/vacaciones.xml"></asp:XmlDataSource>
+            <asp:XmlDataSource ID="XmlDataSource1" runat="server"></asp:XmlDataSource>
         </div>
 
         <div id="botones">

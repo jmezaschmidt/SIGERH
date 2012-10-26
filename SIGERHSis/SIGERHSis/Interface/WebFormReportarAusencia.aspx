@@ -9,8 +9,9 @@
         #grid 
         {
             float: left;
-            width: 337px;
+            width: 345px;
             height: 301px;
+             overflow: scroll;
         }
         #filtrar 
         {
@@ -77,10 +78,13 @@
         <div id="grid">
             <asp:GridView ID="GridViewEmpleados" runat="server" BackColor="White" 
                 BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
-                Width="337px" Height="80px" >
+                Width="314px" Height="80px" AutoGenerateColumns="False" 
+                DataSourceID="XmlDataSource1" >
                 <Columns>
-                    <asp:BoundField HeaderText="Cédula" />
-                    <asp:BoundField HeaderText="Nombre" />
+                    <asp:BoundField HeaderText="Nombre" DataField="Nombre" 
+                        SortExpression="Nombre" />
+                    <asp:BoundField HeaderText="Cedula" DataField="Cedula" 
+                        SortExpression="Cedula" />
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -92,6 +96,8 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+            <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
+                DataFile="~/XML/expedientes.xml"></asp:XmlDataSource>
         </div>
  
         <div id="info">
