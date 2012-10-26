@@ -16,7 +16,7 @@ namespace SIGERHSis
 
         protected void botonExpediente_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:1491/Interface/WebFormInfoGeneralExpediente.aspx");
+            Response.Redirect("http://localhost:1491/Interface/WebFormListaExpedientes.aspx");
         }
     }
 }

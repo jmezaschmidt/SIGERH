@@ -11,5 +11,9 @@ namespace SIGERHSis.Interface
     {
 
 
+        protected void ButtonVerExpediente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:1491/Interface/WebFormInfoGeneralExpediente.aspx");
+        }
     }
 }

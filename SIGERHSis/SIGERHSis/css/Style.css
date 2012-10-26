@@ -57,17 +57,19 @@ body
 
 .expedienteMenuButton
 {
-    background:#1BA1E2;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    background: #1BA1E2;
     font-size:100%;
     font-family:@Arial Unicode MS;
     -moz-border-radius: 15px 15px 0px 0px;
     -webkit-border-radius: 15px 15px 0px 0px;
     border-radius: 15px 15px 0px 0px;
-    height:40px;
-    width:100%;
     color: White;
-    border: 1px solid #ffffff;
-    border-bottom:0px;
+    border-bottom-style: none;
+    border-bottom-color: inherit;
+    border-bottom-width: 0px;
 }
 .expedienteMenuButton:hover
 {

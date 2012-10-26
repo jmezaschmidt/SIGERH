@@ -24,23 +24,23 @@
     <div id="menu_Expediente" class="menu_Expediente">
         <div style="padding: 0px; margin: 0px; float: left;">
         <asp:Button ID="Button_InfoGeneral" runat="server" Text="Información General" 
-            CssClass="expedienteMenuButton"/>
+            CssClass="expedienteMenuButton" onclick="Button_InfoGeneral_Click"/>
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
         <asp:Button ID="Button1" runat="server" Text="Permisos" 
-        CssClass="expedienteMenuButton" />
+        CssClass="expedienteMenuButton" onclick="Button1_Click" />
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
         <asp:Button ID="Button2" runat="server" Text="Vacaciones" 
-        CssClass="expedienteMenuButton" Width="108px" />
+        CssClass="expedienteMenuButton" Width="108px" onclick="Button2_Click" />
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
         <asp:Button ID="Button3" runat="server" Text="Incapacidades" 
-        CssClass="expedienteMenuButton" />
+        CssClass="expedienteMenuButton" onclick="Button3_Click" />
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
          <asp:Button ID="Button4" runat="server" Text="Capacitaciones" 
-        CssClass="expedienteMenuButton" />
+        CssClass="expedienteMenuButton" onclick="Button4_Click" />
         </div>
         <div style="padding: 0px; margin: 0px; float: left;">
          <asp:Button ID="Button5" runat="server" Text="Contrato" 

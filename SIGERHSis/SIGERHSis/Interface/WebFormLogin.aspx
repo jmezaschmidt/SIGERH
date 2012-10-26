@@ -39,7 +39,7 @@
                     Height="16px" Width="121px">
                 </asp:DropDownList>
             </div>
-            <asp:Button ID="Button1" runat="server" Text="Ingresar" CssClass="botonLogin" 
+            <asp:Button ID="Button1" runat="server" Text="Ingresar" CssClass="botonLogin" onclick="Button1_Click" 
                />
         </div>
         

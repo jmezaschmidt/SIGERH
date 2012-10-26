@@ -44,7 +44,8 @@
         <br />
         <br />
         <asp:Button ID="ButtonVerExpediente" runat="server" Text="Ver Expediente" 
-            style="font-family: Arial, Helvetica, sans-serif" />
+            style="font-family: Arial, Helvetica, sans-serif" 
+            onclick="ButtonVerExpediente_Click" />
 
         <br />
 
