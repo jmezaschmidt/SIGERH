@@ -119,3 +119,40 @@ body
     font-family:@Arial Unicode MS;
     color: Gray;
 }
+.botonLogin
+{
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    margin-left:400px;
+    background: #1BA1E2;
+    font-size:x-large;
+    color: White;
+    border-style:None;
+}
+.botonLogin:hover
+{
+    margin-top: 20px;
+    height: 40px;
+    width: 120px;
+    margin-left:400px;
+    background: #EEEEEE;
+    font-size:x-large;
+    color: #1BA1E2;
+    border-style:None;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#000000', endColorstr = 'transparent');
+    /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#000000', endColorstr = 'transparent')";
+    /*Element must have a height (not auto)*/
+    /*All filters must be placed together*/
+    background-image: -moz-linear-gradient(top, #000000, transparent);
+    background-image: -ms-linear-gradient(top, #000000, transparent);
+    background-image: -o-linear-gradient(top, #000000, transparent);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#000000), to(transparent));
+    background-image: -webkit-linear-gradient(top, #000000, transparent);
+    background-image: linear-gradient(top, #000000, transparent);
+    /*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+}
