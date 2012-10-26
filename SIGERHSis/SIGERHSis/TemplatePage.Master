@@ -18,6 +18,8 @@
 </head>
 <body>
     <div id="header">
+        <asp:Image ID="Image1" runat="server" Height="127px" 
+            ImageUrl="~/Images/SIGERGH Logo.png" Width="654px" />
     </div>
     <div id="menu_Expediente" class="menu_Expediente">
     </div>

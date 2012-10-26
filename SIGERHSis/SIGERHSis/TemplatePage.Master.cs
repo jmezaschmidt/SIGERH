@@ -26,7 +26,7 @@ namespace SIGERHSis
 
         protected void botonExpediente1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:1491/Interface/WebFormEnConstruccionDHR.aspx");
+            Response.Redirect("http://localhost:1491/Interface/WebFormConstruccionDRH.aspx");
         }
 
         protected void botonExpediente2_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace SIGERHSis
 
         protected void botonExpediente5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:1491/Interface/WebFormEnConstruccionDHR.aspx");
+            Response.Redirect("http://localhost:1491/Interface/WebFormConstruccionDRH.aspx");
         }
 
         protected void botonExpediente6_Click(object sender, EventArgs e)
@@ -56,17 +56,17 @@ namespace SIGERHSis
 
         protected void botonExpediente5_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:1491/Interface/WebFormEnConstruccionDHR.aspx");
+            Response.Redirect("http://localhost:1491/Interface/WebFormConstruccionDRH.aspx");
         }
 
         protected void botonExpediente6_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:1491/Interface/WebFormEnConstruccionDHR.aspx");
+            Response.Redirect("http://localhost:1491/Interface/WebFormConstruccionDRH.aspx");
         }
 
         protected void botonExpediente7_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://localhost:1491/Interface/WebFormEnConstruccionDHR.aspx");
+            Response.Redirect("http://localhost:1491/Interface/WebFormConstruccionDRH.aspx");
         }
 
     }

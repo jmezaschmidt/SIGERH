@@ -64,7 +64,8 @@
     <Content Include="Images\download.png" />
     <Content Include="Images\en_construccion.gif" />
     <Content Include="Images\foto.JPG" />
-    <Content Include="Images\logo_Empresa.jpg" />
+    <Content Include="Images\SIGERGH Logo.png" />
+    <Content Include="Interface\WebFormConstruccionDRH.aspx" />
     <Content Include="Interface\WebFormDepartamentos.aspx" />
     <Content Include="Interface\WebFormAsignarCapacitacionesJefe.aspx" />
     <Content Include="Interface\WebFormDocumentosExpCol.aspx" />
@@ -110,6 +111,13 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WebFormConstruccionDRH.aspx.cs">
+      <DependentUpon>WebFormConstruccionDRH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WebFormConstruccionDRH.aspx.designer.cs">
+      <DependentUpon>WebFormConstruccionDRH.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\WebFormDepartamentos.aspx.cs">
       <DependentUpon>WebFormDepartamentos.aspx</DependentUpon>
