@@ -1,5 +1,3 @@
-
-
 CREATE PROCEDURE sp<NombreNombre>
 
 	@param int, @param2 int

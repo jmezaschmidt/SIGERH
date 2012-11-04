@@ -1,15 +1,15 @@
-ALTER PROCEDURE [dbo].[sp_crearTipoUsuario]
+ALTER PROCEDURE [dbo].[sp_verExpediente]
 
 --Parametros
-@tipoUsuario nvarchar(40)
+@idUsuario int
 	
 AS
 BEGIN
 
 	BEGIN TRY
-		
-		INSERT into dbo.TipoUsuario (tipoUsuario) values (@tipoUsuario)
-		
+	
+	Select 
+	
 	END TRY
 	
 	BEGIN CATCH
@@ -19,7 +19,6 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		ROLLBACK
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH
-		
+	END CATCH	
 END
 GO
