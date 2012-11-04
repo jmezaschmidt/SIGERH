@@ -111,6 +111,12 @@
     <Content Include="XML\vacaciones.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos\AccesoDatos.cs" />
+    <Compile Include="AccesoDatos\ModuloExpedientes\AccesoDatosExpedientes.cs" />
+    <Compile Include="Controladores\ModuloExpedientes\ControladorExpedientes.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\IExpediente.cs" />
+    <Compile Include="Logica\ModuloExpedientes\LogicaExpedientes.cs" />
+    <Compile Include="Logica\ModuloExpedientes\ProxyExpediente.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -324,6 +330,16 @@
     <Compile Include="Interface\WebFormVacacionesExp.aspx.designer.cs">
       <DependentUpon>WebFormVacacionesExp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LibreriaComun\ModuloExpedientes\Ausencia.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Capacitacion.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Contrato.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Expediente.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Incapacidad.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Permiso.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Solicitud.cs" />
+    <Compile Include="LibreriaComun\ModuloExpedientes\Vacaciones.cs" />
+    <Compile Include="LibreriaComun\ModuloOrganizacion\Colaborador.cs" />
+    <Compile Include="LibreriaComun\ModuloOrganizacion\Proyecto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
     </Compile>
     <Compile Include="TemplatePage.Master.cs">
@@ -363,11 +379,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AccesoDatos\ModuloOrganizacion\" />
+    <Folder Include="AccesoDatos\ModuloReportes\" />
+    <Folder Include="AccesoDatos\ModuloUsuarios\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Controller\" />
-    <Folder Include="DataAccess\" />
-    <Folder Include="Logic\" />
-    <Folder Include="ObjectLibrary\" />
+    <Folder Include="Controladores\ModuloOrganizacion\" />
+    <Folder Include="Controladores\ModuloReportes\" />
+    <Folder Include="Controladores\ModuloUsuarios\" />
+    <Folder Include="Interface\ModuloExpedientes\" />
+    <Folder Include="Interface\ModuloOrganizacion\" />
+    <Folder Include="Interface\ModuloReportes\" />
+    <Folder Include="Interface\ModuloUsuarios\" />
+    <Folder Include="LibreriaComun\ModuloReportes\" />
+    <Folder Include="LibreriaComun\ModuloUsuarios\" />
+    <Folder Include="Logica\ModuloOrganizacion\" />
+    <Folder Include="Logica\ModuloReportes\" />
+    <Folder Include="Logica\ModuloUsuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TemplatePage.Master" />
