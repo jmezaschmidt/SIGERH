@@ -59,12 +59,17 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\Style.css" />
+    <Content Include="css\Global.css" />
+    <Content Include="css\Login.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\download.png" />
     <Content Include="Images\en_construccion.gif" />
     <Content Include="Images\foto.JPG" />
+    <Content Include="Images\logoTec.jpg" />
     <Content Include="Images\SIGERGH Logo.png" />
+    <Content Include="Images\SIGERGH LogoPeq.png" />
+    <Content Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx" />
+    <Content Include="Interface\ModuloUsuarios\WFLogin.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -86,6 +91,27 @@
     <Compile Include="AccesoDatos\ModuloUsuarios\AccesoDatosUsuarios.cs" />
     <Compile Include="Controladores\ModuloExpedientes\ControladorExpedientes.cs" />
     <Compile Include="Controladores\ModuloUsuarios\ControladorUsuarios.cs" />
+    <Compile Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx.cs">
+      <DependentUpon>WFDRHPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx.designer.cs">
+      <DependentUpon>WFDRHPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloUsuarios\WFLogin.aspx.cs">
+      <DependentUpon>WFLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloUsuarios\WFLogin.aspx.designer.cs">
+      <DependentUpon>WFLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WFDRH.Master.cs">
+      <DependentUpon>WFDRH.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WFDRH.Master.designer.cs">
+      <DependentUpon>WFDRH.Master</DependentUpon>
+    </Compile>
     <Compile Include="LibreriaComun\ModuloExpedientes\IExpediente.cs" />
     <Compile Include="LibreriaComun\ModuloOrganizacion\Contacto.cs" />
     <Compile Include="LibreriaComun\ModuloUsuarios\Usuario.cs" />
@@ -122,12 +148,12 @@
     <Folder Include="Interface\ModuloExpedientes\" />
     <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
-    <Folder Include="Interface\ModuloUsuarios\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
     <Folder Include="Logica\ModuloOrganizacion\" />
     <Folder Include="Logica\ModuloReportes\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Interface\WFDRH.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
