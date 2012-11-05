@@ -13,7 +13,9 @@ namespace SIGERHSis.LibreriaComun.ModuloOrganizacion
         private DateTime _FechaNacimiento;
         private String _Puesto;
         private String _Departamento;
-        private List<String> _Contactos;
+        private DateTime _FechaIngreso;
+        private List<Contacto> _Contactos;
+        private String _Estado;
 
 
         public int Cedula
@@ -46,11 +48,25 @@ namespace SIGERHSis.LibreriaComun.ModuloOrganizacion
             set { _Departamento = value; }
         }
 
-        public List<String> Contactos
+        public List<Contacto> Contactos
         {
             get { return _Contactos; }
             set { _Contactos = value; }
         }
+
+        public DateTime FechaIngreso
+        {
+            get { return _FechaIngreso; }
+            set { _FechaIngreso = value; }
+        }
+
+
+        public String Estado
+        {
+            get { return _Estado; }
+            set { _Estado = value; }
+        }
+
 
 
     }

@@ -11,21 +11,58 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
     public class AccesoDatosExpedientes
     {
 
-        AccesoDatos _AccesoDatos;
+        private AccesoDatos _AccesoDatos;
         
         public AccesoDatosExpedientes() {
             _AccesoDatos = new AccesoDatos();    
         }
 
-        public DateTime getFechaCreacion(int pCedulaClaborador);
-        public Colaborador getColaborador(int pCedulaClaborador);
+
+        public Colaborador obtenerColaborador(int pCedulaClaborador)
+        {
+            Colaborador colaborador = new Colaborador();
+            List<Contacto> contactos = new List<Contacto>();
+            String[] nombreParametros = { "@cedula" };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verInfoExpediente", nombreParametros, pCedulaClaborador);
+
+            reader.Read();
+
+            colaborador.Nombre = reader.GetString(0);
+            colaborador.Cedula = reader.GetInt32(1);
+            colaborador.FechaNacimiento = reader.GetDateTime(2);
+            colaborador.Puesto = reader.GetString(3);
+            colaborador.Departamento = reader.GetString(4);
+            colaborador.FechaIngreso = reader.GetDateTime(5);
+            colaborador.Estado = reader.GetString(6);
+
+            reader.Close();
+
+            reader = _AccesoDatos.leer("sp_", nombreParametros, pCedulaClaborador);
+
+            while (reader.Read())
+            {
+                Contacto _contacto = new Contacto();
+                _contacto.TipoContacto = reader.GetString(0);
+                _contacto.ValorContacto = reader.GetString(1);
+                contactos.Add(_contacto);
+            }
+
+            colaborador.Contactos = contactos;
+
+            reader.Close();
+            return colaborador;
+        }
+
+
+        /*public DateTime getFechaCreacion(int pCedulaClaborador);
         public List<Solicitud> getPermisos(int pCedulaClaborador);
         public List<Vacaciones> getVacaciones(int pCedulaClaborador);
         public List<Solicitud> getIncapacidades(int pCedulaClaborador);
         public List<Ausencia> getHistorialAusencias(int pCedulaClaborador);
         public List<Capacitacion> getCapacitaciones(int pCedulaClaborador);
         public List<Proyecto> getProyecto(int pIdClaborador);
-        public Contrato getContrato(int pIdClaborador);
+        public Contrato getContrato(int pIdClaborador);*/
 
     }
 }

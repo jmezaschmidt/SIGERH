@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EF61C12-60E0-4D21-8F2F-23006420074D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestProject1</RootNamespace>
+    <AssemblyName>TestProject1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatosExpedientesTest.cs" />
+    <Compile Include="AccesoDatosTest.cs" />
+    <Compile Include="AusenciaTest.cs" />
+    <Compile Include="CapacitacionTest.cs" />
+    <Compile Include="ColaboradorTest.cs" />
+    <Compile Include="ContratoTest.cs" />
+    <Compile Include="ControladorExpedientesTest.cs" />
+    <Compile Include="ExpedienteTest.cs" />
+    <Compile Include="GlobalTest.cs" />
+    <Compile Include="IncapacidadTest.cs" />
+    <Compile Include="LogicaExpedientesTest.cs" />
+    <Compile Include="MainClassTest.cs" />
+    <Compile Include="MenuTest.cs" />
+    <Compile Include="PermisoTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyExpedienteTest.cs" />
+    <Compile Include="ProyectoTest.cs" />
+    <Compile Include="SettingsTest.cs" />
+    <Compile Include="SolicitudTest.cs" />
+    <Compile Include="TemplatePageExpedienteJefeTest.cs" />
+    <Compile Include="TemplatePageExpedienteTest.cs" />
+    <Compile Include="TemplatePageJefeTest.cs" />
+    <Compile Include="TemplatePageTest.cs" />
+    <Compile Include="TemplatePageUsuarioTest.cs" />
+    <Compile Include="UsuarioTest.cs" />
+    <Compile Include="VacacionesTest.cs" />
+    <Compile Include="WebFormAsignarCapacitacionesJefeTest.cs" />
+    <Compile Include="WebFormAsignarCapacitacionesTest.cs" />
+    <Compile Include="WebFormAsignarProyectoTest.cs" />
+    <Compile Include="WebFormCapacitacionesExpTest.cs" />
+    <Compile Include="WebFormConstruccionDRHTest.cs" />
+    <Compile Include="WebFormContratoTest.cs" />
+    <Compile Include="WebFormDepartamentosTest.cs" />
+    <Compile Include="WebFormDocumentosExpColTest.cs" />
+    <Compile Include="WebFormDocumentosExpJefeTest.cs" />
+    <Compile Include="WebFormDocumentosExpTest.cs" />
+    <Compile Include="WebFormEnConstruccionDRHTest.cs" />
+    <Compile Include="WebFormEnConstruccionExpDHRTest.cs" />
+    <Compile Include="WebFormEnConstruccionTest.cs" />
+    <Compile Include="WebFormExpJefeTest.cs" />
+    <Compile Include="WebFormExpUsuarioTest.cs" />
+    <Compile Include="WebFormIncapacidadesExpTest.cs" />
+    <Compile Include="WebFormInfoGeneralColTest.cs" />
+    <Compile Include="WebFormInfoGeneralExpedienteJefeTest.cs" />
+    <Compile Include="WebFormInfoGeneralExpedienteTest.cs" />
+    <Compile Include="WebFormListaExpedientesTest.cs" />
+    <Compile Include="WebFormLoginTest.cs" />
+    <Compile Include="WebFormMenuJefeTest.cs" />
+    <Compile Include="WebFormPermisosExpTest.cs" />
+    <Compile Include="WebFormReportarAusenciasJefeTest.cs" />
+    <Compile Include="WebFormReportarAusenciaTest.cs" />
+    <Compile Include="WebFormSolicitarVacacionesTest.cs" />
+    <Compile Include="WebFormSolicitudesPendientesJefeTest.cs" />
+    <Compile Include="WebFormSolicitudesPendientesTest.cs" />
+    <Compile Include="WebFormVacacionesExpTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\SIGERHSis.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGERHSis\SIGERHSis.csproj">
+      <Project>{DC5D8499-9FF2-4C3A-85AC-3FDA2572DB37}</Project>
+      <Name>SIGERHSis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

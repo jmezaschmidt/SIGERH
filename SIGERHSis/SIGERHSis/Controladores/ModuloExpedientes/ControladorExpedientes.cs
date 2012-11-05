@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 using SIGERHSis.LibreriaComun.ModuloExpedientes;
 using SIGERHSis.LibreriaComun.ModuloOrganizacion;
 using SIGERHSis.Logica.ModuloExpedientes;
@@ -10,22 +11,43 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
 {
     public class ControladorExpedientes
     {
-        LogicaExpedientes _LogicaExpedientes;
+        private LogicaExpedientes _LogicaExpedientes;
+        private ProxyExpediente _Expediente;
 
         public ControladorExpedientes()
         {
             _LogicaExpedientes = new LogicaExpedientes();
+            _Expediente = new ProxyExpediente();
         }
 
-        public DateTime getFechaCreacion(int pCedulaClaborador);
-        public Colaborador getColaborador(int pCedulaClaborador);
-        public List<Solicitud> getPermisos(int pCedulaClaborador);
-        public List<Vacaciones> getVacaciones(int pCedulaClaborador);
-        public List<Solicitud> getIncapacidades(int pCedulaClaborador);
-        public List<Ausencia> getHistorialAusencias(int pCedulaClaborador);
-        public List<Capacitacion> getCapacitaciones(int pCedulaClaborador);
-        public List<Proyecto> getProyecto(int pIdClaborador);
-        public Contrato getContrato(int pIdClaborador);
+
+        public Colaborador obtenerInformacionGeneral(int pCedulaClaborador)
+        {
+            return _Expediente.obtenerInformacionGeneral(pCedulaClaborador);
+        }
+
+        public DataTable obtenerContactos()
+        {
+            DataTable contactos = new DataTable();
+            DataRow contacto;
+            List<Contacto> listaContactos;
+
+            contactos.Columns.Add(new DataColumn("Tipo Contacto", typeof(string)));
+            contactos.Columns.Add(new DataColumn("Contacto", typeof(string)));
+
+            listaContactos = _Expediente.obtenerContactos();
+
+            for (int i = 0; i < listaContactos.Count(); i++)
+            {
+                contacto = contactos.NewRow();
+                contacto["Tipo Contacto"] = listaContactos.ElementAt(i).TipoContacto;
+                contacto["Contacto"] = listaContactos.ElementAt(i).ValorContacto;
+                contactos.Rows.Add(contacto);
+            }
+
+            return contactos;
+            
+        }
 
     }
 }

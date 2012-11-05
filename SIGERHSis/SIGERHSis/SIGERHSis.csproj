@@ -113,8 +113,12 @@
   <ItemGroup>
     <Compile Include="AccesoDatos\AccesoDatos.cs" />
     <Compile Include="AccesoDatos\ModuloExpedientes\AccesoDatosExpedientes.cs" />
+    <Compile Include="AccesoDatos\ModuloUsuarios\AccesoDatosUsuarios.cs" />
     <Compile Include="Controladores\ModuloExpedientes\ControladorExpedientes.cs" />
+    <Compile Include="Controladores\ModuloUsuarios\ControladorUsuarios.cs" />
     <Compile Include="LibreriaComun\ModuloExpedientes\IExpediente.cs" />
+    <Compile Include="LibreriaComun\ModuloOrganizacion\Contacto.cs" />
+    <Compile Include="LibreriaComun\ModuloUsuarios\Usuario.cs" />
     <Compile Include="Logica\ModuloExpedientes\LogicaExpedientes.cs" />
     <Compile Include="Logica\ModuloExpedientes\ProxyExpediente.cs" />
     <Compile Include="Global.asax.cs">
@@ -340,7 +344,13 @@
     <Compile Include="LibreriaComun\ModuloExpedientes\Vacaciones.cs" />
     <Compile Include="LibreriaComun\ModuloOrganizacion\Colaborador.cs" />
     <Compile Include="LibreriaComun\ModuloOrganizacion\Proyecto.cs" />
+    <Compile Include="Logica\ModuloUsuarios\LogicaUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TemplatePage.Master.cs">
       <DependentUpon>TemplatePage.Master</DependentUpon>
@@ -381,20 +391,16 @@
   <ItemGroup>
     <Folder Include="AccesoDatos\ModuloOrganizacion\" />
     <Folder Include="AccesoDatos\ModuloReportes\" />
-    <Folder Include="AccesoDatos\ModuloUsuarios\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controladores\ModuloOrganizacion\" />
     <Folder Include="Controladores\ModuloReportes\" />
-    <Folder Include="Controladores\ModuloUsuarios\" />
     <Folder Include="Interface\ModuloExpedientes\" />
     <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
     <Folder Include="Interface\ModuloUsuarios\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
-    <Folder Include="LibreriaComun\ModuloUsuarios\" />
     <Folder Include="Logica\ModuloOrganizacion\" />
     <Folder Include="Logica\ModuloReportes\" />
-    <Folder Include="Logica\ModuloUsuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TemplatePage.Master" />
@@ -410,6 +416,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="TemplatePageExpedienteJefe.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

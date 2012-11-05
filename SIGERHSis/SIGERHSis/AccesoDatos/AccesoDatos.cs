@@ -22,7 +22,7 @@ namespace SIGERHSis.AccesoDatos
 
 
         // Retorna un boolean para saber si la operación tuvo éxito o no
-        public Boolean escribir(String pStoredProcedure, String[] pNombreParametros, params String[] pValorParametros)
+        public Boolean escribir(String pStoredProcedure, String[] pNombreParametros, params Object[] pValorParametros)
         {
             cmd = new SqlCommand(pStoredProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -47,7 +47,7 @@ namespace SIGERHSis.AccesoDatos
 
 
         // Retorna el IDataReader para que sea procesado por el DataAccess especifico
-        public IDataReader leer(String pStoredProcedure, String[] pNombreParametros, params String[] pValorParametros)
+        public IDataReader leer(String pStoredProcedure, String[] pNombreParametros, params Object[] pValorParametros)
         {
             cmd = new SqlCommand(pStoredProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
