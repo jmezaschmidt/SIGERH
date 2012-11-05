@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_verInfoExpediente]
+ALTER PROCEDURE [dbo].[sp_verExpedienteColaborador]
 
 @cedula int
 	
