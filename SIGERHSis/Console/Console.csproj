@@ -50,6 +50,12 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGERHSis\SIGERHSis.csproj">
+      <Project>{DC5D8499-9FF2-4C3A-85AC-3FDA2572DB37}</Project>
+      <Name>SIGERHSis</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

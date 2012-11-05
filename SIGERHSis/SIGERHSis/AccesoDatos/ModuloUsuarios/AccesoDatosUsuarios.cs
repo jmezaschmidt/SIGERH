@@ -23,14 +23,18 @@ namespace SIGERHSis.AccesoDatos.ModuloUsuarios
             String tipoUsuario = usuario.TipoUsuario;
             Boolean resultado;
 
-            String[] nombreParametros = { "@nickname", "@passwrod", "@tipoUsuario" };
+            String[] nombreParametros = { "@nickname", "@password", "@tipoUsuario" };
 
             IDataReader reader = _AccesoDatos.leer("sp_autenticarUsuario", nombreParametros, nickname, password, tipoUsuario);
 
             reader.Read();
             resultado = reader.GetBoolean(0);
             reader.Close();
+
             return resultado;
+            /*if (resultado == "1") return true;
+            else return false;*/
+
         }
 
     }
