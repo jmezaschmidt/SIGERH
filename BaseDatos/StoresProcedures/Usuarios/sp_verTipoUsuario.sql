@@ -1,14 +1,10 @@
-ALTER PROCEDURE [dbo].[sp_crearExpediente]
-
---Parametros
-@cedula int
+CREATE PROCEDURE [dbo].[sp_verTipoUsuario]
 	
 AS
 BEGIN
-
 	BEGIN TRY
-	
-		INSERT into dbo.Expediente(fechaCreacion, habilitado, FK_idColaborador) values (GETDATE(), 1, (Select idColaborador FROM dbo.Colaborador where cedula = @cedula))
+		
+		Select TipoUsuario FROM dbo.TipoUsuario
 	
 	END TRY
 	
@@ -19,6 +15,6 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		ROLLBACK
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH	
+	END CATCH		
 END
 GO

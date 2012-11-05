@@ -1,14 +1,13 @@
-ALTER PROCEDURE [dbo].[sp_crearExpediente]
+ALTER PROCEDURE [dbo].[sp_agregarPuesto]
 
 --Parametros
-@cedula int
+@puesto nvarchar(50)	
 	
 AS
 BEGIN
-
 	BEGIN TRY
-	
-		INSERT into dbo.Expediente(fechaCreacion, habilitado, FK_idColaborador) values (GETDATE(), 1, (Select idColaborador FROM dbo.Colaborador where cedula = @cedula))
+		
+		INSERT into dbo.Puesto(puesto) values (@puesto)	
 	
 	END TRY
 	
@@ -19,6 +18,6 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		ROLLBACK
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH	
+	END CATCH		
 END
 GO

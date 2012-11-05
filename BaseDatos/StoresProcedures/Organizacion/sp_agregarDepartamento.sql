@@ -1,14 +1,14 @@
-ALTER PROCEDURE [dbo].[sp_crearExpediente]
+CREATE PROCEDURE [dbo].[sp_agregarDepartamento]
 
 --Parametros
-@cedula int
+@nombre nvarchar(50),
+@descripcion nvarchar(100)
 	
 AS
 BEGIN
-
 	BEGIN TRY
-	
-		INSERT into dbo.Expediente(fechaCreacion, habilitado, FK_idColaborador) values (GETDATE(), 1, (Select idColaborador FROM dbo.Colaborador where cedula = @cedula))
+		
+		INSERT into dbo.Departamento(nombre, descripcion, habilitado) values (@nombre, @descripcion, 1)	
 	
 	END TRY
 	
@@ -19,6 +19,6 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		ROLLBACK
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH	
+	END CATCH		
 END
 GO

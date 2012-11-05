@@ -1,14 +1,15 @@
-ALTER PROCEDURE [dbo].[sp_verExpediente]
+CREATE PROCEDURE [dbo].[sp_asignarDepartamentoColaborador]
 
 --Parametros
-@idUsuario int
+@nombre nvarchar(50),
+@cedula int
 	
 AS
 BEGIN
-
 	BEGIN TRY
-	
-	Select 
+		
+		UPDATE dbo.Colaborador SET FK_idDepartamento = (Select idDepartamento FROM dbo.Departamento where nombre = @nombre) 
+		where cedula = @cedula
 	
 	END TRY
 	
@@ -19,6 +20,6 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		ROLLBACK
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH	
+	END CATCH		
 END
 GO

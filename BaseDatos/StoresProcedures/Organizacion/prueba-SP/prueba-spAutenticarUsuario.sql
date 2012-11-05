@@ -1,0 +1,1 @@
+exec sp_AutenticarUsuario 'javier.meza1', '3452706', 'Administrador'
