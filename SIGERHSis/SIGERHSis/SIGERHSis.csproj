@@ -112,41 +112,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TemplatePage.Master.cs">
-      <DependentUpon>TemplatePage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TemplatePage.Master.designer.cs">
-      <DependentUpon>TemplatePage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TemplatePageExpediente.Master.cs">
-      <DependentUpon>TemplatePageExpediente.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TemplatePageExpediente.Master.designer.cs">
-      <DependentUpon>TemplatePageExpediente.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TemplatePageExpedienteJefe.Master.cs">
-      <DependentUpon>TemplatePageExpedienteJefe.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TemplatePageExpedienteJefe.Master.designer.cs">
-      <DependentUpon>TemplatePageExpedienteJefe.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TemplatePageJefe.Master.cs">
-      <DependentUpon>TemplatePageJefe.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TemplatePageJefe.Master.designer.cs">
-      <DependentUpon>TemplatePageJefe.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TemplatePageUsuario.Master.cs">
-      <DependentUpon>TemplatePageUsuario.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TemplatePageUsuario.Master.designer.cs">
-      <DependentUpon>TemplatePageUsuario.Master</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AccesoDatos\ModuloOrganizacion\" />
@@ -161,21 +126,6 @@
     <Folder Include="LibreriaComun\ModuloReportes\" />
     <Folder Include="Logica\ModuloOrganizacion\" />
     <Folder Include="Logica\ModuloReportes\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TemplatePage.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TemplatePageExpediente.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TemplatePageUsuario.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TemplatePageJefe.Master" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TemplatePageExpedienteJefe.Master" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Settings.settings">

@@ -12,12 +12,12 @@ namespace SIGERHSis.AccesoDatos
     public class AccesoDatos
     {
 
-        private Database _SIADB;
+        private Database _DbSIGERH;
         private SqlCommand cmd;
 
         public AccesoDatos()
         {
-            _SIADB = DatabaseFactory.CreateDatabase("DB_Contabilidad");
+            _DbSIGERH = DatabaseFactory.CreateDatabase("DB_SIGERH");
         }
 
 
@@ -39,7 +39,7 @@ namespace SIGERHSis.AccesoDatos
                 }
             }
 
-            IDataReader reader = _SIADB.ExecuteReader(cmd);
+            IDataReader reader = _DbSIGERH.ExecuteReader(cmd);
             Boolean resultado = reader.GetBoolean(0);
 
             return resultado;
@@ -64,7 +64,7 @@ namespace SIGERHSis.AccesoDatos
                 }
             }
 
-            IDataReader reader = _SIADB.ExecuteReader(cmd);
+            IDataReader reader = _DbSIGERH.ExecuteReader(cmd);
             return reader;         
         }
     }
