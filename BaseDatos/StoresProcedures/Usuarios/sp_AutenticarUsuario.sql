@@ -10,7 +10,7 @@ BEGIN
 	BEGIN TRY
 	
 	declare @passwordMD5 varbinary(50);
-	declare @resultado nvarchar(20);	
+	declare @resultado bit;	
 		
 	set @passwordMD5 = HASHBYTES('MD5', @password);
 	print @passwordMD5;
