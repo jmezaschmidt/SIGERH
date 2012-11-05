@@ -13,3 +13,9 @@ DBCC CHECKIDENT('dbo.TipoUsuario', RESEED, 0)
 
 DELETE FROM dbo.Permisos
 DBCC CHECKIDENT('dbo.Permisos', RESEED, 0)
+
+DELETE FROM dbo.ContactosXColaborador
+
+DELETE FROM dbo.TipoContacto
+DBCC CHECKIDENT('dbo.TipoContacto', RESEED, 0)
+

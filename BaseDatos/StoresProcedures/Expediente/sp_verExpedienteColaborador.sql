@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verInfoExpediente]
+ALTER PROCEDURE [dbo].[sp_verInfoExpediente]
 
 @cedula int
 	
@@ -14,7 +14,7 @@ BEGIN
 		END Habilitado FROM 
 		dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador
 		LEFT JOIN dbo.Puesto ON idPuesto = FK_idPuesto
-		LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento
+		LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento where cedula = @cedula
 		
 	
 	END TRY

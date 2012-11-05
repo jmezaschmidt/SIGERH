@@ -30,7 +30,7 @@ BEGIN
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		ROLLBACK
-		Select -1
+		Select 
 	END CATCH
 END
 GO
