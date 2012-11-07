@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_crearContactoUsuario]
+CREATE PROCEDURE [dbo].[sp_crearContactoColaborador]
 
 @cedula int,
 @valor nvarchar(30),

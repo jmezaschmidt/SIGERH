@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verContactosUsuario]
+CREATE PROCEDURE [dbo].[sp_verContactosColaborador]
 
 @cedula int
 	
