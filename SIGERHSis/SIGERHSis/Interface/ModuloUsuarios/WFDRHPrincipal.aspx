@@ -1,8 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interface/WFDRH.Master" AutoEventWireup="true" CodeBehind="WFDRHPrincipal.aspx.cs" Inherits="SIGERHSis.Interface.ModuloUsuarios.WFDRHPrincipal" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 <script type="text/javascript">
-    function searchTable(inputVal) {
+    function calledFn() {
+        alert("code fired");
+    } 
+    </script> 
+<script type="text/javascript">
+    function searchTable() {
+        var inputVal = document.getElementById('TextBox1').value;
         var table = $('#tblData');
         table.find('tr').each(function (index, row) {
             var allCells = $(row).find('td');
@@ -28,116 +33,33 @@
             <label for="search">
             <strong>Enter keyword to search </strong>
             </label>
-            <input id="search" type="text" onkeyup="searchTable($(this).val())"/>
+            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <input id="search" type="text" onkeyup="searchTable()"/>
             <label>
             e.g. bar, parking, tv</label>
         </p>
-        <table id="tblData" bgcolor="#ACAAFC" class="target" width="100%">
-            <tr>
-                <th width="10%">
-                    #</th>
-                <th width="35%">
-                    Hotel Name</th>
-                <th width="55%">
-                    Facilities</th>
-            </tr>
-            <tr>
-                <td class="odd">
-                    1</td>
-                <td class="odd">
-                    Manu Maharani</td>
-                <td class="odd">
-                    Attached Bath, Bar, Swimming Pool,
-                </td>
-            </tr>
-            <tr>
-                <td class="even">
-                    2</td>
-                <td class="even">
-                    Hill View</td>
-                <td class="even">
-                    TV, In-Room Safe, Bar</td>
-            </tr>
-            <tr>
-                <td class="odd">
-                    3</td>
-                <td class="odd">
-                    Hotel Suba Galaxy</td>
-                <td class="odd">
-                    Paid Internet Access, Coffee Shop, Spa</td>
-            </tr>
-            <tr>
-                <td class="even">
-                    4</td>
-                <td class="even">
-                    The Residence Hotel</td>
-                <td class="even">
-                    Doctor on Call, Parking</td>
-            </tr>
-            <tr>
-                <td class="odd">
-                    5</td>
-                <td class="odd">
-                    The Taj</td>
-                <td class="odd">
-                    Currency Exchange, Bar, Golf</td>
-            </tr>
-            <tr>
-                <td class="even">
-                    6</td>
-                <td class="even">
-                    Mumbai Grand</td>
-                <td class="even">
-                    Jacuzzi, Spa, Coffee Shop</td>
-            </tr>
-            <tr>
-                <td class="odd">
-                    7</td>
-                <td class="odd">
-                    The Promenade</td>
-                <td class="odd">
-                    Cable TV, Coffee Shop, Spa</td>
-            </tr>
-            <tr>
-                <td class="even">
-                    8</td>
-                <td class="even">
-                    Hotel Regency</td>
-                <td class="even">
-                    Mini Bar,Golf, Spa, Sauna</td>
-            </tr>
-            <tr>
-                <td class="odd">
-                    9</td>
-                <td class="odd">
-                    Park Plaza</td>
-                <td class="odd">
-                    Currency Exchange, Bar, Golf</td>
-            </tr>
-            <tr>
-                <td class="even">
-                    10</td>
-                <td class="even">
-                    The Mapple Inn</td>
-                <td class="even">
-                    Jacuzzi, Spa, Coffee Shop</td>
-            </tr>
-            <tr>
-                <td class="odd">
-                    11</td>
-                <td class="odd">
-                    Cidade de Goa</td>
-                <td class="odd">
-                    Cable TV, Coffee Shop, Spa</td>
-            </tr>
-            <tr>
-                <td class="even">
-                    12</td>
-                <td class="even">
-                    Saurabh Mountview</td>
-                <td class="even">
-                    Doctor, Free Parking</td>
-            </tr>
+       <div style="overflow: scroll;height:400px">
+         <table width="100%" id="tblData"  bgcolor="#ACAAFC">
+         <tbody>
+          <tr>
+            <td colspan="2"><h2>Colaboradores</h2></td>
+          </tr>
+          <tr>
+            <td>Nombre</td>
+            <td>Cédula</td>
+            <td>Puesto</td>
+            <td>Departamento</td>
+          </tr>
+          <tr>
+            <td>CAsa</td>
+            <td>perro</td>
+            <td>Pue</td>
+            <td>Dep</td>
+          </tr>
+          </tbody>
         </table>
+
+        </div>
+        
     </div>
 </asp:Content>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 
 namespace SIGERHSis.Interface.ModuloUsuarios
 {
@@ -11,7 +12,7 @@ namespace SIGERHSis.Interface.ModuloUsuarios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TextBox1.Attributes.Add("onKeyUp", "searchTable()");
         }
     }
 }

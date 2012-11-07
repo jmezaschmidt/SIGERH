@@ -29,8 +29,7 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		ROLLBACK
-		Select 
+		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)		 
 	END CATCH
 END
 GO
