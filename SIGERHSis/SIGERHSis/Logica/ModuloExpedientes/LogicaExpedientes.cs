@@ -23,15 +23,6 @@ namespace SIGERHSis.Logica.ModuloExpedientes
         {
             return _AccesoDatosExpedientes.obtenerColaborador(pCedulaClaborador);
         }
-        /*
-        public DateTime getFechaCreacion(int pCedulaClaborador);
-        public List<Solicitud> getPermisos(int pCedulaClaborador);
-        public List<Vacaciones> getVacaciones(int pCedulaClaborador);
-        public List<Solicitud> getIncapacidades(int pCedulaClaborador);
-        public List<Ausencia> getHistorialAusencias(int pCedulaClaborador);
-        public List<Capacitacion> getCapacitaciones(int pCedulaClaborador);
-        public List<Proyecto> getProyecto(int pIdClaborador);
-        public Contrato getContrato(int pIdClaborador);*/
 
     }
 }

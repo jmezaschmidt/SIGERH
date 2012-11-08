@@ -24,7 +24,7 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
             List<Contacto> contactos = new List<Contacto>();
             String[] nombreParametros = { "@cedula" };
 
-            IDataReader reader = _AccesoDatos.leer("sp_verInfoExpediente", nombreParametros, pCedulaClaborador);
+            IDataReader reader = _AccesoDatos.leer("sp_verExpedienteColaborador", nombreParametros, pCedulaClaborador);
 
             reader.Read();
 
@@ -38,19 +38,19 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
 
             reader.Close();
 
-            /*reader = _AccesoDatos.leer("sp_", nombreParametros, pCedulaClaborador);
+            reader = _AccesoDatos.leer("sp_verContactosUsuario", nombreParametros, pCedulaClaborador);
 
             while (reader.Read())
             {
                 Contacto _contacto = new Contacto();
-                _contacto.TipoContacto = reader.GetString(0);
-                _contacto.ValorContacto = reader.GetString(1);
+                _contacto.ValorContacto = reader.GetString(0);
+                _contacto.TipoContacto = reader.GetString(1);
                 contactos.Add(_contacto);
             }
 
             colaborador.Contactos = contactos;
 
-            reader.Close();*/
+            reader.Close();
             return colaborador;
         }
 

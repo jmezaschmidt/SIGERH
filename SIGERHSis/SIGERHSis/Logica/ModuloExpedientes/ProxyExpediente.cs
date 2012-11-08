@@ -27,10 +27,10 @@ namespace SIGERHSis.Logica.ModuloExpedientes
 
         public Colaborador obtenerInformacionGeneral(int pCedulaClaborador)
         {
-            if (_CedulaColaboradorActual == pCedulaClaborador)
+            if (_CedulaColaboradorActual != pCedulaClaborador)
             {
                 _ExpedienteReal = new Expediente();
-                _ExpedienteReal.Colaborador = _LogicaExpedientes.obtenerColaborador(pCedulaClaborador);
+                _ExpedienteReal.Colaborador = obtenerColaborador(pCedulaClaborador);
             }
 
             Colaborador colaborador = new Colaborador();
@@ -41,6 +41,8 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             colaborador.Departamento = _ExpedienteReal.Colaborador.Departamento;
             colaborador.FechaIngreso = _ExpedienteReal.Colaborador.FechaIngreso;
             colaborador.Estado = _ExpedienteReal.Colaborador.Estado;
+
+            _CedulaColaboradorActual = pCedulaClaborador;
 
             return colaborador;
         }
