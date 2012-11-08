@@ -1,8 +1,4 @@
-<<<<<<< HEAD:BaseDatos/StoresProcedures/Usuarios/sp_verContactosUsuario.sql
-ALTER PROCEDURE [dbo].[sp_verContactosUsuario]
-=======
 CREATE PROCEDURE [dbo].[sp_verContactosColaborador]
->>>>>>> 0f94dc3e26606d7f035518156c994958709cf125:BaseDatos/StoresProcedures/Expediente/sp_verContactosColaborador.sql
 
 @cedula int
 	
