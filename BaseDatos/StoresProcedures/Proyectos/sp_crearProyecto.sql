@@ -1,14 +1,14 @@
-ALTER PROCEDURE [dbo].[sp_agregarDepartamento]
+ALTER PROCEDURE [dbo].[sp_crearProyecto]
 
---Parametros
 @nombre nvarchar(50),
-@descripcion nvarchar(100)
+@descripcion nvarchar(200)
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT into dbo.Departamento(nombre, descripcion, habilitado) values (@nombre, @descripcion, 1)	
+		INSERT INTO dbo.Proyecto (nombre, descripcion, fechaInicio, FK_idEstadoProyecto) values
+		(@nombre, @descripcion, GETDATE(), (SELECT idEstadoProyecto FROM dbo.EstadoProyecto where EstadoProyecto = 'Detenido'))
 		Select 1
 	
 	END TRY

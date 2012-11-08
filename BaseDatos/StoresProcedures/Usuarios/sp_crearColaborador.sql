@@ -22,6 +22,11 @@ BEGIN
 		SET @lastID = SCOPE_IDENTITY()		
 		INSERT INTO dbo.RolesXUsuario (FK_idTipoUsuario, FK_idUsuario) 
 			values((Select idTipoUsuario FROM dbo.TipoUsuario where tipoUsuario = @tipoUsuario), @lastID) 	
+		
+		exec sp_crearExpediente @cedula
+		
+		Select 1
+		
 	END TRY
 	
 	BEGIN CATCH
@@ -29,7 +34,7 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)		 
+		Select 0	 
 	END CATCH
 END
 GO

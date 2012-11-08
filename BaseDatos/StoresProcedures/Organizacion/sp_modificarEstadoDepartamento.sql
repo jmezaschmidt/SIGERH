@@ -1,14 +1,15 @@
-ALTER PROCEDURE [dbo].[sp_verContactosUsuario]
+CREATE PROCEDURE [dbo].[sp_modificarEstadoDepartamento]
 
-@cedula int
+--Parametros
+@nombre nvarchar(50),
+@estado bit
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		Select Valor Contacto, tipoContacto FROM dbo.Colaborador INNER JOIN dbo.ContactosXColaborador ON idColaborador = FK_idColaborador
-		INNER JOIN TipoContacto ON idTipoContacto = FK_idTipoContacto where cedula = @cedula
-	
+		UPDATE dbo.Departamento SET habilitado = @estado where idDepartamento = (SELECT idDepartamento FROM dbo.Departamento where nombre = @nombre)
+		
 	END TRY
 	
 	BEGIN CATCH

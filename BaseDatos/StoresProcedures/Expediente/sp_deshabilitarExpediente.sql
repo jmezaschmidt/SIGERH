@@ -1,14 +1,15 @@
-ALTER PROCEDURE [dbo].[sp_verContactosUsuario]
+CREATE PROCEDURE [dbo].[sp_deshabilitarExpediente]
 
-@cedula int
+@cedula int,
+@habilitado bit
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		Select Valor Contacto, tipoContacto FROM dbo.Colaborador INNER JOIN dbo.ContactosXColaborador ON idColaborador = FK_idColaborador
-		INNER JOIN TipoContacto ON idTipoContacto = FK_idTipoContacto where cedula = @cedula
-	
+		UPDATE dbo.Expediente SET habilitado = @habilitado, fechaModificacion = GETDATE() where 
+		idExpediente = (SELECT idExpediente FROM dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula)
+
 	END TRY
 	
 	BEGIN CATCH

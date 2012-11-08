@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_modificarPassUsuario]
+ALTER PROCEDURE [dbo].[sp_modificarPassUsuario]
 
 @cedula int,
 @password nvarchar(50) 

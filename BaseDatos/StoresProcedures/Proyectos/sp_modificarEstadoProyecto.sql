@@ -1,13 +1,14 @@
-ALTER PROCEDURE [dbo].[sp_verContactosUsuario]
+CREATE PROCEDURE [dbo].[sp_modificarEstadoProyecto]
 
-@cedula int
+@nombre nvarchar(50),
+@estado nvarchar(20)
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		Select Valor Contacto, tipoContacto FROM dbo.Colaborador INNER JOIN dbo.ContactosXColaborador ON idColaborador = FK_idColaborador
-		INNER JOIN TipoContacto ON idTipoContacto = FK_idTipoContacto where cedula = @cedula
+		UPDATE dbo.Proyecto SET FK_idEstadoProyecto = (Select idEstadoProyecto FROM dbo.EstadoProyecto where EstadoProyecto = @estado)
+		where nombre = @nombre  
 	
 	END TRY
 	

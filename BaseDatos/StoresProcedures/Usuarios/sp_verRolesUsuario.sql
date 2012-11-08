@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_verContactosUsuario]
+ALTER PROCEDURE [dbo].[sp_verRolesUsuario]
 
 @cedula int
 	
@@ -6,8 +6,9 @@ AS
 BEGIN
 	BEGIN TRY
 		
-		Select Valor Contacto, tipoContacto FROM dbo.Colaborador INNER JOIN dbo.ContactosXColaborador ON idColaborador = FK_idColaborador
-		INNER JOIN TipoContacto ON idTipoContacto = FK_idTipoContacto where cedula = @cedula
+		Select TipoUsuario FROM dbo.Colaborador INNER JOIN Usuario ON idColaborador = FK_idColaborador
+		INNER JOIN dbo.RolesXUsuario ON idUsuario = FK_idUsuario
+		INNER JOIN dbo.TipoUsuario ON idTipoUsuario = FK_idTipoUsuario where cedula = @cedula
 	
 	END TRY
 	

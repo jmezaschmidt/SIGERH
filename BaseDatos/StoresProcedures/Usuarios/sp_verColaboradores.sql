@@ -1,4 +1,6 @@
-CREATE PROCEDURE [dbo].[sp_verColaborades]
+CREATE PROCEDURE [dbo].[sp_verColaboradores]
+
+@habilitado bit
 
 AS
 BEGIN
@@ -8,7 +10,7 @@ BEGIN
 		ISNULL(Departamento.nombre, 'Sin asignar') Departamento FROM 
 		dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador
 		LEFT JOIN dbo.Puesto ON idPuesto = FK_idPuesto
-		LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento where dbo.Expediente.habilitado = 1
+		LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento where dbo.Expediente.habilitado = @habilitado
 	
 	END TRY
 	
