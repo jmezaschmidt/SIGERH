@@ -9,6 +9,7 @@ using SIGERHSis.LibreriaComun.ModuloOrganizacion;
 using SIGERHSis.LibreriaComun.ModuloUsuarios;
 using SIGERHSis.Controladores.ModuloUsuarios;
 using SIGERHSis.Controladores.ModuloExpedientes;
+using SIGERHSis.Controladores.ModuloOrganizacion;
 
 namespace ConsoleApp
 {
@@ -16,15 +17,15 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            /*ControladorUsuarios cu = new ControladorUsuarios();
-            Usuario u = Usuario.obtenerUsuarioActual();
-            u.Nickname = "Javier.Meza1";
-            u.Password = "3452706";
-            u.TipoUsuario = "Administrador";
-            Console.WriteLine(cu.autenticarUsuario());*/
+            //ControladorUsuarios cu = new ControladorUsuarios();
+            //Usuario u = Usuario.obtenerUsuarioActual();
+            /*cu.UsuarioActual.Nickname = "Javier.Meza1";
+            cu.UsuarioActual.Password = "3452706";
+            cu.UsuarioActual.TipoUsuario = "Administrador";*/
+            //Console.WriteLine(cu.autenticarUsuario("Javier.Meza1", "3452706", "Administrador"));
 
-            ControladorExpedientes ce = new ControladorExpedientes();
-            ce.obtenerInformacionGeneral(3452706);
+            /*ControladorExpedientes ce = new ControladorExpedientes();
+            ce.obtenerInformacionGeneral(3452706);*/
 
             /*Colaborador c = new Colaborador();
             c = ce.obtenerInformacionGeneral(114740899);*/
@@ -51,7 +52,7 @@ namespace ConsoleApp
             for (int i = 0; i < lc.Count; i++)
             { Console.WriteLine(lc.ElementAt(i).TipoContacto + ": " + lc.ElementAt(i).ValorContacto); } */
 
-            List<Permiso> lp = ce.obtenerPermisosColaboradorPxy();
+            /*List<Permiso> lp = ce.obtenerPermisosColaboradorPxy();
             for (int i = 0; i < lp.Count; i++)
             {
                 Permiso p = lp.ElementAt(i);
@@ -61,7 +62,19 @@ namespace ConsoleApp
                 Console.WriteLine(lp.ElementAt(i).Motivo);
                 Console.WriteLine(lp.ElementAt(i).Estado);
                 Console.WriteLine(lp.ElementAt(i).Id);
-            }
+            }*/
+
+            //ControladorOrganizacion co = new ControladorOrganizacion();
+            //List<Colaborador> lc = co.obtenerColaboradores(true);
+            //for (int i = 0; i < lc.Count; i++)
+            //{
+            //    Colaborador c = lc.ElementAt(i);
+            //    Console.WriteLine(lc.ElementAt(i).Cedula);
+            //    Console.WriteLine(lc.ElementAt(i).Nombre);
+            //    Console.WriteLine(lc.ElementAt(i).Puesto);
+            //    Console.WriteLine(lc.ElementAt(i).Departamento);
+            //    Console.WriteLine("-----------");
+            //}
 
 
             Console.ReadLine();

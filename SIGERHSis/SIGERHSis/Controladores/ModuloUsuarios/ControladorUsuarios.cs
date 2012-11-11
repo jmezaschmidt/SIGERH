@@ -12,10 +12,17 @@ namespace SIGERHSis.Controladores.ModuloUsuarios
         private LogicaUsuarios _LogicaUsuarios;
         private Usuario _UsuarioActual;
 
-        public ControladorUsuarios()
+        private static ControladorUsuarios _ControladorUsuarios = new ControladorUsuarios();
+
+        private ControladorUsuarios()
         {
             _LogicaUsuarios = new LogicaUsuarios();
             _UsuarioActual = Usuario.obtenerUsuarioActual();
+        }
+
+        public static ControladorUsuarios obtenerControladorUsuarios()
+        {
+            return _ControladorUsuarios;
         }
 
         public Boolean autenticarUsuario(String pUsuario, String pPassw, String pTipoUsuario)
@@ -24,6 +31,12 @@ namespace SIGERHSis.Controladores.ModuloUsuarios
             _UsuarioActual.Password = pPassw;
             _UsuarioActual.TipoUsuario = pTipoUsuario;
             return _LogicaUsuarios.autenticarUsuario();
+        }
+
+        public Usuario UsuarioActual
+        {
+            get { return _UsuarioActual; }
+            set { _UsuarioActual = value; }
         }
     }
 }
