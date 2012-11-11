@@ -50,7 +50,7 @@
         <div align="center" style="margin-top: 30px">
             <asp:Button ID="buttonIngresar" runat="server" Text="Ingresar" BackColor="#3366FF" 
                 Font-Bold="True" Font-Size="X-Large" ForeColor="White" Height="43px" 
-                Width="130px" BorderStyle="None" />
+                Width="130px" BorderStyle="None" onclick="buttonIngresar_Click" />
         </div>
         </form>
     </div>
