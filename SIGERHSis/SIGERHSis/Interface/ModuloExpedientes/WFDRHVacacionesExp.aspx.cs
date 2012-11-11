@@ -4,27 +4,28 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SIGERHSis.LibreriaComun.ModuloExpedientes;
-using SIGERHSis.LibreriaComun.ModuloUsuarios;
-using SIGERHSis.Controladores.ModuloUsuarios;
-	
 using SIGERHSis.Controladores.ModuloExpedientes;
+using SIGERHSis.LibreriaComun.ModuloExpedientes;
 
 namespace SIGERHSis.Interface.ModuloExpedientes
 {
-    public partial class WFDRHPermisosExp : System.Web.UI.Page
+    public partial class WFDRHVacacionesExp : System.Web.UI.Page
     {
         ControladorExpedientes controladorExpediente = ControladorExpedientes.obtenerControladorExpedientes();
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarExpedientes();
+            cargarVacaciones();
+        }
+
+        protected void btnAprobar_Click(object sender, EventArgs e)
+        {
 
         }
-        private void cargarExpedientes()
+        private void cargarVacaciones()
         {
-            List<Permiso> permisos = controladorExpediente.obtenerPermisosColaboradorPxy();
+            List<Vacaciones> vacaciones = controladorExpediente.obtenerVacacionesColaboradorPxy();
 
-            int numColaboradores = permisos.Count;
+            int numColaboradores = vacaciones.Count;
             string claseFilaImpar = "impar";
             string claseFilaPar = "par";
             string claseFila = "";
@@ -62,34 +63,29 @@ namespace SIGERHSis.Interface.ModuloExpedientes
                 tblData.Rows.Add(tRow);
                 // Create a new cell and add it to the row.
                 TableCell tCell = new TableCell();
-                tCell.Text = permisos[i].FechaSolicitud.Day + "-" + permisos[i].FechaSolicitud.Month + "-" + permisos[i].FechaSolicitud.Year;
+                tCell.Text = vacaciones[i].FechaSolicitud.Day + "-" + vacaciones[i].FechaSolicitud.Month + "-" + vacaciones[i].FechaSolicitud.Year;
                 tRow.Cells.Add(tCell);
                 // Create a new cell and add it to the row.
                 TableCell tCell2 = new TableCell();
-                tCell2.Text = permisos[i].FechaInicial.Day + "-" + permisos[i].FechaInicial.Month + "-" + permisos[i].FechaInicial.Year;
+                tCell2.Text = vacaciones[i].FechaInicial.Day + "-" + vacaciones[i].FechaInicial.Month + "-" + vacaciones[i].FechaInicial.Year;
                 tRow.Cells.Add(tCell2);
                 // Create a new cell and add it to the row.
                 TableCell tCell3 = new TableCell();
-                tCell3.Text = permisos[i].FechaFinal.Day + "-" + permisos[i].FechaFinal.Month + "-" + permisos[i].FechaFinal.Year;
+                tCell3.Text = vacaciones[i].FechaFinal.Day + "-" + vacaciones[i].FechaFinal.Month + "-" + vacaciones[i].FechaFinal.Year;
                 tRow.Cells.Add(tCell3);
                 // Create a new cell and add it to the row.
                 TableCell tCell4 = new TableCell();
-                tCell4.Text = permisos[i].Estado;
+                tCell4.Text = vacaciones[i].Estado;
                 tRow.Cells.Add(tCell4);
 
                 RadioButton radioButton = new RadioButton();
-                radioButton.ID = permisos[i].Id.ToString();
-                radioButton.GroupName = "Permisos";
+                radioButton.ID = vacaciones[i].Id.ToString();
+                radioButton.GroupName = "Vacaciones";
 
                 TableCell cell = new TableCell();
                 cell.Controls.Add(radioButton);
                 tRow.Cells.Add(cell);
             }
-        }
-
-        protected void btnAprobar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

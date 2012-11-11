@@ -49,22 +49,58 @@ namespace SIGERHSis.Interface {
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
-        /// btnInformacionGeneral control.
+        /// btnInformacionGeneralExp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInformacionGeneral;
+        protected global::System.Web.UI.WebControls.Button btnInformacionGeneralExp;
         
         /// <summary>
-        /// btnPermisos control.
+        /// btnPermisosExp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPermisos;
+        protected global::System.Web.UI.WebControls.Button btnPermisosExp;
+        
+        /// <summary>
+        /// btnVacacionesExp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVacacionesExp;
+        
+        /// <summary>
+        /// btnIncapacidadesExp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnIncapacidadesExp;
+        
+        /// <summary>
+        /// btnCapacitaciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCapacitaciones;
+        
+        /// <summary>
+        /// btnContrato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnContrato;
         
         /// <summary>
         /// botonExpedientes control.
