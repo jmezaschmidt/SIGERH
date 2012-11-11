@@ -10,7 +10,7 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 {
     public partial class WFLogin : System.Web.UI.Page
     {
-        ControladorUsuarios controladorUsuario =new ControladorUsuarios();
+        ControladorUsuarios controladorUsuario = ControladorUsuarios.obtenerControladorUsuarios();
 
         protected void Page_Load(object sender, EventArgs e){
         

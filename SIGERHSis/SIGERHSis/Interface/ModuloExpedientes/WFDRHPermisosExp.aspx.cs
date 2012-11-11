@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SIGERHSis.LibreriaComun.ModuloExpedientes;
 using SIGERHSis.LibreriaComun.ModuloUsuarios;
+using SIGERHSis.Controladores.ModuloUsuarios;
 	
 using SIGERHSis.Controladores.ModuloExpedientes;
 
@@ -17,8 +18,8 @@ namespace SIGERHSis.Interface.ModuloExpedientes
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Usuario actual = Usuario.obtenerUsuarioActual();
-            lblMotivo.Text = actual.Nickname;
+            ControladorUsuarios controladorUsuario = ControladorUsuarios.obtenerControladorUsuarios();
+            lblMotivoInfo.Text= controladorUsuario.UsuarioActual.Nickname;
             //cargarExpedientes();
 
         }
