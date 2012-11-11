@@ -4,45 +4,44 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using SIGERHSis.LibreriaComun.ModuloExpedientes;
-using SIGERHSis.LibreriaComun.ModuloUsuarios;
-using SIGERHSis.Controladores.ModuloUsuarios;
-	
 using SIGERHSis.Controladores.ModuloExpedientes;
+using SIGERHSis.LibreriaComun.ModuloExpedientes;
 
 namespace SIGERHSis.Interface.ModuloExpedientes
 {
-    public partial class WFDRHPermisosExp : System.Web.UI.Page
+    public partial class WFDRHCapacitacionesExp : System.Web.UI.Page
     {
+
         ControladorExpedientes controladorExpediente = ControladorExpedientes.obtenerControladorExpedientes();
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarExpedientes();
-
+            cargarCapacacitaciones();
         }
-        private void cargarExpedientes()
-        {
-            List<Permiso> permisos = controladorExpediente.obtenerPermisosColaboradorPxy();
 
-            int numColaboradores = permisos.Count;
+
+        private void cargarCapacacitaciones()
+        {
+            List<Capacitacion> capacitaciones = controladorExpediente.obtenerCapacitacionesColaboradorPxy();
+
+            int numColaboradores = capacitaciones.Count;
             string claseFilaImpar = "impar";
             string claseFilaPar = "par";
             string claseFila = "";
             TableRow tRow2 = new TableRow();
             TableHeaderCell headerCell = new TableHeaderCell();
-            headerCell.Text = "Fecha de Solicitud";
+            headerCell.Text = "Capacitación";
             headerCell.Width = Unit.Percentage(25);
             tRow2.Cells.Add(headerCell);
             TableHeaderCell headerCell2 = new TableHeaderCell();
-            headerCell2.Text = "Fecha Inicial";
+            headerCell2.Text = "Duración";
             headerCell2.Width = Unit.Percentage(25);
             tRow2.Cells.Add(headerCell2);
             TableHeaderCell headerCell3 = new TableHeaderCell();
-            headerCell3.Text = "Fecha Final";
+            headerCell3.Text = "Fecha Inicial";
             headerCell3.Width = Unit.Percentage(25);
             tRow2.Cells.Add(headerCell3);
             TableHeaderCell headerCell4 = new TableHeaderCell();
-            headerCell4.Text = "Estado";
+            headerCell4.Text = "Fecha Final";
             headerCell4.Width = Unit.Percentage(20);
             tRow2.Cells.Add(headerCell4);
             tblData.Rows.Add(tRow2);
@@ -62,34 +61,21 @@ namespace SIGERHSis.Interface.ModuloExpedientes
                 tblData.Rows.Add(tRow);
                 // Create a new cell and add it to the row.
                 TableCell tCell = new TableCell();
-                tCell.Text = permisos[i].FechaSolicitud.Day + "-" + permisos[i].FechaSolicitud.Month + "-" + permisos[i].FechaSolicitud.Year;
+                tCell.Text = capacitaciones[i].Nombre;
                 tRow.Cells.Add(tCell);
                 // Create a new cell and add it to the row.
                 TableCell tCell2 = new TableCell();
-                tCell2.Text = permisos[i].FechaInicial.Day + "-" + permisos[i].FechaInicial.Month + "-" + permisos[i].FechaInicial.Year;
+                tCell2.Text = capacitaciones[i].DuracionEnHoras + " horas";
                 tRow.Cells.Add(tCell2);
                 // Create a new cell and add it to the row.
                 TableCell tCell3 = new TableCell();
-                tCell3.Text = permisos[i].FechaFinal.Day + "-" + permisos[i].FechaFinal.Month + "-" + permisos[i].FechaFinal.Year;
+                tCell3.Text = capacitaciones[i].FechaInicial.Day + "-" + capacitaciones[i].FechaInicial.Month + "-" + capacitaciones[i].FechaInicial.Year;
                 tRow.Cells.Add(tCell3);
                 // Create a new cell and add it to the row.
                 TableCell tCell4 = new TableCell();
-                tCell4.Text = permisos[i].Estado;
+                tCell4.Text = capacitaciones[i].FechaFinal.Day + "-" + capacitaciones[i].FechaFinal.Month + "-" + capacitaciones[i].FechaFinal.Year;
                 tRow.Cells.Add(tCell4);
-
-                RadioButton radioButton = new RadioButton();
-                radioButton.ID = permisos[i].Id.ToString();
-                radioButton.GroupName = "Permisos";
-
-                TableCell cell = new TableCell();
-                cell.Controls.Add(radioButton);
-                tRow.Cells.Add(cell);
             }
-        }
-
-        protected void btnAprobar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

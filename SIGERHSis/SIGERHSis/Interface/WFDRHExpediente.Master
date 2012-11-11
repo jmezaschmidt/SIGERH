@@ -25,9 +25,18 @@
     <div style="padding: 0px; margin: 0px; float: left;">
         
         </div>
-        <asp:Button ID="btnInformacionGeneral" runat="server" Text="Información General" />
-        <asp:Button ID="btnPermisos" runat="server" Text="Permisos Laborales" 
+        <asp:Button ID="btnInformacionGeneralExp" runat="server" 
+            Text="Información General" onclick="btnInformacionGeneralExp_Click" />
+        <asp:Button ID="btnPermisosExp" runat="server" Text="Permisos Laborales" 
             onclick="btnPermisos_Click" />
+        <asp:Button ID="btnVacacionesExp" runat="server" Text="Vacaciones" 
+            onclick="btnVacacionesExp_Click" />
+        <asp:Button ID="btnIncapacidadesExp" runat="server" Text="Incapacidades" 
+            onclick="btnIncapacidadesExp_Click" />
+        <asp:Button ID="btnCapacitaciones" runat="server" Text="Capacitaciones" 
+            onclick="btnCapacitaciones_Click" />
+        <asp:Button ID="btnContrato" runat="server" Text="Contrato" 
+            onclick="btnContrato_Click" />
     </div>
     <div id="content">
         
@@ -81,6 +90,7 @@
             <asp:Image ID="imagenTec" runat="server" ImageUrl="~/Images/logoTec.jpg" 
                 Width="200px" />
         </div>
+    </div>
     </div>
 </body>
 
