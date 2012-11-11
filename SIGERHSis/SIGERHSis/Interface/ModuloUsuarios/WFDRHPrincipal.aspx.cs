@@ -13,7 +13,7 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 {
     public partial class WFDRHPrincipal : System.Web.UI.Page
     {
-        ControladorOrganizacion controladorOrganizacion;
+        ControladorOrganizacion controladorOrganizacion = new ControladorOrganizacion();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,8 +51,8 @@ namespace SIGERHSis.Interface.ModuloUsuarios
         }
         private void cargarExpedientes()
         {
-            List<Colaborador> colaboradores;
-            colaboradores = new List<Colaborador>();
+            List<Colaborador> colaboradores = controladorOrganizacion.obtenerColaboradores(true);
+            /*colaboradores = new List<Colaborador>();
             //
             Colaborador cola = new Colaborador();
             cola.Cedula = 304500160;
@@ -73,7 +73,7 @@ namespace SIGERHSis.Interface.ModuloUsuarios
             cola2.Nombre = "Javier Meza Schmidt";
             cola2.Puesto = "Ingenieria en Computacion";
             cola2.Departamento = "Redes y mas";
-            colaboradores.Add(cola2);
+            colaboradores.Add(cola2);*/
             int numColaboradores = colaboradores.Count;
             string claseFilaImpar = "impar";
             string claseFilaPar = "par";
@@ -139,25 +139,8 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 
         protected void btnVerExpediente_Click(object sender, EventArgs e)
         {
-            RadioButton rb = new RadioButton();
-            foreach (TableRow tr in tblData.Controls)
-            {
-                foreach (TableCell tc in tr.Controls)
-                {
-                    if (tc.HasControls())
-                    {
-                        if (tc.Controls[0] is RadioButton)
-                        {
-                            rb = (RadioButton)tc.Controls[0];
-                            if (rb.Checked)
-                            {
-                                Label1.Text = rb.ID;
-                            }
-                            break;
-                        }
-                    }
-                }
-            }
+            String cedula = "3452706"; 
+            Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx?cedula="+cedula);
         }
     }
 }

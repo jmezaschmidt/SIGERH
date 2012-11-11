@@ -22,7 +22,7 @@
         </div>
         <div style="float: left; width: 250px; margin-top: 40px; margin-left: 75px">
         <div class="labelsLogin">
-        Usuario:
+        <asp:Label ID="Label3" runat="server" Text="Usuario:"></asp:Label>
         </div>
         <div>
             <asp:TextBox ID="textBoxUsuario" runat="server" ForeColor="#003399" Width="213px" 
@@ -43,8 +43,12 @@
             <asp:Label ID="Label2" runat="server" Text="Tipo de Usuario: " 
                 CssClass="labelsLogin"></asp:Label>
             </div>
-            <asp:DropDownList ID="dropDownListTipoU" runat="server" BackColor="White" 
+            <asp:DropDownList ID="dropDownListTipoUsuario" runat="server" BackColor="White" 
                 Font-Size="Larger" ForeColor="#003399">
+                <asp:ListItem>Colaborador</asp:ListItem>
+                <asp:ListItem>Direccion RH</asp:ListItem>
+                <asp:ListItem>Jefe</asp:ListItem>
+                <asp:ListItem>Administrador</asp:ListItem>
             </asp:DropDownList>
         </div>
         <div align="center" style="margin-top: 30px">
