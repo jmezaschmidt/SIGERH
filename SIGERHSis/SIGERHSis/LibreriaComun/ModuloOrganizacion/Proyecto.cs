@@ -12,6 +12,7 @@ namespace SIGERHSis.LibreriaComun.ModuloOrganizacion
         private String _Descripcion;
         private DateTime _FechaInicial;
         private DateTime _FechaFinal;
+        private String _Estado;
         private List<Colaborador> _Miembros;
 
 
@@ -43,6 +44,12 @@ namespace SIGERHSis.LibreriaComun.ModuloOrganizacion
         {
             get { return _Miembros; }
             set { _Miembros = value; }
+        }
+
+        public String Estado
+        {
+            get { return _Estado; }
+            set { _Estado = value; }
         }
     }
 }

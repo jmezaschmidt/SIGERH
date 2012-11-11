@@ -17,16 +17,27 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             /*ControladorUsuarios cu = new ControladorUsuarios();
-            ControladorUsuarios cu = new ControladorUsuarios();
             Usuario u = Usuario.obtenerUsuarioActual();
-            u.Nickname = "javier.meza1";
+            u.Nickname = "Javier.Meza1";
             u.Password = "3452706";
             u.TipoUsuario = "Administrador";
             Console.WriteLine(cu.autenticarUsuario());*/
 
             ControladorExpedientes ce = new ControladorExpedientes();
-            Colaborador c = new Colaborador();
-            c = ce.obtenerInformacionGeneral(114740899);
+            ce.obtenerInformacionGeneral(3452706);
+
+            /*Colaborador c = new Colaborador();
+            c = ce.obtenerInformacionGeneral(114740899);*/
+            /*Console.WriteLine(c.Cedula);
+            Console.WriteLine(c.Nombre);
+            Console.WriteLine(c.FechaNacimiento);
+            Console.WriteLine(c.Puesto);
+            Console.WriteLine(c.Departamento);
+            Console.WriteLine(c.FechaIngreso);
+            Console.WriteLine(c.Estado);
+            Console.WriteLine("-----------------------");*/
+
+            /*c = ce.obtenerInformacionGeneral(3452706);
             Console.WriteLine(c.Cedula);
             Console.WriteLine(c.Nombre);
             Console.WriteLine(c.FechaNacimiento);
@@ -34,25 +45,25 @@ namespace ConsoleApp
             Console.WriteLine(c.Departamento);
             Console.WriteLine(c.FechaIngreso);
             Console.WriteLine(c.Estado);
-            Console.WriteLine("-----------------------");
-            c = ce.obtenerInformacionGeneral(3452706);
-            Console.WriteLine(c.Cedula);
-            Console.WriteLine(c.Nombre);
-            Console.WriteLine(c.FechaNacimiento);
-            Console.WriteLine(c.Puesto);
-            Console.WriteLine(c.Departamento);
-            Console.WriteLine(c.FechaIngreso);
-            Console.WriteLine(c.Estado);
-            Console.WriteLine("-----------------------");
-            DataTable dt = new DataTable();
-            dt = ce.obtenerContactos();
-            foreach(DataRow dr in dt.Rows)
+            Console.WriteLine("-----------------------");*/
+
+            /*List<Contacto> lc = ce.obtenerContactosPxy();
+            for (int i = 0; i < lc.Count; i++)
+            { Console.WriteLine(lc.ElementAt(i).TipoContacto + ": " + lc.ElementAt(i).ValorContacto); } */
+
+            List<Permiso> lp = ce.obtenerPermisosColaboradorPxy();
+            for (int i = 0; i < lp.Count; i++)
             {
-                Console.WriteLine(dr["Tipo Contacto"]);
-                Console.WriteLine(dr["Contacto"]);
+                Permiso p = lp.ElementAt(i);
+                Console.WriteLine(lp.ElementAt(i).FechaSolicitud);
+                Console.WriteLine(lp.ElementAt(i).FechaInicial);
+                Console.WriteLine(lp.ElementAt(i).FechaFinal);
+                Console.WriteLine(lp.ElementAt(i).Motivo);
+                Console.WriteLine(lp.ElementAt(i).Estado);
+                Console.WriteLine(lp.ElementAt(i).Id);
             }
-            
-            Console.WriteLine("mau23");
+
+
             Console.ReadLine();
         }
     }

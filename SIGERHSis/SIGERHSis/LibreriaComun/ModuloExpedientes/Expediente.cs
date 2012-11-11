@@ -11,9 +11,9 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
 
         private DateTime _FechaCreacion;
         private Colaborador _Colaborador;
-        private List<Solicitud> _Permisos;
+        private List<Permiso> _Permisos;
         private List<Vacaciones> _Vacaciones;
-        private List<Solicitud> _Incapacidades;
+        private List<Incapacidad> _Incapacidades;
         private List<Ausencia> _HistorialAusencias;
         private List<Capacitacion> _Capacitaciones;
         private List<Proyecto> _Proyecto;
@@ -33,7 +33,7 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
             set { _Colaborador = value; }
         }
 
-        public List<Solicitud> Permisos
+        public List<Permiso> Permisos
         {
             get { return _Permisos; }
             set { _Permisos = value; }
@@ -45,7 +45,7 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
             set { _Vacaciones = value; }
         }
 
-        public List<Solicitud> Incapacidades
+        public List<Incapacidad> Incapacidades
         {
             get { return _Incapacidades; }
             set { _Incapacidades = value; }

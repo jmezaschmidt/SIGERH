@@ -26,28 +26,56 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
             return _Expediente.obtenerInformacionGeneral(pCedulaClaborador);
         }
 
-        public DataTable obtenerContactos()
+        public List<Contacto> obtenerContactosPxy()
         {
-            DataTable contactos = new DataTable();
-            DataRow contacto;
-            List<Contacto> listaContactos;
-
-            contactos.Columns.Add(new DataColumn("Tipo Contacto", typeof(string)));
-            contactos.Columns.Add(new DataColumn("Contacto", typeof(string)));
-
-            listaContactos = _Expediente.obtenerContactos();
-
-            for (int i = 0; i < listaContactos.Count(); i++)
-            {
-                contacto = contactos.NewRow();
-                contacto["Tipo Contacto"] = listaContactos.ElementAt(i).TipoContacto;
-                contacto["Contacto"] = listaContactos.ElementAt(i).ValorContacto;
-                contactos.Rows.Add(contacto);
-            }
-
-            return contactos;
-            
+            List<Contacto> listaContactos = _Expediente.obtenerContactos();
+            return listaContactos;
         }
+
+        public List<Permiso> obtenerPermisosColaboradorPxy()
+        {
+            List<Permiso> listaPermisos = _Expediente.obtenerPermisosColaborador();
+            return listaPermisos;
+        }
+        // ---->
+        public Boolean cambiarEstadoPermisoPxy(int pIdSolicitud, String pNuevoEstado)
+        {
+            return _Expediente.cambiarEstadoPermiso(pIdSolicitud, pNuevoEstado);
+        }
+
+        public List<Vacaciones> obtenerVacacionesColaboradorPxy()
+        {
+            List<Vacaciones> listaVacaciones = _Expediente.obtenerVacacionesColaborador();
+            return listaVacaciones;
+        }
+
+        public Boolean cambiarEstadoVacacionesPxy(int pIdSolicitud, String pNuevoEstado)
+        {
+            return _Expediente.cambiarEstadoVacaciones(pIdSolicitud, pNuevoEstado);
+        }
+
+        public List<Incapacidad> obtenerIncapacidadesColaboradorPxy()
+        {
+            List<Incapacidad> listaIncapacidades = _Expediente.obtenerIncapacidadesColaborador();
+            return listaIncapacidades;
+        }
+
+        public Boolean cambiarEstadoIncapacidadesPxy(int pIdSolicitud, String pNuevoEstado)
+        {
+            return _Expediente.cambiarEstadoIncapacidades(pIdSolicitud, pNuevoEstado);
+        }
+
+        public List<Capacitacion> obtenerCapacitacionesColaboradorPxy()
+        {
+            List<Capacitacion> listaCapacitaciones = _Expediente.obtenerCapacitacionesColaborador();
+            return listaCapacitaciones;
+        }
+
+        public Contrato obtenerContratoColaboradorPxy()
+        {
+            return _Expediente.obtenerContratoColaborador();
+        }
+
 
     }
 }
