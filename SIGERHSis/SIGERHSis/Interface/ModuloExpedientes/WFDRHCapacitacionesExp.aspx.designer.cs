@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIGERHSis.Interface.ModuloUsuarios {
+namespace SIGERHSis.Interface.ModuloExpedientes {
     
     
-    public partial class WFDRHPrincipal {
+    public partial class WFDRHCapacitacionesExp {
         
         /// <summary>
         /// tblData control.
@@ -22,21 +22,21 @@ namespace SIGERHSis.Interface.ModuloUsuarios {
         protected global::System.Web.UI.WebControls.Table tblData;
         
         /// <summary>
-        /// Label1 control.
+        /// lblDescripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblDescripcion;
         
         /// <summary>
-        /// btnVerExpediente control.
+        /// lblDescripcionInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVerExpediente;
+        protected global::System.Web.UI.WebControls.Label lblDescripcionInfo;
     }
 }

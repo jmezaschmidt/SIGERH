@@ -14,10 +14,18 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
         private LogicaExpedientes _LogicaExpedientes;
         private ProxyExpediente _Expediente;
 
-        public ControladorExpedientes()
+        // Singleton
+        private static ControladorExpedientes _ControladorExpedientes = new ControladorExpedientes();
+
+        private ControladorExpedientes()
         {
             _LogicaExpedientes = new LogicaExpedientes();
             _Expediente = new ProxyExpediente();
+        }
+
+        public static ControladorExpedientes obtenerControladorExpedientes()
+        {
+            return _ControladorExpedientes;
         }
 
 

@@ -84,17 +84,16 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
             List<Capacitacion> capacitaciones = new List<Capacitacion>();
             String[] nombreParametros = { "@cedula" };
 
-            IDataReader reader = _AccesoDatos.leer("sp_obtenerCapacitacionesColaborador", nombreParametros, pCedulaClaborador);
+            IDataReader reader = _AccesoDatos.leer("sp_verCapacitacionColaborador", nombreParametros, pCedulaClaborador);
 
             while (reader.Read())
             {
                 Capacitacion _capacitacion = new Capacitacion();
-                _capacitacion.FechaInicial = reader.GetDateTime(0);
-                _capacitacion.FechaFinal = reader.GetDateTime(1);
-                _capacitacion.Nombre = reader.GetString(2);
-                _capacitacion.Estado = reader.GetString(3);
-                _capacitacion.DuracionEnHoras = reader.GetInt16(4);
-                _capacitacion.Descripcion = reader.GetString(5);
+                _capacitacion.Nombre = reader.GetString(0);
+                _capacitacion.Descripcion = reader.GetString(1);
+                _capacitacion.DuracionEnHoras = reader.GetInt32(2);
+                _capacitacion.FechaInicial = reader.GetDateTime(3);
+                _capacitacion.FechaFinal = reader.GetDateTime(4);
                 capacitaciones.Add(_capacitacion);
             }
 
@@ -104,8 +103,8 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
 
         public Boolean cambiarEstadoSolicitud(int pIdSolicitud, String pNuevoEstado)
         {
-            String[] nombreParametros = { "@idSolicitud", "@nuevoEstado" };
-            return _AccesoDatos.escribir("sp_cambiarEstadoSolicitud", nombreParametros, pIdSolicitud, pNuevoEstado);
+            String[] nombreParametros = { "@idSolicitud", "@estado" };
+            return _AccesoDatos.escribir("sp_modificarEstadoSolicitud", nombreParametros, pIdSolicitud, pNuevoEstado);
         }
 
         public Contrato obtenerContratoColaborador(int pCedulaClaborador)
@@ -113,11 +112,11 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
             Contrato contrato = new Contrato();
             String[] nombreParametros = { "@cedula" };
 
-            IDataReader reader = _AccesoDatos.leer("sp_obtenerContratoColaborador", nombreParametros, pCedulaClaborador);
+            IDataReader reader = _AccesoDatos.leer("sp_verContratoColaborador", nombreParametros, pCedulaClaborador);
 
             if (reader.Read())
             {
-                contrato.CantidadHorasLaborales = reader.GetInt16(0);
+                contrato.CantidadHorasLaborales = reader.GetInt32(0);
                 contrato.FechaCreacion = reader.GetDateTime(1);
                 contrato.Estado = reader.GetString(2);
             }
@@ -125,7 +124,22 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
             reader.Close();
             return contrato;
         }
-       
+
+        //public List<String> asignarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        //{
+        //    List<String> colaboradoresSinAsignar = new List<String>();
+        //    String[] nombreParametros = { "@idCapacitacion", "@cedula", @ };
+
+        //    for (int i = 0; i < pColaboradores.Count; i++)
+        //    {
+        //        Boolean resultado = _AccesoDatos.escribir("sp_asignarProyectoColaborador", nombreParametros, pColaboradores.ElementAt(i).Cedula, pProyecto);
+        //        if (resultado == false)
+        //        {
+        //            colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+        //        }
+        //    }
+        //    return colaboradoresSinAsignar;
+        //}
             
     }
 }

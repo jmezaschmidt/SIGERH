@@ -1,4 +1,11 @@
-﻿#header
+﻿body
+{
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 0px; 
+}
+#header
 {
     float:left;
     width:100%;
@@ -86,4 +93,12 @@
     filter: progid:DXImageTransform.Microsoft.Shadow(strength = 6, direction = 180, color = '#000000');
     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 6, Direction = 180, Color = '#000000')";
 
+}
+
+.menu_Expediente
+{
+    width: 70%;
+    height: 40px;
+    margin-right:3%;
+    float:right;
 }

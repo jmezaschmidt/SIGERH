@@ -68,6 +68,12 @@
     <Content Include="Images\logoTec.jpg" />
     <Content Include="Images\SIGERGH Logo.png" />
     <Content Include="Images\SIGERGH LogoPeq.png" />
+    <Content Include="Interface\ModuloExpedientes\WFDRHCapacitacionesExp.aspx" />
+    <Content Include="Interface\ModuloExpedientes\WFDRHContratoExp.aspx" />
+    <Content Include="Interface\ModuloExpedientes\WFDRHIncapacidadesExp.aspx" />
+    <Content Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx" />
+    <Content Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx" />
+    <Content Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx" />
     <Content Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx" />
     <Content Include="Interface\ModuloUsuarios\WFLogin.aspx" />
     <Content Include="Web.config">
@@ -93,6 +99,48 @@
     <Compile Include="Controladores\ModuloExpedientes\ControladorExpedientes.cs" />
     <Compile Include="Controladores\ModuloOrganizacion\ControladorOrganizacion.cs" />
     <Compile Include="Controladores\ModuloUsuarios\ControladorUsuarios.cs" />
+    <Compile Include="Interface\ModuloExpedientes\WFDRHCapacitacionesExp.aspx.cs">
+      <DependentUpon>WFDRHCapacitacionesExp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHCapacitacionesExp.aspx.designer.cs">
+      <DependentUpon>WFDRHCapacitacionesExp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHContratoExp.aspx.cs">
+      <DependentUpon>WFDRHContratoExp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHContratoExp.aspx.designer.cs">
+      <DependentUpon>WFDRHContratoExp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHIncapacidadesExp.aspx.cs">
+      <DependentUpon>WFDRHIncapacidadesExp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHIncapacidadesExp.aspx.designer.cs">
+      <DependentUpon>WFDRHIncapacidadesExp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx.cs">
+      <DependentUpon>WFDRHInfoGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx.designer.cs">
+      <DependentUpon>WFDRHInfoGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx.cs">
+      <DependentUpon>WFDRHPermisosExp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx.designer.cs">
+      <DependentUpon>WFDRHPermisosExp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx.cs">
+      <DependentUpon>WFDRHVacacionesExp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx.designer.cs">
+      <DependentUpon>WFDRHVacacionesExp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx.cs">
       <DependentUpon>WFDRHPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +161,13 @@
     </Compile>
     <Compile Include="Interface\WFDRH.Master.designer.cs">
       <DependentUpon>WFDRH.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\WFDRHExpediente.Master.cs">
+      <DependentUpon>WFDRHExpediente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\WFDRHExpediente.Master.designer.cs">
+      <DependentUpon>WFDRHExpediente.Master</DependentUpon>
     </Compile>
     <Compile Include="LibreriaComun\ModuloExpedientes\IExpediente.cs" />
     <Compile Include="LibreriaComun\ModuloOrganizacion\Contacto.cs" />
@@ -146,7 +201,6 @@
     <Folder Include="AccesoDatos\ModuloReportes\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controladores\ModuloReportes\" />
-    <Folder Include="Interface\ModuloExpedientes\" />
     <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
@@ -154,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Interface\WFDRH.Master" />
+    <Content Include="Interface\WFDRHExpediente.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
