@@ -12,6 +12,7 @@ namespace SIGERHSis.Controladores.ModuloUsuarios
         private LogicaUsuarios _LogicaUsuarios;
         private Usuario _UsuarioActual;
 
+        // Singleton
         private static ControladorUsuarios _ControladorUsuarios = new ControladorUsuarios();
 
         private ControladorUsuarios()

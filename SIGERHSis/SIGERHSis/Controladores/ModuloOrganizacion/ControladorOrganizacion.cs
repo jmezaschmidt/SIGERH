@@ -11,9 +11,17 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
     {
         private LogicaOrganizacion _LogicaOrganizacion;
 
-        public ControladorOrganizacion()
+        // Singleton
+        private static ControladorOrganizacion _ControladorOrganizacion = new ControladorOrganizacion();
+
+        private ControladorOrganizacion()
         {
             _LogicaOrganizacion = new LogicaOrganizacion();
+        }
+
+        public static ControladorOrganizacion obtenerControladorOrganizacion()
+        {
+            return _ControladorOrganizacion;
         }
 
         public List<Colaborador> obtenerColaboradores(Boolean pEstado)
