@@ -13,7 +13,7 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 {
     public partial class WFDRHPrincipal : System.Web.UI.Page
     {
-        ControladorOrganizacion controladorOrganizacion = new ControladorOrganizacion();
+        ControladorOrganizacion controladorOrganizacion = ControladorOrganizacion.obtenerControladorOrganizacion();
 
         protected void Page_Load(object sender, EventArgs e)
         {

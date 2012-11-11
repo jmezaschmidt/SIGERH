@@ -14,7 +14,7 @@ namespace SIGERHSis.Interface.ModuloExpedientes
 {
     public partial class WFDRHPermisosExp : System.Web.UI.Page
     {
-        ControladorExpedientes controladorExpediente = new ControladorExpedientes();
+        ControladorExpedientes controladorExpediente = ControladorExpedientes.obtenerControladorExpedientes();
         protected void Page_Load(object sender, EventArgs e)
         {
 
