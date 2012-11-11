@@ -13,6 +13,7 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
         private int _DuracionEnHoras;
         private DateTime _FechaInicial;
         private DateTime _FechaFinal;
+        private String _Estado;
 
 
         public String Nombre
@@ -43,6 +44,12 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
         {
             get { return _FechaFinal; }
             set { _FechaFinal = value; }
+        }
+
+        public String Estado
+        {
+            get { return _Estado; }
+            set { _Estado = value; }
         }
     }
 }

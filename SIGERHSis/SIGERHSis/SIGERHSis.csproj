@@ -88,8 +88,10 @@
   <ItemGroup>
     <Compile Include="AccesoDatos\AccesoDatos.cs" />
     <Compile Include="AccesoDatos\ModuloExpedientes\AccesoDatosExpedientes.cs" />
+    <Compile Include="AccesoDatos\ModuloOrganizacion\AccesoDatosOrganizacion.cs" />
     <Compile Include="AccesoDatos\ModuloUsuarios\AccesoDatosUsuarios.cs" />
     <Compile Include="Controladores\ModuloExpedientes\ControladorExpedientes.cs" />
+    <Compile Include="Controladores\ModuloOrganizacion\ControladorOrganizacion.cs" />
     <Compile Include="Controladores\ModuloUsuarios\ControladorUsuarios.cs" />
     <Compile Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx.cs">
       <DependentUpon>WFDRHPrincipal.aspx</DependentUpon>
@@ -130,6 +132,7 @@
     <Compile Include="LibreriaComun\ModuloExpedientes\Vacaciones.cs" />
     <Compile Include="LibreriaComun\ModuloOrganizacion\Colaborador.cs" />
     <Compile Include="LibreriaComun\ModuloOrganizacion\Proyecto.cs" />
+    <Compile Include="Logica\ModuloOrganizacion\LogicaOrganizacion.cs" />
     <Compile Include="Logica\ModuloUsuarios\LogicaUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
     </Compile>
@@ -140,16 +143,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AccesoDatos\ModuloOrganizacion\" />
     <Folder Include="AccesoDatos\ModuloReportes\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Controladores\ModuloOrganizacion\" />
     <Folder Include="Controladores\ModuloReportes\" />
     <Folder Include="Interface\ModuloExpedientes\" />
     <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
-    <Folder Include="Logica\ModuloOrganizacion\" />
     <Folder Include="Logica\ModuloReportes\" />
   </ItemGroup>
   <ItemGroup>

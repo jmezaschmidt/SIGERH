@@ -52,31 +52,83 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             return _ExpedienteReal.Colaborador.Contactos;
         }
 
-        /*
-        public DateTime getFechaCreacion(int pCedulaClaborador);
-        public void setFechaCreacion();
+        public List<Permiso> obtenerPermisosColaborador()
+        {
+            if (_ExpedienteReal.Permisos == null)
+            {
+                _ExpedienteReal.Permisos = _LogicaExpedientes.obtenerPermisosColaborador(_CedulaColaboradorActual);
+            }
+            return _ExpedienteReal.Permisos;
+        }
 
-        public List<Solicitud> getPermisos(int pCedulaClaborador);
-        public void setPermisos();
+        public Boolean cambiarEstadoPermiso(int pIdSolicitud, String pNuevoEstado)
+        {
+            Boolean resultado = _LogicaExpedientes.cambiarEstadoSolicitud(pIdSolicitud, pNuevoEstado);
+            if (resultado)
+            {
+                obtenerPermisosColaborador();
+                return resultado;
+            }
+            return false;
+        }
 
-        public List<Vacaciones> getVacaciones(int pCedulaClaborador);
-        public void setVacaciones();
+        public List<Vacaciones> obtenerVacacionesColaborador()
+        {
+            if (_ExpedienteReal.Vacaciones == null)
+            {
+                _ExpedienteReal.Vacaciones = _LogicaExpedientes.obtenerVacacionesColaborador(_CedulaColaboradorActual);
+            }
+            return _ExpedienteReal.Vacaciones;
+        }
 
-        public List<Solicitud> getIncapacidades(int pCedulaClaborador);
-        public void setIncapacidades();
+        public Boolean cambiarEstadoVacaciones(int pIdSolicitud, String pNuevoEstado)
+        {
+            Boolean resultado = _LogicaExpedientes.cambiarEstadoSolicitud(pIdSolicitud, pNuevoEstado);
+            if (resultado)
+            {
+                obtenerVacacionesColaborador();
+                return resultado;
+            }
+            return false;
+        }
 
-        public List<Ausencia> getHistorialAusencias(int pCedulaClaborador);
-        public void setHistorialAusencias();
+        public List<Incapacidad> obtenerIncapacidadesColaborador()
+        {
+            if (_ExpedienteReal.Incapacidades == null)
+            {
+                _ExpedienteReal.Incapacidades = _LogicaExpedientes.obtenerIncapacidadesColaborador(_CedulaColaboradorActual);
+            }
+            return _ExpedienteReal.Incapacidades;
+        }
 
-        public List<Capacitacion> getCapacitaciones(int pCedulaClaborador);
-        public void setCapacitaciones();
+        public Boolean cambiarEstadoIncapacidades(int pIdSolicitud, String pNuevoEstado)
+        {
+            Boolean resultado = _LogicaExpedientes.cambiarEstadoSolicitud(pIdSolicitud, pNuevoEstado);
+            if (resultado)
+            {
+                obtenerIncapacidadesColaborador();
+                return resultado;
+            }
+            return false;
+        }
 
-        public List<Proyecto> getProyecto(int pIdClaborador);
-        public void setProyecto();
+        public List<Capacitacion> obtenerCapacitacionesColaborador()
+        {
+            if (_ExpedienteReal.Capacitaciones == null)
+            {
+                _ExpedienteReal.Capacitaciones = _LogicaExpedientes.obtenerCapacitacionesColaborador(_CedulaColaboradorActual);
+            }
+            return _ExpedienteReal.Capacitaciones;
+        }
 
-        public Contrato getContrato(int pIdClaborador);
-        public void setContrato();*/
-
+        public Contrato obtenerContratoColaborador()
+        {
+            if (_ExpedienteReal.Contrato == null)
+            {
+                _ExpedienteReal.Contrato = _LogicaExpedientes.obtenerContratoColaborador(_CedulaColaboradorActual);
+            }
+            return _ExpedienteReal.Contrato;
+        }
 
         #region Properties Expediente
         /*

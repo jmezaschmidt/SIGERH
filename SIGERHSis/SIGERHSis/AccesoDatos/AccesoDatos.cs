@@ -27,22 +27,29 @@ namespace SIGERHSis.AccesoDatos
             cmd = new SqlCommand(pStoredProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            for (int i = 0; i < pValorParametros.Length; i++)
+            if (pNombreParametros != null)
             {
-                if (pValorParametros[i] == null)
+                for (int i = 0; i < pValorParametros.Length; i++)
                 {
-                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i])).Value = DBNull.Value;
-                }
-                else
-                {
-                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i]));
+                    if (pValorParametros[i] == null)
+                    {
+                        cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i])).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i]));
+                    }
                 }
             }
 
             IDataReader reader = _DbSIGERH.ExecuteReader(cmd);
-            Boolean resultado = reader.GetBoolean(0);
 
-            return resultado;
+            if (reader.Read())
+            {
+                return reader.GetBoolean(0);
+            }
+
+            return false;
         }
 
 
@@ -52,18 +59,21 @@ namespace SIGERHSis.AccesoDatos
             cmd = new SqlCommand(pStoredProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            for (int i = 0; i < pValorParametros.Length; i++)
+            if (pNombreParametros != null)
             {
-                if (pValorParametros[i] == null)
+                for (int i = 0; i < pValorParametros.Length; i++)
                 {
-                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i])).Value = DBNull.Value;
-                }
-                else
-                {
-                    cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i]));
+                    if (pValorParametros[i] == null)
+                    {
+                        cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i])).Value = DBNull.Value;
+                    }
+                    else
+                    {
+                        cmd.Parameters.Add(new SqlParameter(pNombreParametros[i], pValorParametros[i]));
+                    }
                 }
             }
-
+            
             IDataReader reader = _DbSIGERH.ExecuteReader(cmd);
             return reader;         
         }

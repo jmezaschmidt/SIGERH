@@ -7,11 +7,12 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
 {
     public class Solicitud
     {
-
+        private DateTime _FechaSolicitud;
         private DateTime _FechaInicial;
         private DateTime _FechaFinal;
         private String _Motivo;
-        private Boolean _Estado;
+        private String _Estado;
+        private int _Id;
 
 
         public DateTime FechaInicial
@@ -32,10 +33,24 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
             set { _Motivo = value; }
         }
 
-        public Boolean Estado
+        public String Estado
         {
             get { return _Estado; }
             set { _Estado = value; }
         }
+
+        public DateTime FechaSolicitud
+        {
+            get { return _FechaSolicitud; }
+            set { _FechaSolicitud = value; }
+        }
+
+        public int Id
+        {
+            get { return _Id; }
+            set { _Id = value; }
+        }
+
+
     }
 }

@@ -10,10 +10,10 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
 
         private int _CantidadHorasLaborales;
         private DateTime _FechaCreacion;
-        private Boolean _Estado;
+        private String _Estado;
 
 
-        public Boolean Estado
+        public String Estado
         {
             get { return _Estado; }
             set { _Estado = value; }

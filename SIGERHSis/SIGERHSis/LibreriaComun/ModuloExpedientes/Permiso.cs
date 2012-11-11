@@ -7,5 +7,6 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
 {
     public class Permiso : Solicitud
     {
+
     }
 }
