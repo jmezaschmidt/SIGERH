@@ -2,15 +2,17 @@ CREATE PROCEDURE [dbo].[sp_crearCapacitacion]
 
 @nombre nvarchar(50),
 @descripcion nvarchar(100),
-@duracion int
+@duracion int,
+@fechaInicial date,
+@fechaFinal date
 	
 AS
 BEGIN
 
 	BEGIN TRY
 		
-		INSERT INTO dbo.Capacitacion(nombre, descripcion, duracion)
-		values (@nombre, @descripcion, @duracion)
+		INSERT INTO dbo.Capacitacion(nombre, descripcion, duracion, fechaInicial, fechaFinal)
+		values (@nombre, @descripcion, @duracion, @fechaInicial, @fechaFinal)
 		
 	END TRY
 	

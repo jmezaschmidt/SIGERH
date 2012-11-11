@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verColaboradesDepartamento]
+ALTER PROCEDURE [dbo].[sp_verColaboradesDepartamento]
 
 @departamento nvarchar(50)
 

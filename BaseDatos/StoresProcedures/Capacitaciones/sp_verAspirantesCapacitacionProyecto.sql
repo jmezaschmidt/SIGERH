@@ -1,6 +1,7 @@
-CREATE PROCEDURE [dbo].[sp_verAspirantesCapacitacion]
+CREATE PROCEDURE [dbo].[sp_verAspirantesCapacitacionProyecto]
 
-@idcapacitacion int
+@idcapacitacion int,
+@proyecto nvarchar(50)
 	
 AS
 BEGIN
@@ -13,7 +14,7 @@ BEGIN
 		INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador
 		LEFT JOIN dbo.Puesto ON idPuesto = FK_idPuesto
 		LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento
-		where FK_idCapacitacion = @idcapacitacion	
+		where FK_idCapacitacion != @idcapacitacion AND FK_idProyecto != (SELECT idProyecto FROM dbo.Proyecto where nombre = @proyecto)
 	
 		
 	END TRY

@@ -1,8 +1,7 @@
-CREATE PROCEDURE [dbo].[sp_crearContrato]
+ALTER PROCEDURE [dbo].[sp_crearContrato]
 
 @cedula int,
-@cantidadHoras int,
-@fechaCreacion date
+@cantidadHoras int
 	
 AS
 BEGIN

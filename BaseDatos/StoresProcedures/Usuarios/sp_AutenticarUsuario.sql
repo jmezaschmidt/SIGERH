@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_autenticarUsuario]
+ALTER PROCEDURE [dbo].[sp_autenticarUsuario]
 
 	@nickname nvarchar(40), 
 	@password nvarchar(50), 

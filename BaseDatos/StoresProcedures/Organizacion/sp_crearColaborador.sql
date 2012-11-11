@@ -20,8 +20,15 @@ BEGIN
 		(@nombre +'.'+ @apellido1 + CAST(@lastID as nvarchar), HashBytes('MD5', CAST(@cedula as nvarchar(50))), @lastID)
 		
 		SET @lastID = SCOPE_IDENTITY()		
+		
 		INSERT INTO dbo.RolesXUsuario (FK_idTipoUsuario, FK_idUsuario) 
-			values((Select idTipoUsuario FROM dbo.TipoUsuario where tipoUsuario = @tipoUsuario), @lastID) 	
+		values((Select idTipoUsuario FROM dbo.TipoUsuario where tipoUsuario = 'Colaborador'), @lastID) 	
+		
+		IF @tipoUsuario != 'Colaborador'
+		BEGIN 
+		INSERT INTO dbo.RolesXUsuario (FK_idTipoUsuario, FK_idUsuario) 
+			values((Select idTipoUsuario FROM dbo.TipoUsuario where tipoUsuario = @tipoUsuario), @lastID) 			
+		END
 		
 		exec sp_crearExpediente @cedula
 		

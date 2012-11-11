@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verContratoColaborador]
+ALTER PROCEDURE [dbo].[sp_verContratoColaborador]
 
 @cedula int
 	
@@ -6,10 +6,12 @@ AS
 BEGIN
 	BEGIN TRY
 	
-		SELECT idContrato, cantidadHorasLaborales, Contrato.fechaCreacion
+		SELECT cantidadHorasLaborales, Contrato.fechaCreacion, CASE Expediente.habilitado
+		WHEN 1 THEN 'Activo'
+		WHEN 0 THEN 'Inactivo'
+		END Habilitado 
 		FROM dbo.Contrato INNER JOIN dbo.Expediente ON idExpediente = FK_idExpediente
-		INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula AND dbo.Contrato.habilitado = 1
-		
+		INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula AND dbo.Contrato.habilitado = 1		
 	END TRY
 	
 	BEGIN CATCH
