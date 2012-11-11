@@ -1,14 +1,14 @@
-CREATE PROCEDURE [dbo].[sp_agregarDepartamento]
+CREATE PROCEDURE [dbo].[sp_crearPuesto]
 
 --Parametros
-@nombre nvarchar(50),
-@descripcion nvarchar(100)
+@puesto nvarchar(50)	
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT into dbo.Departamento(nombre, descripcion, habilitado) values (@nombre, @descripcion, 1)	
+		INSERT into dbo.Puesto(puesto) values (@puesto)	
+		SElect 1
 	
 	END TRY
 	
@@ -17,7 +17,7 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
+		Select 0
 	END CATCH		
 END
 GO

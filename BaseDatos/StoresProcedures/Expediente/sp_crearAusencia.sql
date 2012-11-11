@@ -1,14 +1,14 @@
-CREATE PROCEDURE [dbo].[sp_crearTipoUsuario]
+CREATE PROCEDURE [dbo].[sp_crearAusencia]
 
---Parametros
-@tipoUsuario nvarchar(40)
+@cedula int,
+@fecha date
 	
 AS
 BEGIN
-
 	BEGIN TRY
-		
-		INSERT into dbo.TipoUsuario (tipoUsuario) values (@tipoUsuario)
+	
+		INSERT INTO dbo.Ausencia(FK_idExpediente, fecha) values 
+		((Select idExpediente FROM dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador), @fecha)
 		
 	END TRY
 	
@@ -19,6 +19,5 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
 	END CATCH
-		
 END
 GO

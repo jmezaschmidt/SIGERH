@@ -1,17 +1,14 @@
-CREATE PROCEDURE [dbo].[sp_modificarDepartamentoJefe]
+CREATE PROCEDURE [dbo].[sp_modificarEstadoDepartamento]
 
 --Parametros
 @nombre nvarchar(50),
-@cedula int,
 @estado bit
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		UPDATE dbo.JefesXDepartamento SET habilitado = @estado where 
-		FK_idColaborador = (SELECT idColaborador FROM dbo.Colaborador where cedula = @cedula) AND
-		FK_idDepartamento = (SELECT idDepartamento FROM dbo.Departamento where nombre = @nombre)
+		UPDATE dbo.Departamento SET habilitado = @estado where idDepartamento = (SELECT idDepartamento FROM dbo.Departamento where nombre = @nombre)
 		
 	END TRY
 	

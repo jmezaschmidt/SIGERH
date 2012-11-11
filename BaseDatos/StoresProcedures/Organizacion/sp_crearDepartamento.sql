@@ -1,15 +1,16 @@
-CREATE PROCEDURE [dbo].[sp_crearTipoUsuario]
+CREATE PROCEDURE [dbo].[sp_crearDepartamento]
 
 --Parametros
-@tipoUsuario nvarchar(40)
+@nombre nvarchar(50),
+@descripcion nvarchar(100)
 	
 AS
 BEGIN
-
 	BEGIN TRY
 		
-		INSERT into dbo.TipoUsuario (tipoUsuario) values (@tipoUsuario)
-		
+		INSERT into dbo.Departamento(nombre, descripcion, habilitado) values (@nombre, @descripcion, 1)	
+		Select 1
+	
 	END TRY
 	
 	BEGIN CATCH
@@ -17,8 +18,7 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH
-		
+		Select 0
+	END CATCH		
 END
 GO

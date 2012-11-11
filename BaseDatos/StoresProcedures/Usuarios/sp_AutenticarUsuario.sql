@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_autenticarUsuario]
+CREATE PROCEDURE [dbo].[sp_autenticarUsuario]
 
 	@nickname nvarchar(40), 
 	@password nvarchar(50), 
@@ -15,9 +15,11 @@ BEGIN
 	set @passwordMD5 = HASHBYTES('MD5', @password);
 	print @passwordMD5;
 	
-    set @resultado = isnull((select 1 from dbo.Usuario INNER JOIN dbo.RolesXUsuario ON FK_idUsuario = idUsuario
+    set @resultado = isnull((select 1 from dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = dbo.Expediente.FK_idColaborador
+							INNER JOIN dbo.Usuario ON idColaborador = dbo.Usuario.FK_idColaborador 
+							INNER JOIN dbo.RolesXUsuario ON FK_idUsuario = idUsuario
 							INNER JOIN dbo.TipoUsuario ON idTipoUsuario = FK_idTipoUsuario
-							where nickname  = @nickname and password = @passwordMD5 and tipoUsuario = @tipoUsuario), 0);				
+							where nickname  = @nickname AND password = @passwordMD5 AND tipoUsuario = @tipoUsuario AND Expediente.habilitado = 1), 0);				
 	
 	select @resultado Resultado
 	

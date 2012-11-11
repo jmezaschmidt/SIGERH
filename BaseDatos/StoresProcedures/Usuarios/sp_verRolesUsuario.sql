@@ -1,13 +1,14 @@
-ALTER PROCEDURE [dbo].[sp_agregarPuesto]
+ALTER PROCEDURE [dbo].[sp_verRolesUsuario]
 
---Parametros
-@puesto nvarchar(50)	
+@cedula int
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT into dbo.Puesto(puesto) values (@puesto)	
+		Select TipoUsuario FROM dbo.Colaborador INNER JOIN Usuario ON idColaborador = FK_idColaborador
+		INNER JOIN dbo.RolesXUsuario ON idUsuario = FK_idUsuario
+		INNER JOIN dbo.TipoUsuario ON idTipoUsuario = FK_idTipoUsuario where cedula = @cedula
 	
 	END TRY
 	

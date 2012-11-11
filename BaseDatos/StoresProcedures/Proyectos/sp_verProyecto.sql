@@ -1,15 +1,11 @@
-CREATE PROCEDURE [dbo].[sp_crearTipoUsuario]
-
---Parametros
-@tipoUsuario nvarchar(40)
+CREATE PROCEDURE [dbo].[sp_verProyecto]
 	
 AS
 BEGIN
-
 	BEGIN TRY
 		
-		INSERT into dbo.TipoUsuario (tipoUsuario) values (@tipoUsuario)
-		
+		SELECT nombre, descripcion, fechaInicio, fechaFinal, EstadoProyecto FROM dbo.Proyecto INNER JOIN dbo.EstadoProyecto ON idEstadoProyecto = FK_idEstadoProyecto		
+	
 	END TRY
 	
 	BEGIN CATCH
@@ -18,7 +14,6 @@ BEGIN
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	END CATCH
-		
+	END CATCH		
 END
 GO

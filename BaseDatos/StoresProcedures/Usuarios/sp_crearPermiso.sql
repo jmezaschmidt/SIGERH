@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_crearPermiso]
+CREATE PROCEDURE [dbo].[sp_crearPermiso]
 
 --Parametros
 @permiso nvarchar(40)

@@ -1,14 +1,16 @@
-CREATE PROCEDURE [dbo].[sp_crearExpediente]
+CREATE PROCEDURE [dbo].[sp_modificarEstadoSolicitud]
 
 --Parametros
-@cedula int
+@idSolicitud int,
+@estado nvarchar(30)
 	
 AS
 BEGIN
 
 	BEGIN TRY
 	
-		INSERT into dbo.Expediente(fechaCreacion, habilitado, FK_idColaborador) values (GETDATE(), 1, (Select idColaborador FROM dbo.Colaborador where cedula = @cedula))
+		UPDATE dbo.Solicitud SET FK_idEstadoSolicitud = (SELECT idEstadoSolicitud FROM dbo.EstadoSolicitud where EstadoSolicitud = @estado)
+		where idSolicitud = @idSolicitud
 	
 	END TRY
 	

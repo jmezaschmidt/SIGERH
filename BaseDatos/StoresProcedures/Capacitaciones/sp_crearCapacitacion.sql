@@ -1,14 +1,16 @@
-CREATE PROCEDURE [dbo].[sp_crearTipoUsuario]
+CREATE PROCEDURE [dbo].[sp_crearCapacitacion]
 
---Parametros
-@tipoUsuario nvarchar(40)
+@nombre nvarchar(50),
+@descripcion nvarchar(100),
+@duracion int
 	
 AS
 BEGIN
 
 	BEGIN TRY
 		
-		INSERT into dbo.TipoUsuario (tipoUsuario) values (@tipoUsuario)
+		INSERT INTO dbo.Capacitacion(nombre, descripcion, duracion)
+		values (@nombre, @descripcion, @duracion)
 		
 	END TRY
 	
@@ -19,6 +21,5 @@ BEGIN
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
 		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
 	END CATCH
-		
 END
 GO

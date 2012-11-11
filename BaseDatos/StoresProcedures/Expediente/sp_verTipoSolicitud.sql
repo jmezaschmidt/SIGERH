@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_crearExpediente]
+CREATE PROCEDURE [dbo].[sp_verTipoSolicitud]
 
 --Parametros
 @cedula int
@@ -8,7 +8,7 @@ BEGIN
 
 	BEGIN TRY
 	
-		INSERT into dbo.Expediente(fechaCreacion, habilitado, FK_idColaborador) values (GETDATE(), 1, (Select idColaborador FROM dbo.Colaborador where cedula = @cedula))
+		SELECT TipoSolicitud FROM dbo.TipoSolicitud
 	
 	END TRY
 	
