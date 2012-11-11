@@ -52,19 +52,23 @@ namespace ConsoleApp
             for (int i = 0; i < lc.Count; i++)
             { Console.WriteLine(lc.ElementAt(i).TipoContacto + ": " + lc.ElementAt(i).ValorContacto); } */
 
-            /*List<Permiso> lp = ce.obtenerPermisosColaboradorPxy();
-            for (int i = 0; i < lp.Count; i++)
-            {
-                Permiso p = lp.ElementAt(i);
-                Console.WriteLine(lp.ElementAt(i).FechaSolicitud);
-                Console.WriteLine(lp.ElementAt(i).FechaInicial);
-                Console.WriteLine(lp.ElementAt(i).FechaFinal);
-                Console.WriteLine(lp.ElementAt(i).Motivo);
-                Console.WriteLine(lp.ElementAt(i).Estado);
-                Console.WriteLine(lp.ElementAt(i).Id);
-            }*/
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //ce.obtenerInformacionGeneral(3452706);
+            //List<Vacaciones> lp = ce.obtenerVacacionesColaboradorPxy();
+            //for (int i = 0; i < lp.Count; i++)
+            //{
+            //    Vacaciones p = lp.ElementAt(i);
+            //    Console.WriteLine(lp.ElementAt(i).FechaSolicitud);
+            //    Console.WriteLine(lp.ElementAt(i).FechaInicial);
+            //    Console.WriteLine(lp.ElementAt(i).FechaFinal);
+            //    Console.WriteLine(lp.ElementAt(i).Motivo);
+            //    Console.WriteLine(lp.ElementAt(i).Estado);
+            //    Console.WriteLine(lp.ElementAt(i).Id);
+            //}
 
-            //ControladorOrganizacion co = new ControladorOrganizacion();
+            //Console.WriteLine(ce.cambiarEstadoVacacionesPxy(11, "En Espera"));
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
             //List<Colaborador> lc = co.obtenerColaboradores(true);
             //for (int i = 0; i < lc.Count; i++)
             //{
@@ -76,6 +80,26 @@ namespace ConsoleApp
             //    Console.WriteLine("-----------");
             //}
 
+            ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            ce.obtenerInformacionGeneral(3452706);
+            Contrato c = ce.obtenerContratoColaboradorPxy();
+            Console.WriteLine(c.CantidadHorasLaborales);
+            Console.WriteLine(c.FechaCreacion);
+            Console.WriteLine(c.Estado);
+
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //ce.obtenerInformacionGeneral(3452706);
+            //List<Capacitacion> lp = ce.obtenerCapacitacionesColaboradorPxy();
+            //for (int i = 0; i < lp.Count; i++)
+            //{
+            //    Capacitacion p = lp.ElementAt(i);
+            //    Console.WriteLine(lp.ElementAt(i).Nombre);
+            //    Console.WriteLine(lp.ElementAt(i).Descripcion);
+            //    Console.WriteLine(lp.ElementAt(i).FechaInicial);
+            //    Console.WriteLine(lp.ElementAt(i).FechaFinal);
+            //    Console.WriteLine(lp.ElementAt(i).DuracionEnHoras);
+            //    Console.WriteLine("-----------");
+            //}
 
             Console.ReadLine();
         }
