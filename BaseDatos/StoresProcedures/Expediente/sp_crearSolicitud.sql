@@ -1,8 +1,9 @@
-CREATE PROCEDURE [dbo].[sp_crearSolicitud]
+ALTER PROCEDURE [dbo].[sp_crearSolicitud]
 
 @cedula int,
-@fechaInicial date,
-@fechaFinal	date,
+@fechaSolicitud datetime,
+@fechaInicial datetime,
+@fechaFinal	datetime,
 @motivo nvarchar(100),
 @tipoSolicitud nvarchar(20)
 	
@@ -10,14 +11,11 @@ AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT INTO dbo.Solicitud (fechaInicial, fechaFinal, motivo, FK_idExpediente, FK_idTipoSolicitud, FK_idEstadoSolicitud) values
-		(@fechaInicial, @fechaFinal, @motivo, 
+		INSERT INTO dbo.Solicitud (fechaSolicitud, fechaInicial, fechaFinal, motivo, FK_idExpediente, FK_idTipoSolicitud, FK_idEstadoSolicitud) values
+		(GETDATE(), @fechaInicial, @fechaFinal, @motivo, 
 		(SELECT idExpediente FROM dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula),
 		(SELECT idTipoSolicitud FROM dbo.TipoSolicitud where tipoSolicitud = @tipoSolicitud),
-		(CASE @tipoSolicitud
-			WHEN 'Incapacidad' THEN (SELECT idEstadoSolicitud FROm dbo.EstadoSolicitud where EstadoSolicitud = 'Aprobada')		
-			ELSE (SELECT idEstadoSolicitud FROm dbo.EstadoSolicitud where EstadoSolicitud = 'En Espera')
-		END))
+		(SELECT idEstadoSolicitud FROm dbo.EstadoSolicitud where EstadoSolicitud = 'En Espera'))		
 	
 	END TRY
 	
