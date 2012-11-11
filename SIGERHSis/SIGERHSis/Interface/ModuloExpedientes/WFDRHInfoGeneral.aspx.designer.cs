@@ -7,99 +7,117 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIGERHSis.Interface.ModuloUsuarios {
+namespace SIGERHSis.Interface.ModuloExpedientes {
     
     
-    public partial class WFLogin {
+    public partial class WFDRHInfoGeneral {
         
         /// <summary>
-        /// Head1 control.
+        /// LabelNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.Label LabelNombre;
         
         /// <summary>
-        /// form1 control.
+        /// LabelInfoNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label LabelInfoNombre;
         
         /// <summary>
-        /// Label3 control.
+        /// LabelCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label LabelCedula;
         
         /// <summary>
-        /// textBoxUsuario control.
+        /// LabelInfoCedula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBoxUsuario;
+        protected global::System.Web.UI.WebControls.Label LabelInfoCedula;
         
         /// <summary>
-        /// Label1 control.
+        /// LabelNacimiento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label LabelNacimiento;
         
         /// <summary>
-        /// textBoxContrasena control.
+        /// LabelInfoNacimiento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBoxContrasena;
+        protected global::System.Web.UI.WebControls.Label LabelInfoNacimiento;
         
         /// <summary>
-        /// Label2 control.
+        /// LabelPuesto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label LabelPuesto;
         
         /// <summary>
-        /// dropDownListTipoUsuario control.
+        /// LabelInfoPuesto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropDownListTipoUsuario;
+        protected global::System.Web.UI.WebControls.Label LabelInfoPuesto;
         
         /// <summary>
-        /// buttonIngresar control.
+        /// LabelDepartamento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonIngresar;
+        protected global::System.Web.UI.WebControls.Label LabelDepartamento;
         
         /// <summary>
-        /// imagenTec control.
+        /// LabelInfoDepartemento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imagenTec;
+        protected global::System.Web.UI.WebControls.Label LabelInfoDepartemento;
+        
+        /// <summary>
+        /// LabelIngreso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelIngreso;
+        
+        /// <summary>
+        /// LabelInfoIngreso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelInfoIngreso;
     }
 }

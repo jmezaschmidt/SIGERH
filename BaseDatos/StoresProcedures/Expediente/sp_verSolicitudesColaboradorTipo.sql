@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verSolicitudesColaboradorTipo]
+ALTER PROCEDURE [dbo].[sp_verSolicitudesColaboradorTipo]
 
 @cedula int,
 @tipoSolicitud nvarchar(20)
@@ -7,7 +7,7 @@ AS
 BEGIN
 	BEGIN TRY
 		
-		SELECT idSolicitud, TipoSolicitud, motivo, fechaInicial, fechaFinal, EstadoSolicitud
+		SELECT idSolicitud, fechaRealizada, motivo, fechaInicial, fechaFinal, EstadoSolicitud
 		FROM dbo.Solicitud INNER JOIN dbo.EstadoSolicitud ON idEstadoSolicitud = FK_idEstadoSolicitud
 		INNER JOIN dbo.TipoSolicitud On idTipoSolicitud = FK_idTipoSolicitud
 		INNER JOIN dbo.Expediente ON idExpediente = FK_idExpediente
