@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_crearTipoUsuario]
+CREATE PROCEDURE [dbo].[sp_crearTipoUsuario]
 
 --Parametros
 @tipoUsuario nvarchar(40)

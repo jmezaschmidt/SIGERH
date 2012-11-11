@@ -7,6 +7,9 @@ ALTER PROCEDURE [dbo].[sp_asignarDepartamentoJefe]
 AS
 BEGIN
 	BEGIN TRY
+		DECLARE @resultado bit
+		
+		SET @resultado = 0
 		
 		IF NOT EXISTS (SELECT cedula FROM dbo.Departamento 
 						INNER JOIN dbo.JefesXDepartamento ON idDepartamento = FK_idDepartamento
@@ -17,7 +20,12 @@ BEGIN
 			INSERT INTO dbo.JefesXDepartamento(FK_idDepartamento, FK_idColaborador, habilitado) values
 			((SELECT idDepartamento FROM dbo.Departamento where nombre = @nombre),
 			(SELECT idColaborador FROM dbo.Colaborador where cedula = @cedula), 1) 
+			
+			SET @resultado = 1
 		END
+		
+		Select @resultado
+		
 	END TRY
 	
 	BEGIN CATCH

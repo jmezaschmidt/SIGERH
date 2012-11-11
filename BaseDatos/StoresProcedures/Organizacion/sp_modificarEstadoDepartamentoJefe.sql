@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_modificarDepartamentoJefe]
+CREATE PROCEDURE [dbo].[sp_modificarEstadoDepartamentoJefe]
 
 --Parametros
 @nombre nvarchar(50),

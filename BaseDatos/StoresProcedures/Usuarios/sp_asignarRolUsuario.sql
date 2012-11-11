@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_asignarRolUsuario]
+CREATE PROCEDURE [dbo].[sp_asignarRolUsuario]
 
 @cedula int,
 @tipoUsuario nvarchar(40)

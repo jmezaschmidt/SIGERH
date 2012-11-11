@@ -1,15 +1,14 @@
-ALTER PROCEDURE [dbo].[sp_agregarDepartamento]
+CREATE PROCEDURE [dbo].[sp_crearPuesto]
 
 --Parametros
-@nombre nvarchar(50),
-@descripcion nvarchar(100)
+@puesto nvarchar(50)	
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT into dbo.Departamento(nombre, descripcion, habilitado) values (@nombre, @descripcion, 1)	
-		Select 1
+		INSERT into dbo.Puesto(puesto) values (@puesto)	
+		SElect 1
 	
 	END TRY
 	

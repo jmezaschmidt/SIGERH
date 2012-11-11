@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_verTipoUsuario]
+CREATE PROCEDURE [dbo].[sp_verTipoUsuario]
 	
 AS
 BEGIN

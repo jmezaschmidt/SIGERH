@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_crearExpediente]
+CREATE PROCEDURE [dbo].[sp_crearExpediente]
 
 --Parametros
 @cedula int

@@ -1,0 +1,23 @@
+CREATE PROCEDURE [dbo].[sp_verContratoColaborador]
+
+@cedula int
+	
+AS
+BEGIN
+	BEGIN TRY
+	
+		SELECT idContrato, cantidadHorasLaborales, Contrato.fechaCreacion
+		FROM dbo.Contrato INNER JOIN dbo.Expediente ON idExpediente = FK_idExpediente
+		INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula AND dbo.Contrato.habilitado = 1
+		
+	END TRY
+	
+	BEGIN CATCH
+		declare @ErrorNumber int = ERROR_NUMBER()
+		declare @ErrorSeverity int = ERROR_SEVERITY()
+		declare @ErrorState int = ERROR_STATE()
+		declare @Message nvarchar(200) = ERROR_MESSAGE()
+		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
+	END CATCH
+END
+GO

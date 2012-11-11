@@ -1,11 +1,14 @@
-ALTER PROCEDURE [dbo].[sp_asignarProyectoColaborador]
+CREATE PROCEDURE [dbo].[sp_asignarProyectoColaborador]
 
 @nombre nvarchar(50),
-@cedula nvarchar(20)
+@cedula int
 	
 AS
 BEGIN
 	BEGIN TRY
+		DECLARE @resultado bit
+		
+		SET @resultado = 0
 		
 		IF NOT EXISTS (SELECT idExpediente FROM Colaborador 
 						INNER JOIN dbo.Expediente ON idColaborador = FK_idColaborador 
@@ -16,8 +19,10 @@ BEGIN
 		INSERT into dbo.ProyectosXExpediente (FK_idExpediente, FK_idProyecto, habilitado) values
 		((SELECT idExpediente FROM dbo.Expediente INNER JOIN Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula),
 		 (SELECT idProyecto FROM dbo.Proyecto where nombre = @nombre), 1)		
+		 SET @resultado = 1
 		END
 		
+		SELECT @resultado
 		 	
 	END TRY
 	

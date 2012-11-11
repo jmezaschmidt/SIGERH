@@ -1,14 +1,10 @@
-CREATE PROCEDURE [dbo].[sp_modificarPassUsuario]
-
-@cedula int,
-@password nvarchar(50) 
+CREATE PROCEDURE [dbo].[sp_verProyecto]
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		UPDATE dbo.Usuario SET password = HashBytes('MD5', @password) 
-		where idUsuario = (SELECT idUsuario FROM dbo.Colaborador INNER JOIN dbo.Usuario ON idColaborador = FK_idColaborador where cedula = @cedula)
+		SELECT nombre, descripcion, fechaInicio, fechaFinal, EstadoProyecto FROM dbo.Proyecto INNER JOIN dbo.EstadoProyecto ON idEstadoProyecto = FK_idEstadoProyecto		
 	
 	END TRY
 	

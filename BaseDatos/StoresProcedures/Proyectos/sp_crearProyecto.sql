@@ -1,14 +1,16 @@
-ALTER PROCEDURE [dbo].[sp_crearProyecto]
+CREATE PROCEDURE [dbo].[sp_crearProyecto]
 
 @nombre nvarchar(50),
-@descripcion nvarchar(200)
+@descripcion nvarchar(200),
+@fechaInicio date,
+@fechaFinal date
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT INTO dbo.Proyecto (nombre, descripcion, fechaInicio, FK_idEstadoProyecto) values
-		(@nombre, @descripcion, GETDATE(), (SELECT idEstadoProyecto FROM dbo.EstadoProyecto where EstadoProyecto = 'Detenido'))
+		INSERT INTO dbo.Proyecto (nombre, descripcion, fechaInicio, fechaFinal, FK_idEstadoProyecto) values
+		(@nombre, @descripcion, @fechaInicio, @fechaFinal, (SELECT idEstadoProyecto FROM dbo.EstadoProyecto where EstadoProyecto = 'Detenido'))
 		Select 1
 	
 	END TRY
