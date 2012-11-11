@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_asignarPuesto]
+CREATE PROCEDURE [dbo].[sp_asignarPuesto]
 
 --Parametros
 @cedula int,

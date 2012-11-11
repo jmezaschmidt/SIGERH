@@ -1,4 +1,4 @@
 
-exec sp_agregarDepartamento 'TI', 'Departamento de Tecnologias de Informacion'
+exec sp_crearDepartamento 'TI', 'Departamento de Tecnologias de Informacion'
 
 Select * From dbo.Departamento
