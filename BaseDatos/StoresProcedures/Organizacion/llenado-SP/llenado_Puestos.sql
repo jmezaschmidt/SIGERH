@@ -1,6 +1,6 @@
 
-exec sp_agregarPuesto 'Desarrollador de Software'
-exec sp_agregarPuesto 'Contador'
-exec sp_agregarPuesto 'Jefe de Departamento'
+exec sp_crearPuesto 'Desarrollador de Software'
+exec sp_crearPuesto 'Contador'
+exec sp_crearPuesto 'Jefe de Departamento'
 
 Select * From Puesto

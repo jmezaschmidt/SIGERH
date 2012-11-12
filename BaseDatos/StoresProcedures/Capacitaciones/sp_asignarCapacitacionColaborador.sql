@@ -1,17 +1,14 @@
-CREATE PROCEDURE [dbo].[sp_asignarCapacitacionColaborador]
+ALTER PROCEDURE [dbo].[sp_asignarCapacitacionColaborador]
 
 @idCapacitacion int,
-@cedula int,
-@fechaInicio date,
-@fechaFinal date
+@cedula int
 	
 AS
 BEGIN
 	BEGIN TRY
 	
-		INSERT into dbo.CapacitacionesXExpediente(FK_idCapacitacion, FK_idExpediente, fechaInicial, fechaFinal) values
-		(@idCapacitacion, (Select idExpediente FROM dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula), 
-		@fechaInicio, @fechaFinal)
+		INSERT into dbo.CapacitacionesXExpediente(FK_idCapacitacion, FK_idExpediente) values
+		(@idCapacitacion, (Select idExpediente FROM dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula))
 		 	
 	END TRY
 	

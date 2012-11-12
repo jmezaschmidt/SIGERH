@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_modificarEstadoSolicitud]
+ALTER PROCEDURE [dbo].[sp_modificarEstadoSolicitud]
 
 --Parametros
 @idSolicitud int,
@@ -9,8 +9,14 @@ BEGIN
 
 	BEGIN TRY
 	
+		DECLARE @resultado bit
+		
+		SET @resultado = 1
+		
 		UPDATE dbo.Solicitud SET FK_idEstadoSolicitud = (SELECT idEstadoSolicitud FROM dbo.EstadoSolicitud where EstadoSolicitud = @estado)
 		where idSolicitud = @idSolicitud
+		
+		Select @resultado
 	
 	END TRY
 	
@@ -19,7 +25,8 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()		
-		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
+		SET @resultado = 0
+		Select @resultado
 	END CATCH	
 END
 GO

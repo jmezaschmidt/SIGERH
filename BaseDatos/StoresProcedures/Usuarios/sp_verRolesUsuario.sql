@@ -1,4 +1,4 @@
-ALTER PROCEDURE [dbo].[sp_verRolesUsuario]
+CREATE PROCEDURE [dbo].[sp_verRolesUsuario]
 
 @cedula int
 	

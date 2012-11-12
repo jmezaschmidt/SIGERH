@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verCapacitacion]
+CREATE PROCEDURE [dbo].[sp_verCapacitacionColaborador]
 
 @cedula int
 	
@@ -7,7 +7,7 @@ BEGIN
 
 	BEGIN TRY
 		
-		SELECT idCapacitacion, Capacitacion.nombre Capacitacion, descripcion, duracion
+		SELECT Capacitacion.nombre Capacitacion, descripcion, duracion, fechaInicial, fechaFinal
 		FROM dbo.Colaborador INNER JOIN dbo.Expediente ON idColaborador = FK_idColaborador
 		INNER JOIN dbo.CapacitacionesXExpediente ON idExpediente = FK_idExpediente
 		INNER JOIN dbo.Capacitacion ON idCapacitacion = FK_idCapacitacion where cedula = @cedula

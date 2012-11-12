@@ -7,7 +7,7 @@ AS
 BEGIN
 	BEGIN TRY
 		
-		SELECT idSolicitud, fechaRealizada, motivo, fechaInicial, fechaFinal, EstadoSolicitud
+		SELECT idSolicitud, fechaSolicitud, motivo, fechaInicial, fechaFinal, EstadoSolicitud
 		FROM dbo.Solicitud INNER JOIN dbo.EstadoSolicitud ON idEstadoSolicitud = FK_idEstadoSolicitud
 		INNER JOIN dbo.TipoSolicitud On idTipoSolicitud = FK_idTipoSolicitud
 		INNER JOIN dbo.Expediente ON idExpediente = FK_idExpediente

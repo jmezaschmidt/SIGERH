@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_verColaboradores]
+ALTER PROCEDURE [dbo].[sp_verColaboradores]
 
 @habilitado bit
 

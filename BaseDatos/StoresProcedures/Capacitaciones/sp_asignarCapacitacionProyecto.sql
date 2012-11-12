@@ -1,10 +1,8 @@
-CREATE PROCEDURE [dbo].[sp_asignarCapacitacionProyecto]
+ALTER PROCEDURE [dbo].[sp_asignarCapacitacionProyecto]
 
 @nombreProyecto nvarchar(50),
-@idCapacitacion int,
-@fechaInicio date,
-@fechaFinal date
-	
+@idCapacitacion int
+
 AS
 BEGIN
 	--BEGIN TRY
@@ -24,8 +22,8 @@ BEGIN
 		WHILE @@FETCH_STATUS = 0
 		BEGIN
 			
-			INSERT INTO dbo.CapacitacionesXExpediente (fechaInicial, fechaFinal, FK_idCapacitacion, FK_idExpediente, FK_idProyecto)
-			values(@fechaInicio, @fechaFinal, @idCapacitacion, @idExpediente, @idProyecto)
+			INSERT INTO dbo.CapacitacionesXExpediente (FK_idCapacitacion, FK_idExpediente, FK_idProyecto)
+			values(@idCapacitacion, @idExpediente, @idProyecto)
 			
 			FETCH NEXT FROM cursorColaboradores INTO @idExpediente
 		END
