@@ -49,5 +49,15 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
             return _LogicaOrganizacion.crearProyecto(proyecto);
         }
 
+        public List<Colaborador> obtenerColaboradoresFuerCapacitacion(int pIdCapacitacion)
+        {
+            return _LogicaOrganizacion.obtenerColaboradoresFueraCapacitacion(pIdCapacitacion);
+        }
+
+        public List<String> asignarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        {
+            return _LogicaOrganizacion.asignarColaboradoresCapacitacion(pColaboradores, pIdCapacitacion);
+        }
+
     }
 }

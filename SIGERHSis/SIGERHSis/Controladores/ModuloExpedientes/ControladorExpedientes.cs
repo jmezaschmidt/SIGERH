@@ -84,6 +84,5 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
             return _Expediente.obtenerContratoColaborador();
         }
 
-
     }
 }

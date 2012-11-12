@@ -124,22 +124,6 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
             reader.Close();
             return contrato;
         }
-
-        //public List<String> asignarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
-        //{
-        //    List<String> colaboradoresSinAsignar = new List<String>();
-        //    String[] nombreParametros = { "@idCapacitacion", "@cedula", @ };
-
-        //    for (int i = 0; i < pColaboradores.Count; i++)
-        //    {
-        //        Boolean resultado = _AccesoDatos.escribir("sp_asignarProyectoColaborador", nombreParametros, pColaboradores.ElementAt(i).Cedula, pProyecto);
-        //        if (resultado == false)
-        //        {
-        //            colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
-        //        }
-        //    }
-        //    return colaboradoresSinAsignar;
-        //}
             
     }
 }
