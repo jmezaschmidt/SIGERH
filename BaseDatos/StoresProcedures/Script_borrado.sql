@@ -1,9 +1,3 @@
-
-
-
-
-
-
 DELETE FROM dbo.JefesXDepartamento
 
 DELETE FROM dbo.RolesXUsuario
@@ -23,6 +17,9 @@ DELETE FROM dbo.Capacitacion
 DBCC CHECKIDENT('dbo.Capacitacion', RESEED, 0)
 
 DELETE FROM dbo.ProyectosXExpediente
+
+DELETE FROM dbo.Proyecto
+DBCC CHECKIDENT('dbo.Proyecto', RESEED, 0)
 
 DELETE FROM dbo.Expediente
 DBCC CHECKIDENT('dbo.Expediente', RESEED, 0)

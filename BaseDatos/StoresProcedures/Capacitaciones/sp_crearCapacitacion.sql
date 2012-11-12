@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_crearCapacitacion]
+ALTER PROCEDURE [dbo].[sp_crearCapacitacion]
 
 @nombre nvarchar(50),
 @descripcion nvarchar(100),
@@ -8,12 +8,15 @@ CREATE PROCEDURE [dbo].[sp_crearCapacitacion]
 	
 AS
 BEGIN
-
 	BEGIN TRY
+	
+		DECLARE @resultado bit
+		SET @resultado = 1
 		
 		INSERT INTO dbo.Capacitacion(nombre, descripcion, duracion, fechaInicial, fechaFinal)
 		values (@nombre, @descripcion, @duracion, @fechaInicial, @fechaFinal)
 		
+		SELECT @resultado		
 	END TRY
 	
 	BEGIN CATCH
@@ -21,7 +24,9 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
+		PRINT @Message
+		SET @resultado = 1
+		SELECT @resultado
 	END CATCH
 END
 GO

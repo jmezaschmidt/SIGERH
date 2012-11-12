@@ -5,7 +5,7 @@ ALTER PROCEDURE [dbo].[sp_asignarCapacitacionProyecto]
 
 AS
 BEGIN
-	--BEGIN TRY
+	BEGIN TRY
 		
 		DECLARE @idProyecto int		
 		SET @idProyecto = (Select idProyecto FROM dbo.Proyecto where nombre = @nombreProyecto)
@@ -20,25 +20,31 @@ BEGIN
 		FETCH NEXT FROM cursorColaboradores INTO @idExpediente
 		
 		WHILE @@FETCH_STATUS = 0
-		BEGIN
-			
-			INSERT INTO dbo.CapacitacionesXExpediente (FK_idCapacitacion, FK_idExpediente, FK_idProyecto)
-			values(@idCapacitacion, @idExpediente, @idProyecto)
-			
+		BEGIN		
+			IF EXISTS(SELECT * FROM dbo.CapacitacionesXExpediente where FK_idExpediente = @idExpediente AND FK_idCapacitacion = @idCapacitacion)
+			BEGIN
+				UPDATE dbo.CapacitacionesXExpediente SET FK_idProyecto = (SELECT idProyecto FROM dbo.Proyecto where nombre = @nombreProyecto)
+				where FK_idExpediente = @idExpediente AND FK_idCapacitacion = @idCapacitacion
+			END
+			ELSE
+			BEGIN
+				INSERT INTO dbo.CapacitacionesXExpediente (FK_idCapacitacion, FK_idExpediente, FK_idProyecto)
+				values(@idCapacitacion, @idExpediente, @idProyecto)			
+			END			
 			FETCH NEXT FROM cursorColaboradores INTO @idExpediente
 		END
 		CLOSE cursorColaboradores 
 		DEALLOCATE cursorColaboradores
 		
 		 	
-	--END TRY
+	END TRY
 	
-	--BEGIN CATCH
-	--	declare @ErrorNumber int = ERROR_NUMBER()
-	--	declare @ErrorSeverity int = ERROR_SEVERITY()
-	--	declare @ErrorState int = ERROR_STATE()
-	--	declare @Message nvarchar(200) = ERROR_MESSAGE()
-	--	RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
-	--END CATCH		
+	BEGIN CATCH
+		declare @ErrorNumber int = ERROR_NUMBER()
+		declare @ErrorSeverity int = ERROR_SEVERITY()
+		declare @ErrorState int = ERROR_STATE()
+		declare @Message nvarchar(200) = ERROR_MESSAGE()
+		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
+	END CATCH		
 END
 GO

@@ -4,15 +4,22 @@ ALTER PROCEDURE [dbo].[sp_verAspirantesProyecto]
 	
 AS
 BEGIN
-	BEGIN TRY
-		
-		SELECT Colaborador.nombre +' '+ apellido1 +' '+apellido2 Colaborador, cedula, ISNULL(puesto, 'Sin asignar')
-		FROM dbo.Puesto RIGHT JOIN dbo.Colaborador ON idPuesto = FK_idPuesto
-		INNER JOIN dbo.Expediente ON idColaborador = FK_idColaborador
-		INNER JOIN dbo.ProyectosXExpediente ON idExpediente = FK_idExpediente
-		INNER JOIN dbo.Proyecto ON idProyecto = FK_idProyecto where Proyecto.nombre != @nombre
-		
-	
+	BEGIN TRY	
+		Select cedula, Colaborador.nombre + ' ' + apellido1 + ' ' + apellido2 Nombre, ISNULL(puesto, 'Sin asignar') Puesto, 
+		ISNULL(Departamento.nombre, 'Sin asignar') Departamento 
+		FROM dbo.Expediente INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador
+		LEFT JOIN dbo.Puesto ON idPuesto = FK_idPuesto
+		LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento			
+		Except
+		(
+			Select cedula, Colaborador.nombre + ' ' + apellido1 + ' ' + apellido2 Nombre, ISNULL(puesto, 'Sin asignar') Puesto, 
+			ISNULL(Departamento.nombre, 'Sin asignar') Departamento 
+			FROM dbo.ProyectosXExpediente INNER JOIN dbo.Expediente ON idExpediente = FK_idExpediente
+			INNER JOIN dbo.Colaborador ON idColaborador = FK_idColaborador
+			LEFT JOIN dbo.Puesto ON idPuesto = FK_idPuesto
+			LEFT JOIN dbo.Departamento ON idDepartamento = FK_idDepartamento
+			where FK_idProyecto = (SELECT idProyecto FROM dbo.Proyecto where nombre = @nombre)
+		)				
 	END TRY
 	
 	BEGIN CATCH
