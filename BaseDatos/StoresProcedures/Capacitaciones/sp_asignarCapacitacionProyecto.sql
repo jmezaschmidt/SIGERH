@@ -7,6 +7,9 @@ AS
 BEGIN
 	BEGIN TRY
 		
+		DECLARE @resultado bit
+		SET @resultado = 1
+				
 		DECLARE @idProyecto int		
 		SET @idProyecto = (Select idProyecto FROM dbo.Proyecto where nombre = @nombreProyecto)
 		
@@ -36,6 +39,7 @@ BEGIN
 		CLOSE cursorColaboradores 
 		DEALLOCATE cursorColaboradores
 		
+		SELECT @resultado
 		 	
 	END TRY
 	
@@ -44,7 +48,8 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		RAISERROR (@Message, @ErrorNumber, @ErrorSeverity, @ErrorState)
+		SET @resultado = 1
+		SELECT @resultado
 	END CATCH		
 END
 GO
