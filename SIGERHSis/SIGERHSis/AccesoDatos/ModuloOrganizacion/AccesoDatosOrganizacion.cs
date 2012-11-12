@@ -77,8 +77,45 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
 
         public Boolean crearProyecto(Proyecto pProyecto)
         {
-            String[] nombreParametros = { "@nombre", "@fechaInicial", "@fechaFinal", "@descripcion" };
-            return _AccesoDatos.escribir("sp_asignarProyectoColaborador", nombreParametros, pProyecto.Nombre, pProyecto.FechaInicial, pProyecto.FechaFinal, pProyecto.Descripcion);
+            String[] nombreParametros = { "@nombre", "@descripcion", "@fechaInicio", "@fechaFinal" };
+            return _AccesoDatos.escribir("sp_crearProyecto", nombreParametros, pProyecto.Nombre, pProyecto.Descripcion, pProyecto.FechaInicial, pProyecto.FechaFinal);
+        }
+
+        public List<String> asignarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        {
+            List<String> colaboradoresSinAsignar = new List<String>();
+            String[] nombreParametros = { "@idCapacitacion", "@cedula" };
+
+            for (int i = 0; i < pColaboradores.Count; i++)
+            {
+                Boolean resultado = _AccesoDatos.escribir("sp_asignarCapacitacionColaborador", nombreParametros, pColaboradores.ElementAt(i).Cedula, pIdCapacitacion);
+                if (resultado == false)
+                {
+                    colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+                }
+            }
+            return colaboradoresSinAsignar;
+        }
+
+        public List<Colaborador> obtenerColaboradoresFueraCapacitacion(int pIdCapacitacion)
+        {
+            List<Colaborador> colaboradores = new List<Colaborador>();
+            String[] nombreParametros = { "@idCapacitacion" };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verAspirantesCapacitacion", nombreParametros, pIdCapacitacion);
+
+            while (reader.Read())
+            {
+                Colaborador _colaborador = new Colaborador();
+                _colaborador.Nombre = reader.GetString(0);
+                _colaborador.Cedula = reader.GetInt32(1);
+                _colaborador.Puesto = reader.GetString(2);
+                _colaborador.Departamento = reader.GetString(3);
+                colaboradores.Add(_colaborador);
+            }
+
+            reader.Close();
+            return colaboradores;
         }
 
 

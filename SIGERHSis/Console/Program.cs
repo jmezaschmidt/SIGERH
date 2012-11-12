@@ -80,12 +80,12 @@ namespace ConsoleApp
             //    Console.WriteLine("-----------");
             //}
 
-            ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
-            ce.obtenerInformacionGeneral(3452706);
-            Contrato c = ce.obtenerContratoColaboradorPxy();
-            Console.WriteLine(c.CantidadHorasLaborales);
-            Console.WriteLine(c.FechaCreacion);
-            Console.WriteLine(c.Estado);
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //ce.obtenerInformacionGeneral(3452706);
+            //Contrato c = ce.obtenerContratoColaboradorPxy();
+            //Console.WriteLine(c.CantidadHorasLaborales);
+            //Console.WriteLine(c.FechaCreacion);
+            //Console.WriteLine(c.Estado);
 
             //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
             //ce.obtenerInformacionGeneral(3452706);
@@ -100,6 +100,10 @@ namespace ConsoleApp
             //    Console.WriteLine(lp.ElementAt(i).DuracionEnHoras);
             //    Console.WriteLine("-----------");
             //}
+
+            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            DateTime dt = Convert.ToDateTime("01/08/2008");
+            Console.WriteLine(co.crearProyecto("Proyecto Nuevo Dos", dt, dt, "Esta es la descripción del Proyecto Nuevo Dos"));
 
             Console.ReadLine();
         }

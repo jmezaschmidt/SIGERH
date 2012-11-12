@@ -105,7 +105,6 @@ namespace SIGERHSis.Logica.ModuloExpedientes
         {
             return _AccesoDatosExpedientes.obtenerContratoColaborador(pCedulaClaborador);
         }
-        
 
     }
 }
