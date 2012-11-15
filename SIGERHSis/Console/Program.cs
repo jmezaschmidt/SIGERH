@@ -139,6 +139,20 @@ namespace ConsoleApp
             //}
 
             //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<Capacitacion> lc = co.obtenerCapacitaciones();
+            //for (int i = 0; i < lc.Count; i++)
+            //{
+            //    Capacitacion c = lc.ElementAt(i);
+            //    Console.WriteLine(c.Id);
+            //    Console.WriteLine(c.Nombre);
+            //    Console.WriteLine(c.DuracionEnHoras);
+            //    Console.WriteLine(c.Descripcion);
+            //    Console.WriteLine(c.FechaInicial);
+            //    Console.WriteLine(c.FechaFinal);
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
             //List<Colaborador> lc = new List<Colaborador>();
             //Colaborador c = new Colaborador();
             //c.Nombre = "Mau";
@@ -171,6 +185,36 @@ namespace ConsoleApp
             //    Console.WriteLine(ls.ElementAt(i));
             //    Console.WriteLine("-----------");
             //}
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<Colaborador> lc = co.obtenerColaboradoresProyecto("ERP");
+            //for (int i = 0; i < lc.Count; i++)
+            //{
+            //    Colaborador c = lc.ElementAt(i);
+            //    Console.WriteLine(lc.ElementAt(i).Cedula);
+            //    Console.WriteLine(lc.ElementAt(i).Nombre);
+            //    Console.WriteLine(lc.ElementAt(i).Puesto);
+            //    Console.WriteLine(lc.ElementAt(i).Departamento);
+            //    Console.WriteLine("-----------");
+            //}
+
+            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            List<Colaborador> lc = new List<Colaborador>();
+            Colaborador c = new Colaborador();
+            c.Nombre = "Mau";
+            c.Cedula = 114740899;
+            lc.Add(c);
+            c = new Colaborador();
+            c.Nombre = "Javi";
+            c.Cedula = 3452706;
+            lc.Add(c);
+            List<String> ls = co.quitarColaboradoresProyecto(lc, "ERP");
+            for (int i = 0; i < ls.Count; i++)
+            {
+                Console.WriteLine(ls.ElementAt(i));
+                Console.WriteLine("-----------");
+            }
+            
 
             Console.ReadLine();
         }

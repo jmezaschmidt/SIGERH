@@ -57,6 +57,21 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
             return _AccesoDatosOrganizacion.obtenerProyectos();
         }
 
+        public List<Capacitacion> obtenerCapacitaciones()
+        {
+            return _AccesoDatosOrganizacion.obtenerCapacitaciones();
+        }
+
+        public List<Colaborador> obtenerColaboradoresProyecto(String pNombreProyecto)
+        {
+            return _AccesoDatosOrganizacion.obtenerColaboradoresProyecto(pNombreProyecto);
+        }
+
+        public List<String> quitarColaboradoresProyecto(List<Colaborador> pColaboradores, String pProyecto)
+        {
+            return _AccesoDatosOrganizacion.quitarColaboradoresProyecto(pColaboradores, pProyecto);
+        }
+
     }
 
 }

@@ -13,43 +13,29 @@ namespace SIGERHSis.Logica.ModuloExpedientes
         private LogicaExpedientes _LogicaExpedientes;
         private int _CedulaColaboradorActual;
 
-        public ProxyExpediente() {
+        public ProxyExpediente()
+        {
             _ExpedienteReal = new Expediente();
             _LogicaExpedientes = new LogicaExpedientes();
             _CedulaColaboradorActual = -1;
         }
 
-        private Colaborador obtenerColaborador(int pCedulaClaborador)
+        private Colaborador obtenerColaborador()
         {
-            _ExpedienteReal.Colaborador = _LogicaExpedientes.obtenerColaborador(pCedulaClaborador);
+            _ExpedienteReal.Colaborador = _LogicaExpedientes.obtenerColaborador(_CedulaColaboradorActual);
             return _ExpedienteReal.Colaborador;
         }
 
-        public Colaborador obtenerInformacionGeneral(int pCedulaClaborador)
+        public void iniciarExpediente(int pCedulaColaborador)
         {
-            if (_CedulaColaboradorActual != pCedulaClaborador)
-            {
-                _ExpedienteReal = new Expediente();
-                _ExpedienteReal.Colaborador = obtenerColaborador(pCedulaClaborador);
-            }
-
-            Colaborador colaborador = new Colaborador();
-            colaborador.Cedula = _ExpedienteReal.Colaborador.Cedula;
-            colaborador.Nombre = _ExpedienteReal.Colaborador.Nombre;
-            colaborador.FechaNacimiento = _ExpedienteReal.Colaborador.FechaNacimiento;
-            colaborador.Puesto = _ExpedienteReal.Colaborador.Puesto;
-            colaborador.Departamento = _ExpedienteReal.Colaborador.Departamento;
-            colaborador.FechaIngreso = _ExpedienteReal.Colaborador.FechaIngreso;
-            colaborador.Estado = _ExpedienteReal.Colaborador.Estado;
-
-            _CedulaColaboradorActual = pCedulaClaborador;
-
-            return colaborador;
+            _CedulaColaboradorActual = pCedulaColaborador;
+            _ExpedienteReal = new Expediente();
+            _ExpedienteReal.Colaborador = obtenerColaborador();
         }
 
-        public List<Contacto> obtenerContactos()
+        public Colaborador obtenerInformacionGeneral()
         {
-            return _ExpedienteReal.Colaborador.Contactos;
+            return _ExpedienteReal.Colaborador;
         }
 
         public List<Permiso> obtenerPermisosColaborador()
@@ -66,7 +52,7 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             Boolean resultado = _LogicaExpedientes.cambiarEstadoSolicitud(pIdSolicitud, pNuevoEstado);
             if (resultado)
             {
-                obtenerPermisosColaborador();
+                _ExpedienteReal.Permisos = _LogicaExpedientes.obtenerPermisosColaborador(_CedulaColaboradorActual);
                 return resultado;
             }
             return false;
@@ -86,7 +72,7 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             Boolean resultado = _LogicaExpedientes.cambiarEstadoSolicitud(pIdSolicitud, pNuevoEstado);
             if (resultado)
             {
-                obtenerVacacionesColaborador();
+                _ExpedienteReal.Vacaciones = _LogicaExpedientes.obtenerVacacionesColaborador(_CedulaColaboradorActual);
                 return resultado;
             }
             return false;
@@ -106,7 +92,7 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             Boolean resultado = _LogicaExpedientes.cambiarEstadoSolicitud(pIdSolicitud, pNuevoEstado);
             if (resultado)
             {
-                obtenerIncapacidadesColaborador();
+                _ExpedienteReal.Incapacidades = _LogicaExpedientes.obtenerIncapacidadesColaborador(_CedulaColaboradorActual);
                 return resultado;
             }
             return false;
@@ -130,63 +116,5 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             return _ExpedienteReal.Contrato;
         }
 
-        #region Properties Expediente
-        /*
-        public DateTime FechaCreacion
-        {
-            get { return _ExpedienteReal.FechaCreacion; }
-            set { _ExpedienteReal.FechaCreacion = value; }
-        }
-
-        public Colaborador Colaborador
-        {
-            get { return _ExpedienteReal.Colaborador; }
-            set { _ExpedienteReal.Colaborador = value; }
-        }
-
-        public List<Solicitud> Permisos
-        {
-            get { return _ExpedienteReal.Permisos; }
-            set { _ExpedienteReal.Permisos = value; }
-        }
-
-        public List<Vacaciones> Vacaciones
-        {
-            get { return _ExpedienteReal.Vacaciones; }
-            set { _ExpedienteReal.Vacaciones = value; }
-        }
-
-        public List<Solicitud> Incapacidades
-        {
-            get { return _ExpedienteReal.Incapacidades; }
-            set { _ExpedienteReal.Incapacidades = value; }
-        }
-
-        public List<Ausencia> HistorialAusencias
-        {
-            get { return _ExpedienteReal.HistorialAusencias; }
-            set { _ExpedienteReal.HistorialAusencias = value; }
-        }
-
-        public List<Capacitacion> Capacitaciones
-        {
-            get { return _ExpedienteReal.Capacitaciones; }
-            set { _ExpedienteReal.Capacitaciones = value; }
-        }
-
-        public List<Proyecto> Proyecto
-        {
-            get { return _ExpedienteReal.Proyecto; }
-            set { _ExpedienteReal.Proyecto = value; }
-        }
-
-        public Contrato Contrato
-        {
-            get { return _ExpedienteReal.Contrato; }
-            set { _ExpedienteReal.Contrato = value; }
-        }
-        */
-        #endregion
-        
     }
 }

@@ -147,8 +147,8 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             reader.Close();
             return proyectos;
         }
-        /*
-        public List<Capacitacion> obtenerProyectos()
+
+        public List<Capacitacion> obtenerCapacitaciones()
         {
             String[] nombreParametros = { };
             List<Capacitacion> capacitaciones = new List<Capacitacion>();
@@ -158,16 +158,55 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             while (reader.Read())
             {
                 Capacitacion _capacitacion = new Capacitacion();
-                _capacitacion.Nombre = reader.GetString(0);
-                _capacitacion.Descripcion = reader.GetString(1);
+                _capacitacion.Id = reader.GetInt32(0);
+                _capacitacion.Nombre = reader.GetString(1);
                 _capacitacion.FechaInicial = reader.GetDateTime(2);
                 _capacitacion.FechaFinal = reader.GetDateTime(3);
+                _capacitacion.Descripcion = reader.GetString(4);
+                _capacitacion.DuracionEnHoras = reader.GetInt32(5);
                 capacitaciones.Add(_capacitacion);
             }
 
             reader.Close();
             return capacitaciones;
-        }*/
+        }
+
+        public List<Colaborador> obtenerColaboradoresProyecto(String pNombreProyecto)
+        {
+            List<Colaborador> colaboradores = new List<Colaborador>();
+            String[] nombreParametros = { "@nombre" };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verColaboradoresProyecto", nombreParametros, pNombreProyecto);
+
+            while (reader.Read())
+            {
+                Colaborador _colaborador = new Colaborador();
+                _colaborador.Nombre = reader.GetString(0);
+                _colaborador.Cedula = reader.GetInt32(1);
+                _colaborador.Puesto = reader.GetString(2);
+                _colaborador.Departamento = reader.GetString(3);
+                colaboradores.Add(_colaborador);
+            }
+
+            reader.Close();
+            return colaboradores;
+        }
+
+        public List<String> quitarColaboradoresProyecto(List<Colaborador> pColaboradores, String pProyecto)
+        {
+            List<String> colaboradoresSinAsignar = new List<String>();
+            String[] nombreParametros = { "@nombre", "@cedula" };
+
+            for (int i = 0; i < pColaboradores.Count; i++)
+            {
+                Boolean resultado = _AccesoDatos.escribir("sp_eliminarProyectoColaborador", nombreParametros, pProyecto, pColaboradores.ElementAt(i).Cedula);
+                if (resultado == false)
+                {
+                    colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+                }
+            }
+            return colaboradoresSinAsignar;
+        }
 
     }
 }
