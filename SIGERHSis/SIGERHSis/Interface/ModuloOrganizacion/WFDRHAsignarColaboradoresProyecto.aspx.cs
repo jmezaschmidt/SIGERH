@@ -17,7 +17,7 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
         }
 
         public void obtenerProyectos(){
-            List<Proyectos> proyectos = controladorOrganizacion.
+
         }
 
     }

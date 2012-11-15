@@ -28,6 +28,10 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
             return _ControladorExpedientes;
         }
 
+        public void iniciarExpediente(int pCedulaColaborador)
+        {
+            _Expediente.iniciarExpediente(pCedulaColaborador);
+        }
 
         public Colaborador obtenerInformacionGeneral()
         {
