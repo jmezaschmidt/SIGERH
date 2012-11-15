@@ -117,5 +117,9 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             return _AccesoDatosExpedientes.crearContrato(pCedula, pCantidadHoras);
         }
 
+        public Boolean crearSolicitud(int pCedula, Solicitud pSolicitud, String pTipoSolicitud)
+        {
+            return _AccesoDatosExpedientes.crearSolicitud(pCedula, pSolicitud, pTipoSolicitud);
+        }
     }
 }

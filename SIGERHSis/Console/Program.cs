@@ -272,8 +272,13 @@ namespace ConsoleApp
             //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
             //Console.WriteLine(ce.crearContrato(123456, 48));
 
-            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
-            Console.WriteLine(co.crearDepartamento("Nuevo Depart", "Es un departamento de prueba", "TI"));
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //Console.WriteLine(co.crearDepartamento("Nuevo Depart", "Es un departamento de prueba", "TI"));
+
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Vacaciones"));
+            //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Permiso"));
+            //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Incapacidad"));
 
             Console.ReadLine();
         }

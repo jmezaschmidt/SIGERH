@@ -142,7 +142,7 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
         public Boolean crearSolicitud(int pCedula, Solicitud pSolicitud, String pTipoSolicitud) 
         {
             String[] nombreParametros = { "@cedula", "@fechaInicial", "@fechaFinal", "@motivo", "@tipoSolicitud" };
-            return _AccesoDatos.escribir("sp_crearSolicitud", nombreParametros, pCedula, pSolicitud.FechaInicial, pSolicitud.FechaInicial, pSolicitud.Motivo, pTipoSolicitud); 
+            return _AccesoDatos.escribir("sp_crearSolicitud", nombreParametros, pCedula, pSolicitud.FechaInicial, pSolicitud.FechaFinal, pSolicitud.Motivo, pTipoSolicitud); 
         }
             
     }
