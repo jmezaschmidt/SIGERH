@@ -251,22 +251,7 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return _AccesoDatos.escribir("sp_asignarCapacitacionProyecto", nombreParametros, pNombreProyecto, pIdCapacitacion);
         }
 
-        public List<String> obtenerDepartamentos()
-        {
-            List<String> departamentos = new List<String>();
-            String[] nombreParametros = { };
-
-            IDataReader reader = _AccesoDatos.leer("sp_verDepartamentos", nombreParametros);
-
-            while (reader.Read())
-            {
-                departamentos.Add(reader.GetString(0));
-            }
-
-            reader.Close();
-            return departamentos;
-        }
-
+        
         public List<String> obtenerPuestos()
         {
             List<String> puestos = new List<String>();
@@ -289,7 +274,41 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return _AccesoDatos.escribir("sp_crearDepartamento", nombreParametros, pNombre, pDescripcion, pPadre);
         }
 
-        
+        public List<Departamento> obtenerDepartamentosEstructura()
+        {
+            List<Departamento> departamentos = new List<Departamento>();
+            String[] nombreParametros = { };
+            IDataReader reader = _AccesoDatos.leer("sp_verDepartamentos", nombreParametros);
+
+            while (reader.Read())
+            {
+                Departamento departamento = new Departamento();
+                departamento.Nombre = reader.GetString(0);
+                departamento.Descripcion = reader.GetString(1);
+                departamento.Habilitado = reader.GetBoolean(2);
+                departamento.Padre = reader.GetString(3);
+                departamentos.Add(departamento);
+            }
+
+            reader.Close();
+            return departamentos;
+        }
+        public List<String> obtenerDepartamentos()
+        {
+            List<String> departamentos = new List<String>();
+            String[] nombreParametros = { };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verDepartamentos", nombreParametros);
+
+            while (reader.Read())
+            {
+                departamentos.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return departamentos;
+        }
+
 
     }
 }

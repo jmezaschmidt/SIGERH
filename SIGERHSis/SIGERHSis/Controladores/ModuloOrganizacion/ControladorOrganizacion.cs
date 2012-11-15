@@ -120,6 +120,9 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
         {
             return _LogicaOrganizacion.crearDepartamento(pNombre, pDescripcion, pPadre);
         }
-
+        public String verEstructuraOrganizacional()
+        {
+            return _LogicaOrganizacion.crearHTMLEstructuraOrg();
+        }
     }
 }

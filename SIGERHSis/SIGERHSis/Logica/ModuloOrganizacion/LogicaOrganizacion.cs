@@ -101,6 +101,40 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
         {
             return _AccesoDatosOrganizacion.crearDepartamento(pNombre, pDescripcion, pPadre);
         }
+        public String crearHTMLEstructuraOrg()
+        {
+            String html = "";
+            List<Departamento> departamentos = _AccesoDatosOrganizacion.obtenerDepartamentosEstructura();
+
+            html += "<ul id=" + "\"org\" style=\"display:none\"" + "><li>Departamentos<ul>";
+            for (int i = 0; i < departamentos.Count; i++)
+            {
+                if (departamentos[i].Padre.Equals("Sin asignar"))
+                {
+                    html += "<li>" + departamentos[i].Nombre + "<ul>" + recorridoArbol(departamentos[i].Nombre);
+                    html += "</ul></li>";
+                }
+            }
+            html += "</ul></li><ul>";
+            return html;
+        }
+
+
+        private String recorridoArbol(String padre)
+        {
+            String phtml = "";
+            List<Departamento> departamentos = _AccesoDatosOrganizacion.obtenerDepartamentosEstructura();
+            for (int i = 0; i < departamentos.Count; i++)
+            {
+                if (departamentos[i].Padre.Equals(padre))
+                {
+                    phtml += "<li>" + departamentos[i].Nombre + "<ul>";
+                    phtml += recorridoArbol(departamentos[i].Nombre);
+                    phtml += "</ul></li>";
+                }
+            }
+            return phtml;
+        }
 
     }
 

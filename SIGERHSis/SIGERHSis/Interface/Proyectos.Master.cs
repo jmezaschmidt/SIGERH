@@ -54,5 +54,11 @@ namespace SIGERHSis.Interface
               Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHQuitarColaboradoresProyecto.aspx");
             // Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHQuitarColaboradoresProyecto.aspx");
         }
+
+        protected void botonDepartamentos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHEstructura.aspx");
+            //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHEstructura.aspx");
+        }
     }
 }

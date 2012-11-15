@@ -70,6 +70,12 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
             //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHAsignarProyectoCapacitacion.aspx");
         }
 
+        protected void botonDepartamentos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHEstructura.aspx");
+            //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHEstructura.aspx");
+        }
+
      
 
         
