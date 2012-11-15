@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WFDRHExpediente.master.cs" Inherits="SIGERHSis.Interface.WFDRHExpediente" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Dirección de Recursos Humanos</title>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../css/Global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="header" style="width: 100%">
+        <div style="width: 400px; float: left; margin-left:27px">
+        <asp:Image ID="Image1" runat="server" 
+            ImageUrl="~/Images/SIGERGH LogoPeq.png" />
+        </div>
+            <div>
+                <asp:Label ID="labelUsuario" runat="server" Text="Usuario"></asp:Label>
+            </div>
+    </div>
+    <form id="form2" runat="server">
+    <div id="menu_Expediente" class = "menu_Expediente">
+    <div style="padding: 0px; margin: 0px; float: left;">
+        
+        </div>
+        <asp:Button ID="btnInformacionGeneralExp" runat="server" 
+            Text="Información General" onclick="btnInformacionGeneralExp_Click" />
+        <asp:Button ID="btnPermisosExp" runat="server" Text="Permisos Laborales" 
+            onclick="btnPermisos_Click" />
+        <asp:Button ID="btnVacacionesExp" runat="server" Text="Vacaciones" 
+            onclick="btnVacacionesExp_Click" />
+        <asp:Button ID="btnIncapacidadesExp" runat="server" Text="Incapacidades" 
+            onclick="btnIncapacidadesExp_Click" />
+        <asp:Button ID="btnCapacitaciones" runat="server" Text="Capacitaciones" 
+            onclick="btnCapacitaciones_Click" />
+        <asp:Button ID="btnContrato" runat="server" Text="Contrato" 
+            onclick="btnContrato_Click" />
+    </div>
+    <div id="content">
+        
+         <div id="menuContent" style="width: 300px; float: left;">
+             <asp:Button ID="botonExpedientes" runat="server" Text="Expedientes" 
+                 BorderStyle="None" CssClass="botonMenu"/>
+             <br />
+             <asp:Button ID="botonSolicitudes" runat="server" Text="Solicitudes" 
+                  BorderStyle="None" CssClass="botonMenu"/>
+             <br />
+             <asp:Button ID="botonVacaciones" runat="server" Text="Vacaciones" 
+             BorderStyle="None" CssClass="botonMenu"/>
+             <br />
+             <asp:Button ID="botonDepartamentos" runat="server" Text="Departamentos" 
+                 BorderStyle="None" CssClass="botonMenu"/>
+             <br />
+             <asp:Button ID="botonAusencias" runat="server" Text="Ausencias" 
+                  BorderStyle="None" CssClass="botonMenu"/>
+             <br />
+             <asp:Button ID="botonCapacitaciones" runat="server" Text="Capacitaciones" 
+                 BorderStyle="None" CssClass="botonMenu"/>
+             <br />
+             <asp:Button ID="botonPuestos" runat="server" Text="Puestos" 
+                 BorderStyle="None" CssClass="botonMenu" />
+             <br />
+             <asp:Button ID="botonProyectos" runat="server" Text="Proyectos" 
+                  BorderStyle="None" CssClass="botonMenu" />
+             <br />
+             <asp:Button ID="botonReportes" runat="server" Text="Reportes" 
+                  BorderStyle="None" CssClass="botonMenu" />
+        </div>
+        
+        <div id="mainContent" class="mainContent" align="center" 
+             >
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </form>
+    </div>
+    <div id="footer"align="center">
+    <div class="nombresFooter">
+            Alejandra Monge Granados
+        </div>
+        <div class="nombresFooter">
+            Javier Meza Meza Schmidt
+        </div>
+        <div class="nombresFooter">
+            Mauricio Munoz Chaves
+        </div>
+        <div style="margin-top: 20px">
+            <asp:Image ID="imagenTec" runat="server" ImageUrl="~/Images/logoTec.jpg" 
+                Width="200px" />
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
