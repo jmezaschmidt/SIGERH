@@ -229,21 +229,67 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return colaboradores;
         }
 
-        //public List<String> quitarColaboradoresProyecto(List<Colaborador> pColaboradores, String pProyecto)
-        //{
-        //    List<String> colaboradoresSinAsignar = new List<String>();
-        //    String[] nombreParametros = { "@nombre", "@cedula" };
+        public List<String> quitarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        {
+            List<String> colaboradoresSinAsignar = new List<String>();
+            String[] nombreParametros = { "@idCapacitacion", "@cedula" };
 
-        //    for (int i = 0; i < pColaboradores.Count; i++)
-        //    {
-        //        Boolean resultado = _AccesoDatos.escribir("sp_eliminarProyectoColaborador", nombreParametros, pProyecto, pColaboradores.ElementAt(i).Cedula);
-        //        if (resultado == false)
-        //        {
-        //            colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
-        //        }
-        //    }
-        //    return colaboradoresSinAsignar;
-        //}
+            for (int i = 0; i < pColaboradores.Count; i++)
+            {
+                Boolean resultado = _AccesoDatos.escribir("sp_eliminarCapacitacionColaborador", nombreParametros, pIdCapacitacion, pColaboradores.ElementAt(i).Cedula);
+                if (resultado == false)
+                {
+                    colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+                }
+            }
+            return colaboradoresSinAsignar;
+        }
+
+        public Boolean asignarCapacitacionProyecto(String pNombreProyecto, int pIdCapacitacion)
+        {
+            String[] nombreParametros = { "@nombreProyecto", "@idCapacitacion" };
+            return _AccesoDatos.escribir("sp_asignarCapacitacionProyecto", nombreParametros, pNombreProyecto, pIdCapacitacion);
+        }
+
+        public List<String> obtenerDepartamentos()
+        {
+            List<String> departamentos = new List<String>();
+            String[] nombreParametros = { };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verDepartamentos", nombreParametros);
+
+            while (reader.Read())
+            {
+                departamentos.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return departamentos;
+        }
+
+        public List<String> obtenerPuestos()
+        {
+            List<String> puestos = new List<String>();
+            String[] nombreParametros = { };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verPuestos", nombreParametros);
+
+            while (reader.Read())
+            {
+                puestos.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return puestos;
+        }
+
+        public Boolean crearDepartamento(String pNombre, String pDescripcion, String pPadre)
+        {
+            String[] nombreParametros = { "@nombre", "@descripcion", "@padre" };
+            return _AccesoDatos.escribir("sp_crearDepartamento", nombreParametros, pNombre, pDescripcion, pPadre);
+        }
+
+        
 
     }
 }

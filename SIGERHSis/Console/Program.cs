@@ -215,17 +215,70 @@ namespace ConsoleApp
             //    Console.WriteLine("-----------");
             //}
 
-            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
-            List<Colaborador> lc = co.obtenerColaboradoresCapacitacion(1);
-            for (int i = 0; i < lc.Count; i++)
-            {
-                Colaborador c = lc.ElementAt(i);
-                Console.WriteLine(lc.ElementAt(i).Cedula);
-                Console.WriteLine(lc.ElementAt(i).Nombre);
-                Console.WriteLine(lc.ElementAt(i).Puesto);
-                Console.WriteLine(lc.ElementAt(i).Departamento);
-                Console.WriteLine("-----------");
-            }
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<Colaborador> lc = co.obtenerColaboradoresCapacitacion(1);
+            //for (int i = 0; i < lc.Count; i++)
+            //{
+            //    Colaborador c = lc.ElementAt(i);
+            //    Console.WriteLine(lc.ElementAt(i).Cedula);
+            //    Console.WriteLine(lc.ElementAt(i).Nombre);
+            //    Console.WriteLine(lc.ElementAt(i).Puesto);
+            //    Console.WriteLine(lc.ElementAt(i).Departamento);
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<Colaborador> lc = new List<Colaborador>();
+            //Colaborador c = new Colaborador();
+            //c.Nombre = "Mau";
+            //c.Cedula = 114740899;
+            //lc.Add(c);
+            //c = new Colaborador();
+            //c.Nombre = "Javi";
+            //c.Cedula = 3452706;
+            //lc.Add(c);
+            //c = new Colaborador();
+            //c.Nombre = "Ale";
+            //c.Cedula = 3450160;
+            //lc.Add(c);
+            //List<String> ls = co.quitarColaboradoresCapacitacion(lc, 1);
+            //for (int i = 0; i < ls.Count; i++)
+            //{
+            //    Console.WriteLine(ls.ElementAt(i));
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //Console.WriteLine(co.asignarCapacitacionProyecto("ERP", 1));
+
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //Console.WriteLine(ce.crearColaborador("Caro", "Aguilar", "Segura", 123456, Convert.ToDateTime("05/06/94"), "Colaborador", "TI", "Contador"));
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<String> ls = co.obtenerDepartamentos();
+            //for (int i = 0; i < ls.Count; i++)
+            //{
+            //    Console.WriteLine(ls.ElementAt(i));
+            //    Console.WriteLine("-----------");
+            //}
+            //Console.WriteLine("*****");
+            //ls = co.obtenerPuestos();
+            //for (int i = 0; i < ls.Count; i++)
+            //{
+            //    Console.WriteLine(ls.ElementAt(i));
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //Console.WriteLine(ce.crearContrato(123456, 48));
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //Console.WriteLine(co.crearDepartamento("Nuevo Depart", "Es un departamento de prueba", "TI"));
+
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Vacaciones"));
+            //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Permiso"));
+            //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Incapacidad"));
 
             Console.ReadLine();
         }

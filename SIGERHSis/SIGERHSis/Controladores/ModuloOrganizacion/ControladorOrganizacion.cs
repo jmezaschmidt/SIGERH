@@ -96,6 +96,30 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
             return _LogicaOrganizacion.obtenerColaboradoresCapacitacion(pIdCapacitacion);
         }
 
+        public List<String> quitarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        {
+            return _LogicaOrganizacion.quitarColaboradoresCapacitacion(pColaboradores, pIdCapacitacion);
+        }
+
+        public Boolean asignarCapacitacionProyecto(String pNombreProyecto, int pIdCapacitacion)
+        {
+            return _LogicaOrganizacion.asignarCapacitacionProyecto(pNombreProyecto, pIdCapacitacion);
+        }
+
+        public List<String> obtenerDepartamentos()
+        {
+            return _LogicaOrganizacion.obtenerDepartamentos();
+        }
+
+        public List<String> obtenerPuestos()
+        {
+            return _LogicaOrganizacion.obtenerPuestos();
+        }
+
+        public Boolean crearDepartamento(String pNombre, String pDescripcion, String pPadre)
+        {
+            return _LogicaOrganizacion.crearDepartamento(pNombre, pDescripcion, pPadre);
+        }
 
     }
 }
