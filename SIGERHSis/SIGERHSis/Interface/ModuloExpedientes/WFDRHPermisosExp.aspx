@@ -42,7 +42,7 @@
         </asp:Table>
         </div>
     <asp:Button ID="btnAprobar" runat="server" Text="Aprobar" onclick="btnAprobar_Click" />
-    <asp:Button ID="btnNegar" runat="server" Text="Negar" />
+    <asp:Button ID="btnNegar" runat="server" Text="Negar" onclick="btnNegar_Click" />
     <asp:Label ID="lblMotivo" runat="server" Text="Motivo:"></asp:Label>
     <asp:Label ID="lblMotivoInfo" runat="server" Text="motivo"></asp:Label>
     </div>
