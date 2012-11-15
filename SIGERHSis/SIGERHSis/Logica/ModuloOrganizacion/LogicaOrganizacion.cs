@@ -52,6 +52,11 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
             return _AccesoDatosOrganizacion.crearCapacitacion(pCapacitacion);
         }
 
+        public List<Proyecto> obtenerProyectos()
+        {
+            return _AccesoDatosOrganizacion.obtenerProyectos();
+        }
+
     }
 
 }

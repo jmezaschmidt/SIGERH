@@ -71,5 +71,10 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
             return _LogicaOrganizacion.crearCapacitacion(capacitacion);
         }
 
+        public List<Proyecto> obtenerProyectos()
+        {
+            return _LogicaOrganizacion.obtenerProyectos();
+        }
+
     }
 }

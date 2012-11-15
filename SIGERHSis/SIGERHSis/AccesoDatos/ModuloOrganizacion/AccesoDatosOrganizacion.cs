@@ -106,7 +106,7 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
         public List<String> asignarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
         {
             List<String> colaboradoresSinAsignar = new List<String>();
-            String[] nombreParametros = { "@idCapacitacion", "@cedula" };
+            String[] nombreParametros = { "@cedula", "@idCapacitacion" };
 
             for (int i = 0; i < pColaboradores.Count; i++)
             {
@@ -125,6 +125,49 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return _AccesoDatos.escribir("sp_crearCapacitacion", nombreParametros, pCapacitacion.Nombre, pCapacitacion.Descripcion, 
                                         pCapacitacion.DuracionEnHoras, pCapacitacion.FechaInicial, pCapacitacion.FechaFinal);
         }
+
+        public List<Proyecto> obtenerProyectos()
+        {
+            String[] nombreParametros = { };
+            List<Proyecto> proyectos = new List<Proyecto>();
+
+            IDataReader reader = _AccesoDatos.leer("sp_verProyectos", nombreParametros);
+
+            while (reader.Read())
+            {
+                Proyecto _proyecto = new Proyecto();
+                _proyecto.Nombre = reader.GetString(0);
+                _proyecto.Descripcion = reader.GetString(1);
+                _proyecto.FechaInicial = reader.GetDateTime(2);
+                _proyecto.FechaFinal = reader.GetDateTime(3);
+                _proyecto.Estado = reader.GetString(4);
+                proyectos.Add(_proyecto);
+            }
+
+            reader.Close();
+            return proyectos;
+        }
+        /*
+        public List<Capacitacion> obtenerProyectos()
+        {
+            String[] nombreParametros = { };
+            List<Capacitacion> capacitaciones = new List<Capacitacion>();
+
+            IDataReader reader = _AccesoDatos.leer("sp_verCapacitaciones", nombreParametros);
+
+            while (reader.Read())
+            {
+                Capacitacion _capacitacion = new Capacitacion();
+                _capacitacion.Nombre = reader.GetString(0);
+                _capacitacion.Descripcion = reader.GetString(1);
+                _capacitacion.FechaInicial = reader.GetDateTime(2);
+                _capacitacion.FechaFinal = reader.GetDateTime(3);
+                capacitaciones.Add(_capacitacion);
+            }
+
+            reader.Close();
+            return capacitaciones;
+        }*/
 
     }
 }

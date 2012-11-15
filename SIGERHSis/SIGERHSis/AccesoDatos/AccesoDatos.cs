@@ -27,7 +27,7 @@ namespace SIGERHSis.AccesoDatos
             cmd = new SqlCommand(pStoredProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            if (pNombreParametros != null)
+            if (pNombreParametros.Length != 0)
             {
                 for (int i = 0; i < pValorParametros.Length; i++)
                 {
@@ -59,7 +59,7 @@ namespace SIGERHSis.AccesoDatos
             cmd = new SqlCommand(pStoredProcedure);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            if (pNombreParametros != null)
+            if (pNombreParametros.Length != 0)
             {
                 for (int i = 0; i < pValorParametros.Length; i++)
                 {

@@ -126,16 +126,46 @@ namespace ConsoleApp
             //}
 
             //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<Proyecto> lp = co.obtenerProyectos();
+            //for (int i = 0; i < lp.Count; i++)
+            //{
+            //    Proyecto p = lp.ElementAt(i);
+            //    Console.WriteLine(p.Nombre);
+            //    Console.WriteLine(p.Descripcion);
+            //    Console.WriteLine(p.FechaInicial);
+            //    Console.WriteLine(p.FechaFinal);
+            //    Console.WriteLine(p.Estado);
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
             //List<Colaborador> lc = new List<Colaborador>();
             //Colaborador c = new Colaborador();
             //c.Nombre = "Mau";
-            //c.Cedula = 114740897;
+            //c.Cedula = 114740899;
             //lc.Add(c);
             //c = new Colaborador();
-            //c.Nombre = "Ale";
-            //c.Cedula = 3450160;
+            //c.Nombre = "Javi";
+            //c.Cedula = 3452706;
             //lc.Add(c);
-            //List<String> ls = co.asignarColaboradoresProyecto(lc, "SIGERH");
+            //List<String> ls = co.asignarColaboradoresProyecto(lc, "ERP");
+            //for (int i = 0; i < ls.Count; i++)
+            //{
+            //    Console.WriteLine(ls.ElementAt(i));
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<Colaborador> lc = new List<Colaborador>();
+            //Colaborador c = new Colaborador();
+            //c.Nombre = "Mau";
+            //c.Cedula = 114740898;
+            //lc.Add(c);
+            //c = new Colaborador();
+            //c.Nombre = "Javi";
+            //c.Cedula = 3452706;
+            //lc.Add(c);
+            //List<String> ls = co.asignarColaboradoresCapacitacion(lc, 2);
             //for (int i = 0; i < ls.Count; i++)
             //{
             //    Console.WriteLine(ls.ElementAt(i));
