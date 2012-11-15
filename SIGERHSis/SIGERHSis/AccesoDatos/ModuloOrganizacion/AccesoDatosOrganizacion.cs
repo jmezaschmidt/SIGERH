@@ -283,6 +283,12 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return puestos;
         }
 
+        public Boolean crearDepartamento(String pNombre, String pDescripcion, String pPadre)
+        {
+            String[] nombreParametros = { "@nombre", "@descripcion", "@padre" };
+            return _AccesoDatos.escribir("sp_crearDepartamento", nombreParametros, pNombre, pDescripcion, pPadre);
+        }
+
         
 
     }

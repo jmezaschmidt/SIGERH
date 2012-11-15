@@ -254,20 +254,26 @@ namespace ConsoleApp
             //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
             //Console.WriteLine(ce.crearColaborador("Caro", "Aguilar", "Segura", 123456, Convert.ToDateTime("05/06/94"), "Colaborador", "TI", "Contador"));
 
+            //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            //List<String> ls = co.obtenerDepartamentos();
+            //for (int i = 0; i < ls.Count; i++)
+            //{
+            //    Console.WriteLine(ls.ElementAt(i));
+            //    Console.WriteLine("-----------");
+            //}
+            //Console.WriteLine("*****");
+            //ls = co.obtenerPuestos();
+            //for (int i = 0; i < ls.Count; i++)
+            //{
+            //    Console.WriteLine(ls.ElementAt(i));
+            //    Console.WriteLine("-----------");
+            //}
+
+            //ControladorExpedientes ce = ControladorExpedientes.obtenerControladorExpedientes();
+            //Console.WriteLine(ce.crearContrato(123456, 48));
+
             ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
-            List<String> ls = co.obtenerDepartamentos();
-            for (int i = 0; i < ls.Count; i++)
-            {
-                Console.WriteLine(ls.ElementAt(i));
-                Console.WriteLine("-----------");
-            }
-            Console.WriteLine("*****");
-            ls = co.obtenerPuestos();
-            for (int i = 0; i < ls.Count; i++)
-            {
-                Console.WriteLine(ls.ElementAt(i));
-                Console.WriteLine("-----------");
-            }
+            Console.WriteLine(co.crearDepartamento("Nuevo Depart", "Es un departamento de prueba", "TI"));
 
             Console.ReadLine();
         }

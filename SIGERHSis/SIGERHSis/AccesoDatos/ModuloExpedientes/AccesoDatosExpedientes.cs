@@ -133,6 +133,17 @@ namespace SIGERHSis.AccesoDatos.ModuloExpedientes
                                         pApellidoDos, pCedula, pFechaNac, pTipoUsuario, pDepart, pPuesto);
         }
 
+        public Boolean crearContrato(int pCedula, int pCantidadHoras)
+        {
+            String[] nombreParametros = { "@cedula", "@cantidadHoras" };
+            return _AccesoDatos.escribir("sp_crearContrato", nombreParametros, pCedula, pCantidadHoras);
+        }
+
+        public Boolean crearSolicitud(int pCedula, Solicitud pSolicitud, String pTipoSolicitud) 
+        {
+            String[] nombreParametros = { "@cedula", "@fechaInicial", "@fechaFinal", "@motivo", "@tipoSolicitud" };
+            return _AccesoDatos.escribir("sp_crearSolicitud", nombreParametros, pCedula, pSolicitud.FechaInicial, pSolicitud.FechaInicial, pSolicitud.Motivo, pTipoSolicitud); 
+        }
             
     }
 }

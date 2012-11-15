@@ -97,6 +97,11 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
             return _AccesoDatosOrganizacion.obtenerPuestos();
         }
 
+        public Boolean crearDepartamento(String pNombre, String pDescripcion, String pPadre)
+        {
+            return _AccesoDatosOrganizacion.crearDepartamento(pNombre, pDescripcion, pPadre);
+        }
+
     }
 
 }

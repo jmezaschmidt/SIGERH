@@ -94,5 +94,10 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
             return _LogicaExpedientes.crearColaborador(pNombre, pApellidoUno, pApellidoDos, pCedula, pFechaNac, pTipoUsuario, pDepart, pPuesto);
         }
 
+        public Boolean crearContrato(int pCedula, int pCantidadHoras)
+        {
+            return _LogicaExpedientes.crearContrato(pCedula, pCantidadHoras);
+        }
+
     }
 }
