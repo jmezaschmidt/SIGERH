@@ -41,7 +41,8 @@
                   BorderStyle="None" CssClass="botonMenu"/>
              <br />
              <asp:Button ID="botonCapacitaciones" runat="server" Text="Capacitaciones" 
-                 BorderStyle="None" CssClass="botonMenu"/>
+                 BorderStyle="None" CssClass="botonMenu" 
+                 onclick="botonCapacitaciones_Click"/>
              <br />
              <asp:Button ID="botonPuestos" runat="server" Text="Puestos" 
                  BorderStyle="None" CssClass="botonMenu" />

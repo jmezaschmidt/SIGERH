@@ -36,5 +36,23 @@ namespace SIGERHSis.Interface
             Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFRDHCrearProyecto.aspx");
             //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFRDHCrearProyecto.aspx");
         }
+
+        protected void btnAsignarColaboradores_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHAsignarColaboradoresProyecto.aspx");
+            // Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHAsignarColaboradoresProyecto.aspx");
+        }
+
+        protected void botonCapacitaciones_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHCrearCapacitacion.aspx");
+            //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHCrearCapacitacion.aspx");
+        }
+
+        protected void btnQuitarColaboradores_Click(object sender, EventArgs e)
+        {
+              Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHQuitarColaboradoresProyecto.aspx");
+            // Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHQuitarColaboradoresProyecto.aspx");
+        }
     }
 }

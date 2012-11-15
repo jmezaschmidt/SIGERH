@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Interface/Proyectos.Master" AutoEventWireup="true" CodeBehind="WFDRHAsignarColaboradoresProyecto.aspx.cs" Inherits="SIGERHSis.Interface.ModuloOrganizacion.WFDRHAsignarColaboradoresProyecto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<script language="javascript" type="text/javascript">
+    <script language="javascript" type="text/javascript">
     $(document).ready(function () {
         //agregar una nueva columna con todo el texto 
         //contenido en las columnas de la grilla 
@@ -30,8 +30,26 @@
     <div class="tables" style="font-family: 'Segoe UI'">
             <div>
                 <asp:Label ID="lblProyecto" runat="server" Text="Proyecto: "></asp:Label>
-                <asp:DropDownList ID="DropDownListProyectos" runat="server">
+                <asp:DropDownList ID="DropDownListProyectos" runat="server" AutoPostBack="True" 
+                    onselectedindexchanged="DropDownListProyectos_SelectedIndexChanged">
                 </asp:DropDownList>
+                <asp:Label ID="lblNombre" runat="server" Text="Nombre: "></asp:Label>
+                <asp:Label ID="lblNombreInfo" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="lblEstado" runat="server" Text="Estado: "></asp:Label>
+                <asp:Label ID="lblEstadoInfo" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="lblFechaIncial" runat="server" Text="Fecha Inicial: "></asp:Label>
+                <asp:Label ID="lblFechaIncialInfo" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="lblFechaFinal" runat="server" Text="Fecha Final: "></asp:Label>
+                <asp:Label ID="lblFechaFinalInfo" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="lblDescripcion" runat="server" Text="Descripción: "></asp:Label>
+                <asp:Label ID="lblDescripcionInfo" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Button ID="btnAsignarColaboradores" runat="server" 
+                    Text="Asignar Colaboradores" onclick="btnAsignarColaboradores_Click" />
             </div>
             <div>
             <label for="search" style="margin-left: 163px; color: #B5D942;">

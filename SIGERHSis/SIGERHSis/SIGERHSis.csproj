@@ -74,7 +74,12 @@
     <Content Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarProyectoCapacitacion.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHCrearCapacitacion.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHQuitarColaboradoresCapacitacion.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHQuitarColaboradoresProyecto.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHSolicitudes.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFRDHCrearProyecto.aspx" />
     <Content Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx" />
@@ -139,12 +144,54 @@
     <Compile Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx.designer.cs">
       <DependentUpon>WFDRHVacacionesExp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Interface\Capacitaciones.Master.cs">
+      <DependentUpon>Capacitaciones.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\Capacitaciones.Master.designer.cs">
+      <DependentUpon>Capacitaciones.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx.cs">
+      <DependentUpon>WFDRHAsignarColaboradoresCapacitacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx.designer.cs">
+      <DependentUpon>WFDRHAsignarColaboradoresCapacitacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx.cs">
       <DependentUpon>WFDRHAsignarColaboradoresProyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx.designer.cs">
       <DependentUpon>WFDRHAsignarColaboradoresProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarProyectoCapacitacion.aspx.cs">
+      <DependentUpon>WFDRHAsignarProyectoCapacitacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarProyectoCapacitacion.aspx.designer.cs">
+      <DependentUpon>WFDRHAsignarProyectoCapacitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHCrearCapacitacion.aspx.cs">
+      <DependentUpon>WFDRHCrearCapacitacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHCrearCapacitacion.aspx.designer.cs">
+      <DependentUpon>WFDRHCrearCapacitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHQuitarColaboradoresCapacitacion.aspx.cs">
+      <DependentUpon>WFDRHQuitarColaboradoresCapacitacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHQuitarColaboradoresCapacitacion.aspx.designer.cs">
+      <DependentUpon>WFDRHQuitarColaboradoresCapacitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHQuitarColaboradoresProyecto.aspx.cs">
+      <DependentUpon>WFDRHQuitarColaboradoresProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHQuitarColaboradoresProyecto.aspx.designer.cs">
+      <DependentUpon>WFDRHQuitarColaboradoresProyecto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHSolicitudes.aspx.cs">
       <DependentUpon>WFDRHSolicitudes.aspx</DependentUpon>
@@ -235,6 +282,7 @@
     <Content Include="Interface\WFDRH.Master" />
     <Content Include="Interface\WFDRHExpediente.Master" />
     <Content Include="Interface\Proyectos.Master" />
+    <Content Include="Interface\Capacitaciones.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -28,7 +28,10 @@
         </div>
         <asp:Button ID="btnCrearProyecto" runat="server" 
             Text="Crear Proyecto" onclick="btnCrearProyecto_Click"/>
-        <asp:Button ID="btnAsignarColaboradores" runat="server" Text="Asignar Colaboradores" />
+        <asp:Button ID="btnAsignarColaboradores" runat="server" 
+            Text="Asignar Colaboradores" onclick="btnAsignarColaboradores_Click" />
+            <asp:Button ID="btnQuitarColaboradores" runat="server" 
+            Text="Quitar Colaboradores" onclick="btnQuitarColaboradores_Click" />
     </div>
     <div id="content">
         
@@ -49,7 +52,8 @@
                   BorderStyle="None" CssClass="botonMenu"/>
              <br />
              <asp:Button ID="botonCapacitaciones" runat="server" Text="Capacitaciones" 
-                 BorderStyle="None" CssClass="botonMenu"/>
+                 BorderStyle="None" CssClass="botonMenu" 
+                 onclick="botonCapacitaciones_Click"/>
              <br />
              <asp:Button ID="botonPuestos" runat="server" Text="Puestos" 
                  BorderStyle="None" CssClass="botonMenu" />
