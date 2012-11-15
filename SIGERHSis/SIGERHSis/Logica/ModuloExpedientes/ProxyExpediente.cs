@@ -38,6 +38,11 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             return _ExpedienteReal.Colaborador;
         }
 
+        public List<Contacto> obtenerContactos()
+        {
+            return _ExpedienteReal.Colaborador.Contactos;
+        }
+
         public List<Permiso> obtenerPermisosColaborador()
         {
             if (_ExpedienteReal.Permisos == null)

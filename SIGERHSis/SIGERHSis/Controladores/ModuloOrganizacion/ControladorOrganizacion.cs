@@ -91,6 +91,11 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
             return _LogicaOrganizacion.quitarColaboradoresProyecto(pColaboradores, pProyecto);
         }
 
+        public List<Colaborador> obtenerColaboradoresCapacitacion(int pIdCapacitacion)
+        {
+            return _LogicaOrganizacion.obtenerColaboradoresCapacitacion(pIdCapacitacion);
+        }
+
 
     }
 }

@@ -208,5 +208,42 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return colaboradoresSinAsignar;
         }
 
+        public List<Colaborador> obtenerColaboradoresCapacitacion(int pIdCapacitacion)
+        {
+            List<Colaborador> colaboradores = new List<Colaborador>();
+            String[] nombreParametros = { "@idCapacitacion" };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verColaboradoresCapacitacion", nombreParametros, pIdCapacitacion);
+
+            while (reader.Read())
+            {
+                Colaborador _colaborador = new Colaborador();
+                _colaborador.Nombre = reader.GetString(0);
+                _colaborador.Cedula = reader.GetInt32(1);
+                _colaborador.Puesto = reader.GetString(2);
+                _colaborador.Departamento = reader.GetString(3);
+                colaboradores.Add(_colaborador);
+            }
+
+            reader.Close();
+            return colaboradores;
+        }
+
+        //public List<String> quitarColaboradoresProyecto(List<Colaborador> pColaboradores, String pProyecto)
+        //{
+        //    List<String> colaboradoresSinAsignar = new List<String>();
+        //    String[] nombreParametros = { "@nombre", "@cedula" };
+
+        //    for (int i = 0; i < pColaboradores.Count; i++)
+        //    {
+        //        Boolean resultado = _AccesoDatos.escribir("sp_eliminarProyectoColaborador", nombreParametros, pProyecto, pColaboradores.ElementAt(i).Cedula);
+        //        if (resultado == false)
+        //        {
+        //            colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+        //        }
+        //    }
+        //    return colaboradoresSinAsignar;
+        //}
+
     }
 }

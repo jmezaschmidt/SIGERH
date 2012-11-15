@@ -29,9 +29,9 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
         }
 
 
-        public Colaborador obtenerInformacionGeneral(int pCedulaClaborador)
+        public Colaborador obtenerInformacionGeneral()
         {
-            return _Expediente.obtenerInformacionGeneral(pCedulaClaborador);
+            return _Expediente.obtenerInformacionGeneral();
         }
 
         public List<Contacto> obtenerContactosPxy()
@@ -45,7 +45,7 @@ namespace SIGERHSis.Controladores.ModuloExpedientes
             List<Permiso> listaPermisos = _Expediente.obtenerPermisosColaborador();
             return listaPermisos;
         }
-        // ---->
+
         public Boolean cambiarEstadoPermisoPxy(int pIdSolicitud, String pNuevoEstado)
         {
             return _Expediente.cambiarEstadoPermiso(pIdSolicitud, pNuevoEstado);
