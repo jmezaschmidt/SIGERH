@@ -87,6 +87,16 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
             return _AccesoDatosOrganizacion.asignarCapacitacionProyecto(pNombreProyecto, pIdCapacitacion);
         }
 
+        public List<String> obtenerDepartamentos()
+        {
+            return _AccesoDatosOrganizacion.obtenerDepartamentos();
+        }
+
+        public List<String> obtenerPuestos()
+        {
+            return _AccesoDatosOrganizacion.obtenerPuestos();
+        }
+
     }
 
 }

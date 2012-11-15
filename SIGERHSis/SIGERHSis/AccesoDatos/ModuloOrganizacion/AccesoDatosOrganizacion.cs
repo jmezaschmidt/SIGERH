@@ -251,5 +251,39 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return _AccesoDatos.escribir("sp_asignarCapacitacionProyecto", nombreParametros, pNombreProyecto, pIdCapacitacion);
         }
 
+        public List<String> obtenerDepartamentos()
+        {
+            List<String> departamentos = new List<String>();
+            String[] nombreParametros = { };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verDepartamentos", nombreParametros);
+
+            while (reader.Read())
+            {
+                departamentos.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return departamentos;
+        }
+
+        public List<String> obtenerPuestos()
+        {
+            List<String> puestos = new List<String>();
+            String[] nombreParametros = { };
+
+            IDataReader reader = _AccesoDatos.leer("sp_verPuestos", nombreParametros);
+
+            while (reader.Read())
+            {
+                puestos.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            return puestos;
+        }
+
+        
+
     }
 }

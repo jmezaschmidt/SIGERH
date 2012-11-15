@@ -105,5 +105,16 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
         {
             return _LogicaOrganizacion.asignarCapacitacionProyecto(pNombreProyecto, pIdCapacitacion);
         }
+
+        public List<String> obtenerDepartamentos()
+        {
+            return _LogicaOrganizacion.obtenerDepartamentos();
+        }
+
+        public List<String> obtenerPuestos()
+        {
+            return _LogicaOrganizacion.obtenerPuestos();
+        }
+
     }
 }
