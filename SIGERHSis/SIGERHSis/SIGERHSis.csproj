@@ -74,6 +74,9 @@
     <Content Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFDRHSolicitudes.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFRDHCrearProyecto.aspx" />
     <Content Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx" />
     <Content Include="Interface\ModuloUsuarios\WFLogin.aspx" />
     <Content Include="Web.config">
@@ -141,6 +144,27 @@
     <Compile Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx.designer.cs">
       <DependentUpon>WFDRHVacacionesExp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx.cs">
+      <DependentUpon>WFDRHAsignarColaboradoresProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx.designer.cs">
+      <DependentUpon>WFDRHAsignarColaboradoresProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHSolicitudes.aspx.cs">
+      <DependentUpon>WFDRHSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFDRHSolicitudes.aspx.designer.cs">
+      <DependentUpon>WFDRHSolicitudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFRDHCrearProyecto.aspx.cs">
+      <DependentUpon>WFRDHCrearProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFRDHCrearProyecto.aspx.designer.cs">
+      <DependentUpon>WFRDHCrearProyecto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ModuloUsuarios\WFDRHPrincipal.aspx.cs">
       <DependentUpon>WFDRHPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,6 +178,13 @@
     </Compile>
     <Compile Include="Interface\ModuloUsuarios\WFLogin.aspx.designer.cs">
       <DependentUpon>WFLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Proyectos.Master.cs">
+      <DependentUpon>Proyectos.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\Proyectos.Master.designer.cs">
+      <DependentUpon>Proyectos.Master</DependentUpon>
     </Compile>
     <Compile Include="Interface\WFDRH.Master.cs">
       <DependentUpon>WFDRH.Master</DependentUpon>
@@ -201,7 +232,6 @@
     <Folder Include="AccesoDatos\ModuloReportes\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controladores\ModuloReportes\" />
-    <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
     <Folder Include="Logica\ModuloReportes\" />
@@ -209,6 +239,7 @@
   <ItemGroup>
     <Content Include="Interface\WFDRH.Master" />
     <Content Include="Interface\WFDRHExpediente.Master" />
+    <Content Include="Interface\Proyectos.Master" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
