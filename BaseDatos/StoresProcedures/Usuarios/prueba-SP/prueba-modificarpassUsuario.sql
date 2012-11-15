@@ -1,1 +1,0 @@
-exec sp_modificarPassUsuario 3452706, '3452706'
