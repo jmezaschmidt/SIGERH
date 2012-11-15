@@ -45,7 +45,11 @@
                  BorderStyle="None" CssClass="botonMenu"/>
              <br />
              <asp:Button ID="botonSolicitudes" runat="server" Text="Solicitudes" 
+<<<<<<< HEAD
                   BorderStyle="None" CssClass="botonMenu" onclick="botonSolicitudes_Click"/>
+=======
+                  BorderStyle="None" CssClass="botonMenu"/>
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
              <br />
              <asp:Button ID="botonVacaciones" runat="server" Text="Vacaciones" 
              BorderStyle="None" CssClass="botonMenu"/>

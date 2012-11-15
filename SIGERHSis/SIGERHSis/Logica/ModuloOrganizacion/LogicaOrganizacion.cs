@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SIGERHSis.LibreriaComun.ModuloOrganizacion;
+<<<<<<< HEAD
 using SIGERHSis.LibreriaComun.ModuloExpedientes;
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 using SIGERHSis.AccesoDatos.ModuloOrganizacion;
 
 namespace SIGERHSis.Logica.ModuloOrganizacion
@@ -47,6 +50,7 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
             return _AccesoDatosOrganizacion.asignarColaboradoresCapacitacion(pColaboradores, pIdCapacitacion);
         }
 
+<<<<<<< HEAD
         public Boolean crearCapacitacion(Capacitacion pCapacitacion)
         {
             return _AccesoDatosOrganizacion.crearCapacitacion(pCapacitacion);
@@ -76,6 +80,8 @@ namespace SIGERHSis.Logica.ModuloOrganizacion
         {
             return _AccesoDatosOrganizacion.obtenerColaboradoresCapacitacion(pIdCapacitacion);
         }
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
     }
 
 }

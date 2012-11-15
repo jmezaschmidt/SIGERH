@@ -7,7 +7,11 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using SIGERHSis.Controladores.ModuloOrganizacion;
 using SIGERHSis.LibreriaComun.ModuloOrganizacion;
+<<<<<<< HEAD
 using SIGERHSis.Controladores.ModuloExpedientes;
+=======
+
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
 namespace SIGERHSis.Interface.ModuloUsuarios
 {
@@ -17,18 +21,34 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+
+            /* controladorOrganizacion = new ControladorOrganizacion();
+             String tabla = controladorOrganizacion.obtenerColaboradores();
+             ClientScript.RegisterStartupScript(this.GetType(), "myScript", "<script>javascript:cargarDatosTabla('" + tabla + "');</script>");
+             //TextBox1.Attributes.Add("onKeyUp", "cargarDatosTabla('" + tabla + "')");
+             * */
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
             cargarExpedientes();
 
             Label1.Text = Request.QueryString["dato1"];
         }
 
+<<<<<<< HEAD
         private string obtenerOpcionSeleccionada()
         {
+=======
+        protected void prueba_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
             RadioButton rb = new RadioButton();
             foreach (TableRow tr in tblData.Controls)
             {
                 foreach (TableCell tc in tr.Controls)
                 {
+<<<<<<< HEAD
                     if (tc.HasControls())
                     {
                         if (tc.Controls[0] is RadioButton)
@@ -44,10 +64,49 @@ namespace SIGERHSis.Interface.ModuloUsuarios
                 }
             }
             return "";
+=======
+                    if (tc.Controls[0] is RadioButton)
+                    {
+                        rb = (RadioButton)tc.Controls[0];
+                        if (rb.Checked)
+                        {
+                            Label1.Text = rb.Text;
+                        }
+                        break;
+                    }
+                }
+            }
+
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
         }
         private void cargarExpedientes()
         {
             List<Colaborador> colaboradores = controladorOrganizacion.obtenerColaboradores(true);
+<<<<<<< HEAD
+=======
+            /*colaboradores = new List<Colaborador>();
+            //
+            Colaborador cola = new Colaborador();
+            cola.Cedula = 304500160;
+            cola.Nombre = "Alejandra Monge Granados";
+            cola.Puesto = "Ingenieria en Computacion";
+            cola.Departamento = "Desarrollo de Software";
+            colaboradores.Add(cola);
+            //
+            Colaborador cola1 = new Colaborador();
+            cola1.Cedula = 114740899;
+            cola1.Nombre = "Mauricio Munoz Chaves";
+            cola1.Puesto = "Ingenieria en Software";
+            cola1.Departamento = "Analisis de Sistemas";
+            colaboradores.Add(cola1);
+            //
+            Colaborador cola2 = new Colaborador();
+            cola2.Cedula = 304520706;
+            cola2.Nombre = "Javier Meza Schmidt";
+            cola2.Puesto = "Ingenieria en Computacion";
+            cola2.Departamento = "Redes y mas";
+            colaboradores.Add(cola2);*/
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
             int numColaboradores = colaboradores.Count;
             string claseFilaImpar = "impar";
             string claseFilaPar = "par";
@@ -113,9 +172,14 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 
         protected void btnVerExpediente_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             obtenerOpcionSeleccionada();
             Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx");
+=======
+            String cedula = "3452706"; 
+            Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx?cedula="+cedula);
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
         }
     }
 }

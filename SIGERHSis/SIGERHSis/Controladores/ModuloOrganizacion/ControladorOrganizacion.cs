@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using SIGERHSis.LibreriaComun.ModuloOrganizacion;
+<<<<<<< HEAD
 using SIGERHSis.LibreriaComun.ModuloExpedientes;
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 using SIGERHSis.Logica.ModuloOrganizacion;
 
 namespace SIGERHSis.Controladores.ModuloOrganizacion
@@ -50,7 +53,11 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
             return _LogicaOrganizacion.crearProyecto(proyecto);
         }
 
+<<<<<<< HEAD
         public List<Colaborador> obtenerColaboradoresFueraCapacitacion(int pIdCapacitacion)
+=======
+        public List<Colaborador> obtenerColaboradoresFuerCapacitacion(int pIdCapacitacion)
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
         {
             return _LogicaOrganizacion.obtenerColaboradoresFueraCapacitacion(pIdCapacitacion);
         }
@@ -60,6 +67,7 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
             return _LogicaOrganizacion.asignarColaboradoresCapacitacion(pColaboradores, pIdCapacitacion);
         }
 
+<<<<<<< HEAD
         public Boolean crearCapacitacion(String pNombre, DateTime pFechaInicial, DateTime pFechaFinal, String pDescripcion, int pDuracionEnHoras)
         {
             Capacitacion capacitacion = new Capacitacion();
@@ -97,5 +105,7 @@ namespace SIGERHSis.Controladores.ModuloOrganizacion
         }
 
 
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
     }
 }

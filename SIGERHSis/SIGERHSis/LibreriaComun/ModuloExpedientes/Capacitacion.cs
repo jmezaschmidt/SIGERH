@@ -13,7 +13,10 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
         private int _DuracionEnHoras;
         private DateTime _FechaInicial;
         private DateTime _FechaFinal;
+<<<<<<< HEAD
         private int _Id;
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
         public String Nombre
         {
@@ -44,11 +47,14 @@ namespace SIGERHSis.LibreriaComun.ModuloExpedientes
             get { return _FechaFinal; }
             set { _FechaFinal = value; }
         }
+<<<<<<< HEAD
 
         public int Id
         {
             get { return _Id; }
             set { _Id = value; }
         }
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
     }
 }

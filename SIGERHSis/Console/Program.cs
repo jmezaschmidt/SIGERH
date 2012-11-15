@@ -101,6 +101,7 @@ namespace ConsoleApp
             //    Console.WriteLine("-----------");
             //}
 
+<<<<<<< HEAD
             //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
             //DateTime dt = Convert.ToDateTime("01/08/2008");
             //Console.WriteLine(co.crearProyecto("Proyecto Nuevo Dos", dt, dt, "Esta es la descripción del Proyecto Nuevo Dos"));
@@ -226,6 +227,11 @@ namespace ConsoleApp
                 Console.WriteLine(lc.ElementAt(i).Departamento);
                 Console.WriteLine("-----------");
             }
+=======
+            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            DateTime dt = Convert.ToDateTime("01/08/2008");
+            Console.WriteLine(co.crearProyecto("Proyecto Nuevo Dos", dt, dt, "Esta es la descripción del Proyecto Nuevo Dos"));
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
             Console.ReadLine();
         }

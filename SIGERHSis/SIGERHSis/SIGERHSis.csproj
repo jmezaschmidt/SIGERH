@@ -89,6 +89,11 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="XML\capacitaciones.xml" />
+    <Content Include="XML\departamentos.xml" />
+    <Content Include="XML\expedientes.xml" />
+    <Content Include="XML\solicitudesPendientes.xml" />
+    <Content Include="XML\vacaciones.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\AccesoDatos.cs" />
@@ -234,6 +239,7 @@
     <Folder Include="AccesoDatos\ModuloReportes\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controladores\ModuloReportes\" />
+    <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
     <Folder Include="Logica\ModuloReportes\" />

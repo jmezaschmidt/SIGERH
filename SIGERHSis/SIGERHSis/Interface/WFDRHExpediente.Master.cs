@@ -44,10 +44,13 @@ namespace SIGERHSis.Interface
         {
             Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHContratoExp.aspx");
         }
+<<<<<<< HEAD
 
         protected void botonSolicitudes_Click(object sender, EventArgs e)
         {
             Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFRDHCrearProyecto.aspx");
         }
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
     }
 }
