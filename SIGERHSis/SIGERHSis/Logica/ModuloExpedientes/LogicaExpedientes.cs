@@ -106,5 +106,11 @@ namespace SIGERHSis.Logica.ModuloExpedientes
             return _AccesoDatosExpedientes.obtenerContratoColaborador(pCedulaClaborador);
         }
 
+        public Boolean crearColaborador(String pNombre, String pApellidoUno, String pApellidoDos, int pCedula,
+                                        DateTime pFechaNac, String pTipoUsuario, String pDepart, String pPuesto)
+        {
+            return _AccesoDatosExpedientes.crearColaborador(pNombre, pApellidoUno, pApellidoDos, pCedula, pFechaNac, pTipoUsuario, pDepart, pPuesto);
+        }
+
     }
 }

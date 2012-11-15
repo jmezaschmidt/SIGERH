@@ -229,21 +229,27 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return colaboradores;
         }
 
-        //public List<String> quitarColaboradoresProyecto(List<Colaborador> pColaboradores, String pProyecto)
-        //{
-        //    List<String> colaboradoresSinAsignar = new List<String>();
-        //    String[] nombreParametros = { "@nombre", "@cedula" };
+        public List<String> quitarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        {
+            List<String> colaboradoresSinAsignar = new List<String>();
+            String[] nombreParametros = { "@idCapacitacion", "@cedula" };
 
-        //    for (int i = 0; i < pColaboradores.Count; i++)
-        //    {
-        //        Boolean resultado = _AccesoDatos.escribir("sp_eliminarProyectoColaborador", nombreParametros, pProyecto, pColaboradores.ElementAt(i).Cedula);
-        //        if (resultado == false)
-        //        {
-        //            colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
-        //        }
-        //    }
-        //    return colaboradoresSinAsignar;
-        //}
+            for (int i = 0; i < pColaboradores.Count; i++)
+            {
+                Boolean resultado = _AccesoDatos.escribir("sp_eliminarCapacitacionColaborador", nombreParametros, pIdCapacitacion, pColaboradores.ElementAt(i).Cedula);
+                if (resultado == false)
+                {
+                    colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+                }
+            }
+            return colaboradoresSinAsignar;
+        }
+
+        public Boolean asignarCapacitacionProyecto(String pNombreProyecto, int pIdCapacitacion)
+        {
+            String[] nombreParametros = { "@nombreProyecto", "@idCapacitacion" };
+            return _AccesoDatos.escribir("sp_asignarCapacitacionProyecto", nombreParametros, pNombreProyecto, pIdCapacitacion);
+        }
 
     }
 }
