@@ -19,11 +19,16 @@ namespace SIGERHSis.Interface.ModuloExpedientes
 
         protected void btnAprobar_Click(object sender, EventArgs e)
         {
-
+            if (obtenerOpcionSeleccionada() != "")
+            {
+                controladorExpediente.cambiarEstadoIncapacidadesPxy(int.Parse(obtenerOpcionSeleccionada()), "Aprobada");
+                cargarIncapacidades();
+            }
         }
         private void cargarIncapacidades()
         {
             List<Incapacidad> incapacidades = controladorExpediente.obtenerIncapacidadesColaboradorPxy();
+            tblData.Rows.Clear();
             int numColaboradores = incapacidades.Count;
             string claseFilaImpar = "impar";
             string claseFilaPar = "par";
@@ -86,5 +91,38 @@ namespace SIGERHSis.Interface.ModuloExpedientes
                 tRow.Cells.Add(cell);
             }
         }
+        private string obtenerOpcionSeleccionada()
+        {
+            RadioButton rb = new RadioButton();
+            foreach (TableRow tr in tblData.Controls)
+            {
+                foreach (TableCell tc in tr.Controls)
+                {
+                    if (tc.HasControls())
+                    {
+                        if (tc.Controls[0] is RadioButton)
+                        {
+                            rb = (RadioButton)tc.Controls[0];
+                            if (rb.Checked)
+                            {
+                                return rb.ID;
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+            return "";
+        }
+
+        protected void btnNegar_Click(object sender, EventArgs e)
+        {
+            if (obtenerOpcionSeleccionada() != "")
+            {
+                controladorExpediente.cambiarEstadoIncapacidadesPxy(int.Parse(obtenerOpcionSeleccionada()), "No Aprobada");
+                cargarIncapacidades();
+            }
+        }
     }
+
 }

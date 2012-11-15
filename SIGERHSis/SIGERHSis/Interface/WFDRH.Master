@@ -26,7 +26,7 @@
         <form id="form2" runat="server">
          <div id="menuContent" style="width: 300px; float: left;">
              <asp:Button ID="botonExpedientes" runat="server" Text="Expedientes" 
-                 BorderStyle="None" CssClass="botonMenu"/>
+                 BorderStyle="None" CssClass="botonMenu" onclick="botonExpedientes_Click"/>
              <br />
              <asp:Button ID="botonSolicitudes" runat="server" Text="Solicitudes" 
                   BorderStyle="None" CssClass="botonMenu" onclick="botonSolicitudes_Click"/>
@@ -47,7 +47,7 @@
                  BorderStyle="None" CssClass="botonMenu" />
              <br />
              <asp:Button ID="botonProyectos" runat="server" Text="Proyectos" 
-                  BorderStyle="None" CssClass="botonMenu" />
+                  BorderStyle="None" CssClass="botonMenu" onclick="botonProyectos_Click" />
              <br />
              <asp:Button ID="botonReportes" runat="server" Text="Reportes" 
                   BorderStyle="None" CssClass="botonMenu" />

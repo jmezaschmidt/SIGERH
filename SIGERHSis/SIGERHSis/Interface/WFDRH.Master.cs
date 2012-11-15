@@ -16,6 +16,16 @@ namespace SIGERHSis.Interface
 
         protected void botonSolicitudes_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void botonExpedientes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:17482/Interface/ModuloUsuarios/WFDRHPrincipal.aspx");
+        }
+
+        protected void botonProyectos_Click(object sender, EventArgs e)
+        {
             Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFRDHCrearProyecto.aspx");
         }
     }
