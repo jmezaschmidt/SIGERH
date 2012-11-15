@@ -116,6 +116,7 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 
             obtenerOpcionSeleccionada();
             Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx");
+            //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx");
         }
     }
 }

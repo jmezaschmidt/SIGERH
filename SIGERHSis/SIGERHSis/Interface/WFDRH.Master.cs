@@ -22,11 +22,13 @@ namespace SIGERHSis.Interface
         protected void botonExpedientes_Click(object sender, EventArgs e)
         {
             Response.Redirect("http://localhost:17482/Interface/ModuloUsuarios/WFDRHPrincipal.aspx");
+            //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloUsuarios/WFDRHPrincipal.aspx");
         }
 
         protected void botonProyectos_Click(object sender, EventArgs e)
         {
             Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFRDHCrearProyecto.aspx");
+            //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFRDHCrearProyecto.aspx");
         }
     }
 }
