@@ -1,0 +1,23 @@
+
+exec sp_crearDepartamento 'TI', 'Departamento de Tecnologias de Informacion'
+exec sp_crearDepartamento 'A', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'A', 'TI'
+exec sp_crearDepartamento 'A1', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'A1', 'A'
+exec sp_crearDepartamento 'A2', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'A2', 'A'
+exec sp_crearDepartamento 'A3', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'A3', 'A'
+exec sp_crearDepartamento 'B', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'B', 'TI'
+exec sp_crearDepartamento 'C', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'C', 'TI'
+exec sp_crearDepartamento 'TI2', 'Departamento de Tecnologias de Informacion'
+exec sp_crearDepartamento 'D', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'D', 'TI2'
+exec sp_crearDepartamento 'E', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'E', 'TI2'
+exec sp_crearDepartamento 'F', 'Departamento de Tecnologias de Informacion'
+exec sp_asignarDepartamentoPadre 'F', 'TI2'
+
+Select * From dbo.Departamento
