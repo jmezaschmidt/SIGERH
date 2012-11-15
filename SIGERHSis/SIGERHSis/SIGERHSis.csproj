@@ -74,6 +74,7 @@
     <Content Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFCrearColaborador.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHSolicitudes.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFRDHCrearProyecto.aspx" />
@@ -138,6 +139,12 @@
     </Compile>
     <Compile Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx.designer.cs">
       <DependentUpon>WFDRHVacacionesExp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFCrearColaborador.aspx.cs">
+      <DependentUpon>WFCrearColaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFCrearColaborador.aspx.designer.cs">
+      <DependentUpon>WFCrearColaborador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx.cs">
       <DependentUpon>WFDRHAsignarColaboradoresProyecto.aspx</DependentUpon>

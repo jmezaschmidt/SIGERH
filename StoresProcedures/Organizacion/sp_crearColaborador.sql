@@ -5,12 +5,16 @@ ALTER PROCEDURE [dbo].[sp_crearColaborador]
 @apellido2 nvarchar(20),
 @cedula int,
 @fechaNacimiento date,
-@tipoUsuario nvarchar(40)
+@tipoUsuario nvarchar(40),
+@departamento nvarchar(50),
+@puesto nvarchar(50)
 	
 AS
 BEGIN
 
 	BEGIN TRY
+		
+		DECLARE @resultado bit
 		
 		DECLARE @lastID int
 		INSERT INTO dbo.Colaborador (nombre, apellido1, apellido2,cedula, fechaNacimiento) values (@nombre, @apellido1, @apellido2, @cedula, @fechaNacimiento)
@@ -31,8 +35,11 @@ BEGIN
 		END
 		
 		exec sp_crearExpediente @cedula
+		exec sp_asignarDepartamentoColaborador @departamento, @cedula
+		exec sp_asignarPuesto @cedula, @puesto
 		
-		Select 1
+		SET @resultado = 1
+		Select @resultado
 		
 	END TRY
 	
@@ -41,7 +48,8 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		Select 0	 
+		SET @resultado = 0
+		Select @resultado	 
 	END CATCH
 END
 GO
