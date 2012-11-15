@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using SIGERHSis.Controladores.ModuloOrganizacion;
 using SIGERHSis.LibreriaComun.ModuloOrganizacion;
-
+using SIGERHSis.Controladores.ModuloExpedientes;
 
 namespace SIGERHSis.Interface.ModuloUsuarios
 {
@@ -17,63 +17,37 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            /* controladorOrganizacion = new ControladorOrganizacion();
-             String tabla = controladorOrganizacion.obtenerColaboradores();
-             ClientScript.RegisterStartupScript(this.GetType(), "myScript", "<script>javascript:cargarDatosTabla('" + tabla + "');</script>");
-             //TextBox1.Attributes.Add("onKeyUp", "cargarDatosTabla('" + tabla + "')");
-             * */
             cargarExpedientes();
 
             Label1.Text = Request.QueryString["dato1"];
         }
 
-        protected void prueba_Click(object sender, EventArgs e)
+        private string obtenerOpcionSeleccionada()
         {
-
             RadioButton rb = new RadioButton();
             foreach (TableRow tr in tblData.Controls)
             {
                 foreach (TableCell tc in tr.Controls)
                 {
-                    if (tc.Controls[0] is RadioButton)
+                    if (tc.HasControls())
                     {
-                        rb = (RadioButton)tc.Controls[0];
-                        if (rb.Checked)
+                        if (tc.Controls[0] is RadioButton)
                         {
-                            Label1.Text = rb.Text;
+                            rb = (RadioButton)tc.Controls[0];
+                            if (rb.Checked)
+                            {
+                                ControladorExpedientes.obtenerControladorExpedientes().iniciarExpediente(int.Parse(rb.ID));
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
             }
-
+            return "";
         }
         private void cargarExpedientes()
         {
             List<Colaborador> colaboradores = controladorOrganizacion.obtenerColaboradores(true);
-            /*colaboradores = new List<Colaborador>();
-            //
-            Colaborador cola = new Colaborador();
-            cola.Cedula = 304500160;
-            cola.Nombre = "Alejandra Monge Granados";
-            cola.Puesto = "Ingenieria en Computacion";
-            cola.Departamento = "Desarrollo de Software";
-            colaboradores.Add(cola);
-            //
-            Colaborador cola1 = new Colaborador();
-            cola1.Cedula = 114740899;
-            cola1.Nombre = "Mauricio Munoz Chaves";
-            cola1.Puesto = "Ingenieria en Software";
-            cola1.Departamento = "Analisis de Sistemas";
-            colaboradores.Add(cola1);
-            //
-            Colaborador cola2 = new Colaborador();
-            cola2.Cedula = 304520706;
-            cola2.Nombre = "Javier Meza Schmidt";
-            cola2.Puesto = "Ingenieria en Computacion";
-            cola2.Departamento = "Redes y mas";
-            colaboradores.Add(cola2);*/
             int numColaboradores = colaboradores.Count;
             string claseFilaImpar = "impar";
             string claseFilaPar = "par";
@@ -139,8 +113,9 @@ namespace SIGERHSis.Interface.ModuloUsuarios
 
         protected void btnVerExpediente_Click(object sender, EventArgs e)
         {
-            String cedula = "3452706"; 
-            Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx?cedula="+cedula);
+
+            obtenerOpcionSeleccionada();
+            Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHInfoGeneral.aspx");
         }
     }
 }
