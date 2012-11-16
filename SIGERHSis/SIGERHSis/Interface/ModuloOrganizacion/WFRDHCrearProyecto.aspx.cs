@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SIGERHSis.Controladores.ModuloOrganizacion;
+using System.Drawing;
 
 namespace SIGERHSis.Interface.ModuloOrganizacion
 {
@@ -18,12 +19,32 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
         public void crearProyecto()
         {
             String proyecto = TextBoxNombreProyecto.Text;
-            DateTime fInicial = Convert.ToDateTime(fechaInicial.Text);
-            DateTime fFinal = Convert.ToDateTime(fechaFinal.Text);
-            
+
+            DateTime fInicial;
+            DateTime fFinal;
+            bool parsefInicial = DateTime.TryParse(fechaInicial.Text, out fInicial);
+            bool parsefFinal = DateTime.TryParse(fechaFinal.Text, out fFinal);
             String descripcion = TextBoxDescripcion.Text;
-            controladorOrganizacion.crearProyecto(proyecto, fInicial, fFinal, descripcion);
-            
+
+            if (proyecto.Equals("") || !parsefFinal || !parsefInicial || descripcion.Equals(""))
+            {
+                LabelResultado.ForeColor = Color.Red;
+                LabelResultado.Text = "Campos en Blanco";
+            }
+            else
+            {
+                bool resultado = controladorOrganizacion.crearProyecto(proyecto, fInicial, fFinal, descripcion);
+                if (resultado)
+                {
+                    LabelResultado.ForeColor = Color.Green;
+                    LabelResultado.Text = "Capacitacion creada con exito";
+                }
+                else
+                {
+                    LabelResultado.ForeColor = Color.Red;
+                    LabelResultado.Text = "El nombre especificado para el proyecto ya existe";
+                }
+            }
         }
 
         protected void btnCrearProyecto_Click(object sender, EventArgs e)

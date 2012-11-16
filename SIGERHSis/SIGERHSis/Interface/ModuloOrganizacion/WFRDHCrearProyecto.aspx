@@ -9,16 +9,17 @@
     <div style="float: left">
     
     Fecha inicial: <asp:TextBox ID="fechaInicial" runat="server" type="date"></asp:TextBox>
-    <input type="submit">
-    </div>
+    &nbsp;</div>
     <div>
   
     Fecha final: <asp:TextBox ID="fechaFinal" runat="server" type="date"></asp:TextBox>
-  <input type="submit">
-    </div>
+  &nbsp;</div>
+    
+    Descripcion:
     
     <asp:TextBox ID="TextBoxDescripcion" runat="server"></asp:TextBox>
     <asp:Button ID="btnCrearProyecto" runat="server" Text="Crear Proyecto" 
         onclick="btnCrearProyecto_Click" />
+    <asp:Label ID="LabelResultado" runat="server"></asp:Label>
 </asp:Content>
 

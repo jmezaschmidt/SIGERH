@@ -69,12 +69,14 @@
     <Content Include="Images\logoTec.jpg" />
     <Content Include="Images\SIGERGH Logo.png" />
     <Content Include="Images\SIGERGH LogoPeq.png" />
+    <Content Include="Interface\ModuloExpedientes\WFCrearContrato.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHCapacitacionesExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHContratoExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHIncapacidadesExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHInfoGeneral.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHPermisosExp.aspx" />
     <Content Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFcrearDepartamento.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarProyectoCapacitacion.aspx" />
@@ -96,6 +98,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WFCrearColaborador.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\AccesoDatos.cs" />
@@ -105,6 +108,13 @@
     <Compile Include="Controladores\ModuloExpedientes\ControladorExpedientes.cs" />
     <Compile Include="Controladores\ModuloOrganizacion\ControladorOrganizacion.cs" />
     <Compile Include="Controladores\ModuloUsuarios\ControladorUsuarios.cs" />
+    <Compile Include="Interface\ModuloExpedientes\WFCrearContrato.aspx.cs">
+      <DependentUpon>WFCrearContrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloExpedientes\WFCrearContrato.aspx.designer.cs">
+      <DependentUpon>WFCrearContrato.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ModuloExpedientes\WFDRHCapacitacionesExp.aspx.cs">
       <DependentUpon>WFDRHCapacitacionesExp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,6 +163,13 @@
     </Compile>
     <Compile Include="Interface\Capacitaciones.Master.designer.cs">
       <DependentUpon>Capacitaciones.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFcrearDepartamento.aspx.cs">
+      <DependentUpon>WFcrearDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFcrearDepartamento.aspx.designer.cs">
+      <DependentUpon>WFcrearDepartamento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx.cs">
       <DependentUpon>WFDRHAsignarColaboradoresCapacitacion.aspx</DependentUpon>
@@ -286,6 +303,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WFCrearColaborador.aspx.cs">
+      <DependentUpon>WFCrearColaborador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFCrearColaborador.aspx.designer.cs">
+      <DependentUpon>WFCrearColaborador.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

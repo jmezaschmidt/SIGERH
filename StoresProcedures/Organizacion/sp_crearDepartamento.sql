@@ -1,15 +1,21 @@
-CREATE PROCEDURE [dbo].[sp_crearDepartamento]
+ALTER PROCEDURE [dbo].[sp_crearDepartamento]
 
 --Parametros
 @nombre nvarchar(50),
-@descripcion nvarchar(100)
+@descripcion nvarchar(100),
+@padre nvarchar(50)
 	
 AS
 BEGIN
 	BEGIN TRY
 		
-		INSERT into dbo.Departamento(nombre, descripcion, habilitado) values (@nombre, @descripcion, 1)	
-		Select 1
+		DECLARE @resultado bit
+		SET @resultado = 1
+		
+		INSERT into dbo.Departamento(nombre, descripcion, habilitado, FK_idDepartamentoPadre) values (@nombre, @descripcion, 1,
+		(Select idDepartamento FROM dbo.Departamento where nombre = @padre))	
+		
+		Select @resultado 
 	
 	END TRY
 	
@@ -18,7 +24,7 @@ BEGIN
 		declare @ErrorSeverity int = ERROR_SEVERITY()
 		declare @ErrorState int = ERROR_STATE()
 		declare @Message nvarchar(200) = ERROR_MESSAGE()
-		Select 0
+		Select @resultado
 	END CATCH		
 END
 GO

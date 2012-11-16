@@ -16,9 +16,9 @@ BEGIN
 						INNER JOIN dbo.Proyecto ON idProyecto = FK_idProyecto
 						where dbo.Proyecto.nombre = @nombre AND cedula = @cedula)
 		BEGIN
-		INSERT into dbo.ProyectosXExpediente (FK_idExpediente, FK_idProyecto, habilitado) values
+		INSERT into dbo.ProyectosXExpediente (FK_idExpediente, FK_idProyecto) values
 		((SELECT idExpediente FROM dbo.Expediente INNER JOIN Colaborador ON idColaborador = FK_idColaborador where cedula = @cedula),
-		 (SELECT idProyecto FROM dbo.Proyecto where nombre = @nombre), 1)				 
+		 (SELECT idProyecto FROM dbo.Proyecto where nombre = @nombre))				 
 		END		
 		
 		SELECT @resultado

@@ -9,17 +9,18 @@
     <div style="float: left">
     
     Fecha inicial: <asp:TextBox ID="fechaInicial" runat="server" type="date"></asp:TextBox>
-    <input type="submit">
-    </div>
+    &nbsp;</div>
     <div>
   
     Fecha final: <asp:TextBox ID="fechaFinal" runat="server" type="date"></asp:TextBox>
-  <input type="submit">
-    </div>
+  &nbsp;</div>
+    
+    Descripcion:
     
     <asp:TextBox ID="TextBoxDescripcion" runat="server"></asp:TextBox>
     <asp:Label ID="lblDuracion" runat="server" Text="Duración en horas: "></asp:Label>
     <asp:TextBox ID="TextBoxDuracion" runat="server"></asp:TextBox>
     <asp:Button ID="btnCrear" runat="server" Text="Crear Capacitación" 
         onclick="btnCrear_Click"  />
+    <asp:Label ID="LabelResultado" runat="server"></asp:Label>
 </asp:Content>

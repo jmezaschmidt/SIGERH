@@ -7,81 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIGERHSis.Interface.ModuloOrganizacion {
+namespace SIGERHSis.Interface.ModuloExpedientes {
     
     
-    public partial class WFRDHCrearProyecto {
+    public partial class WFCrearContrato {
         
         /// <summary>
-        /// lblCrearProyecto control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCrearProyecto;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// lblNombreProyecto control.
+        /// TextBoxCantidadHoras control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreProyecto;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCantidadHoras;
         
         /// <summary>
-        /// TextBoxNombreProyecto control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNombreProyecto;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// fechaInicial control.
+        /// TableUsuarios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaInicial;
+        protected global::System.Web.UI.WebControls.Table TableUsuarios;
         
         /// <summary>
-        /// fechaFinal control.
+        /// botonCrearContrato control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaFinal;
+        protected global::System.Web.UI.WebControls.Button botonCrearContrato;
         
         /// <summary>
-        /// TextBoxDescripcion control.
+        /// labelResultado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDescripcion;
-        
-        /// <summary>
-        /// btnCrearProyecto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearProyecto;
-        
-        /// <summary>
-        /// LabelResultado control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelResultado;
+        protected global::System.Web.UI.WebControls.Label labelResultado;
     }
 }

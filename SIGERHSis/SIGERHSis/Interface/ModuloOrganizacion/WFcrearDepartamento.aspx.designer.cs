@@ -10,52 +10,34 @@
 namespace SIGERHSis.Interface.ModuloOrganizacion {
     
     
-    public partial class WFDRHCrearCapacitacion {
+    public partial class WFcrearDepartamento {
         
         /// <summary>
-        /// lblCrearCapacitacion control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCrearCapacitacion;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// lblNombreCapacitacion control.
+        /// TextBoxNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreCapacitacion;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxNombre;
         
         /// <summary>
-        /// TextBoxNombreCapacitacion control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNombreCapacitacion;
-        
-        /// <summary>
-        /// fechaInicial control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaInicial;
-        
-        /// <summary>
-        /// fechaFinal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fechaFinal;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// TextBoxDescripcion control.
@@ -67,39 +49,39 @@ namespace SIGERHSis.Interface.ModuloOrganizacion {
         protected global::System.Web.UI.WebControls.TextBox TextBoxDescripcion;
         
         /// <summary>
-        /// lblDuracion control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDuracion;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// TextBoxDuracion control.
+        /// ListDepartamento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDuracion;
+        protected global::System.Web.UI.WebControls.DropDownList ListDepartamento;
         
         /// <summary>
-        /// btnCrear control.
+        /// BotonCrearDepartamento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrear;
+        protected global::System.Web.UI.WebControls.Button BotonCrearDepartamento;
         
         /// <summary>
-        /// LabelResultado control.
+        /// labelResultado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelResultado;
+        protected global::System.Web.UI.WebControls.Label labelResultado;
     }
 }

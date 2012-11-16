@@ -7,7 +7,7 @@ BEGIN
 	BEGIN TRY
 		
 		Select e1.nombre Departamento, e1.descripcion Descripcion, e1.habilitado Habilitado, ISNULL(e2.nombre, 'Sin asignar')  DepartamentoPadre
-		FROM dbo.Departamento e1 LEFT JOIN dbo.Departamento e2 ON e1.FK_idDepartamentoPadre = e2.idDepartamento
+		FROM dbo.Departamento e1 LEFT JOIN dbo.Departamento e2 ON e1.FK_idDepartamentoPadre = e2.idDepartamento where e1.habilitado = 1
 	
 	END TRY
 	
