@@ -101,6 +101,7 @@ namespace ConsoleApp
             //    Console.WriteLine("-----------");
             //}
 
+<<<<<<< HEAD
             //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
             //DateTime dt = Convert.ToDateTime("01/08/2008");
             //Console.WriteLine(co.crearProyecto("Proyecto Nuevo Dos", dt, dt, "Esta es la descripción del Proyecto Nuevo Dos"));
@@ -215,6 +216,7 @@ namespace ConsoleApp
             //    Console.WriteLine("-----------");
             //}
 
+<<<<<<< HEAD
             //ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
             //List<Colaborador> lc = co.obtenerColaboradoresCapacitacion(1);
             //for (int i = 0; i < lc.Count; i++)
@@ -279,6 +281,24 @@ namespace ConsoleApp
             //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Vacaciones"));
             //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Permiso"));
             //Console.WriteLine(ce.crearSolicitud(123456, Convert.ToDateTime("05/06/94"), Convert.ToDateTime("05/06/94"), "Motivo de la solicitud", "Incapacidad"));
+=======
+            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            List<Colaborador> lc = co.obtenerColaboradoresCapacitacion(1);
+            for (int i = 0; i < lc.Count; i++)
+            {
+                Colaborador c = lc.ElementAt(i);
+                Console.WriteLine(lc.ElementAt(i).Cedula);
+                Console.WriteLine(lc.ElementAt(i).Nombre);
+                Console.WriteLine(lc.ElementAt(i).Puesto);
+                Console.WriteLine(lc.ElementAt(i).Departamento);
+                Console.WriteLine("-----------");
+            }
+=======
+            ControladorOrganizacion co = ControladorOrganizacion.obtenerControladorOrganizacion();
+            DateTime dt = Convert.ToDateTime("01/08/2008");
+            Console.WriteLine(co.crearProyecto("Proyecto Nuevo Dos", dt, dt, "Esta es la descripción del Proyecto Nuevo Dos"));
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
 
             Console.ReadLine();
         }

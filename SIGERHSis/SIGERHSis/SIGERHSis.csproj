@@ -78,6 +78,7 @@
     <Content Include="Interface\ModuloExpedientes\WFDRHVacacionesExp.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFcrearDepartamento.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx" />
+    <Content Include="Interface\ModuloOrganizacion\WFCrearColaborador.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHAsignarProyectoCapacitacion.aspx" />
     <Content Include="Interface\ModuloOrganizacion\WFDRHCrearCapacitacion.aspx" />
@@ -99,6 +100,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="WFCrearColaborador.aspx" />
+    <Content Include="XML\capacitaciones.xml" />
+    <Content Include="XML\departamentos.xml" />
+    <Content Include="XML\expedientes.xml" />
+    <Content Include="XML\solicitudesPendientes.xml" />
+    <Content Include="XML\vacaciones.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos\AccesoDatos.cs" />
@@ -177,6 +183,11 @@
     </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresCapacitacion.aspx.designer.cs">
       <DependentUpon>WFDRHAsignarColaboradoresCapacitacion.aspx</DependentUpon>
+    <Compile Include="Interface\ModuloOrganizacion\WFCrearColaborador.aspx.cs">
+      <DependentUpon>WFCrearColaborador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ModuloOrganizacion\WFCrearColaborador.aspx.designer.cs">
+      <DependentUpon>WFCrearColaborador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interface\ModuloOrganizacion\WFDRHAsignarColaboradoresProyecto.aspx.cs">
       <DependentUpon>WFDRHAsignarColaboradoresProyecto.aspx</DependentUpon>
@@ -316,6 +327,7 @@
     <Folder Include="AccesoDatos\ModuloReportes\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controladores\ModuloReportes\" />
+    <Folder Include="Interface\ModuloOrganizacion\" />
     <Folder Include="Interface\ModuloReportes\" />
     <Folder Include="LibreriaComun\ModuloReportes\" />
     <Folder Include="Logica\ModuloReportes\" />

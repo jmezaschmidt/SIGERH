@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using SIGERHSis.LibreriaComun.ModuloOrganizacion;
+<<<<<<< HEAD
 using SIGERHSis.LibreriaComun.ModuloExpedientes;
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
 namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
 {
@@ -42,15 +45,24 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
         public List<Colaborador> obtenerColaboradoresFueraProyecto(String pProyecto)
         {
             List<Colaborador> colaboradores = new List<Colaborador>();
+<<<<<<< HEAD
             String[] nombreParametros = { "@nombre" };
+=======
+            String[] nombreParametros = { "@proyecto" };
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
             IDataReader reader = _AccesoDatos.leer("sp_verAspirantesProyecto", nombreParametros, pProyecto);
 
             while (reader.Read())
             {
                 Colaborador _colaborador = new Colaborador();
+<<<<<<< HEAD
                 _colaborador.Cedula = reader.GetInt32(0);
                 _colaborador.Nombre = reader.GetString(1);
+=======
+                _colaborador.Nombre = reader.GetString(0);
+                _colaborador.Cedula = reader.GetInt32(1);
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
                 _colaborador.Puesto = reader.GetString(2);
                 _colaborador.Departamento = reader.GetString(3);
                 colaboradores.Add(_colaborador);
@@ -67,7 +79,11 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
 
             for (int i = 0; i < pColaboradores.Count; i++)
             {
+<<<<<<< HEAD
                 Boolean resultado = _AccesoDatos.escribir("sp_asignarProyectoColaborador", nombreParametros, pProyecto, pColaboradores.ElementAt(i).Cedula);
+=======
+                Boolean resultado = _AccesoDatos.escribir("sp_asignarProyectoColaborador", nombreParametros, pColaboradores.ElementAt(i).Cedula, pProyecto);
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
                 if (resultado == false)
                 {
                     colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
@@ -82,6 +98,7 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return _AccesoDatos.escribir("sp_crearProyecto", nombreParametros, pProyecto.Nombre, pProyecto.Descripcion, pProyecto.FechaInicial, pProyecto.FechaFinal);
         }
 
+<<<<<<< HEAD
         public List<Colaborador> obtenerColaboradoresFueraCapacitacion(int pIdCapacitacion)
         {
             List<Colaborador> colaboradores = new List<Colaborador>();
@@ -107,6 +124,12 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
         {
             List<String> colaboradoresSinAsignar = new List<String>();
             String[] nombreParametros = { "@cedula", "@idCapacitacion" };
+=======
+        public List<String> asignarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
+        {
+            List<String> colaboradoresSinAsignar = new List<String>();
+            String[] nombreParametros = { "@idCapacitacion", "@cedula" };
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
             for (int i = 0; i < pColaboradores.Count; i++)
             {
@@ -119,6 +142,7 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return colaboradoresSinAsignar;
         }
 
+<<<<<<< HEAD
         public Boolean crearCapacitacion(Capacitacion pCapacitacion)
         {
             String[] nombreParametros = { "@nombre", "@descripcion", "duracion", "@fechaInicial", "@fechaFinal" };
@@ -209,11 +233,18 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
         }
 
         public List<Colaborador> obtenerColaboradoresCapacitacion(int pIdCapacitacion)
+=======
+        public List<Colaborador> obtenerColaboradoresFueraCapacitacion(int pIdCapacitacion)
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
         {
             List<Colaborador> colaboradores = new List<Colaborador>();
             String[] nombreParametros = { "@idCapacitacion" };
 
+<<<<<<< HEAD
             IDataReader reader = _AccesoDatos.leer("sp_verColaboradoresCapacitacion", nombreParametros, pIdCapacitacion);
+=======
+            IDataReader reader = _AccesoDatos.leer("sp_verAspirantesCapacitacion", nombreParametros, pIdCapacitacion);
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
 
             while (reader.Read())
             {
@@ -229,6 +260,7 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return colaboradores;
         }
 
+<<<<<<< HEAD
         public List<String> quitarColaboradoresCapacitacion(List<Colaborador> pColaboradores, int pIdCapacitacion)
         {
             List<String> colaboradoresSinAsignar = new List<String>();
@@ -309,6 +341,27 @@ namespace SIGERHSis.AccesoDatos.ModuloOrganizacion
             return departamentos;
         }
 
+=======
+<<<<<<< HEAD
+        //public List<String> quitarColaboradoresProyecto(List<Colaborador> pColaboradores, String pProyecto)
+        //{
+        //    List<String> colaboradoresSinAsignar = new List<String>();
+        //    String[] nombreParametros = { "@nombre", "@cedula" };
+
+        //    for (int i = 0; i < pColaboradores.Count; i++)
+        //    {
+        //        Boolean resultado = _AccesoDatos.escribir("sp_eliminarProyectoColaborador", nombreParametros, pProyecto, pColaboradores.ElementAt(i).Cedula);
+        //        if (resultado == false)
+        //        {
+        //            colaboradoresSinAsignar.Add(pColaboradores.ElementAt(i).Nombre);
+        //        }
+        //    }
+        //    return colaboradoresSinAsignar;
+        //}
+=======
+
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
 
     }
 }

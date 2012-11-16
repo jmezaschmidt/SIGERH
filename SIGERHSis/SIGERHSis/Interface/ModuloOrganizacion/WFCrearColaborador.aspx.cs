@@ -4,15 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+<<<<<<< HEAD
 using SIGERHSis.Controladores.ModuloOrganizacion;
 using System.Drawing;
 using SIGERHSis.Controladores.ModuloExpedientes;
+=======
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
 
 namespace SIGERHSis.Interface.ModuloOrganizacion
 {
     public partial class WFCrearColaborador : System.Web.UI.Page
     {
 
+<<<<<<< HEAD
         ControladorOrganizacion _controlador = ControladorOrganizacion.obtenerControladorOrganizacion();
         ControladorExpedientes _controladorExp = ControladorExpedientes.obtenerControladorExpedientes();
         
@@ -27,6 +31,12 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
                 ListPuesto.DataBind();
                 Calendar.SelectedDate = DateTime.Now;
             }
+=======
+
+        
+        protected void Page_Load(object sender, EventArgs e)
+        {
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
             
         }
 
@@ -43,7 +53,10 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
 
             if (nombre.Equals("") || apellido1.Equals("") || apellido2.Equals("") || strCedula.Equals(""))
             {
+<<<<<<< HEAD
                 labelResultado.ForeColor = Color.Red;
+=======
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
                 labelResultado.Text = "Campos en blanco";
             }
             else
@@ -52,11 +65,15 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
                 bool parsed = int.TryParse(strCedula, out cedula);
                 if (!parsed)
                 {
+<<<<<<< HEAD
                     labelResultado.ForeColor = Color.Red;
+=======
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
                     labelResultado.Text = "Debe ingresar un entero valido en cedula";
                 }
                 else
                 {
+<<<<<<< HEAD
                     bool resultado = _controladorExp.crearColaborador(nombre, apellido1, apellido2, cedula, fechaNacimiento, tipoUsuario, departamento, puesto);
                     if (resultado)
                     {
@@ -68,6 +85,8 @@ namespace SIGERHSis.Interface.ModuloOrganizacion
                         labelResultado.ForeColor = Color.Red;
                         labelResultado.Text = "El numero de cedula dado ya se encuentra registrado";
                     }                    
+=======
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
                 }
 
             }

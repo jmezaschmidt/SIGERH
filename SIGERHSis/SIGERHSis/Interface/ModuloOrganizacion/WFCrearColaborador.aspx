@@ -43,6 +43,10 @@
     <br />
     <asp:Button ID="botonCrearUsuario" runat="server" 
         onclick="botonCrearUsuario_Click" Text="Crear Usuario" />
+<<<<<<< HEAD
     <asp:Label ID="labelResultado" runat="server" ForeColor="Red"></asp:Label>
+=======
+    <asp:Label ID="labelResultado" runat="server" Text="Label"></asp:Label>
+>>>>>>> 67b3c6b91f5f0f1e640eb5c453b4a8617e72620d
 </asp:Content>
 

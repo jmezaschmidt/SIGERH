@@ -50,6 +50,7 @@ namespace SIGERHSis.Interface
             Response.Redirect("http://localhost:17482/Interface/ModuloExpedientes/WFDRHContratoExp.aspx");
             //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloExpedientes/WFDRHContratoExp.aspx");
         }
+<<<<<<< HEAD
 
         protected void botonSolicitudes_Click(object sender, EventArgs e)
         {
@@ -79,5 +80,7 @@ namespace SIGERHSis.Interface
             Response.Redirect("http://localhost:17482/Interface/ModuloOrganizacion/WFDRHEstructura.aspx");
             //Response.Redirect("http://201.206.189.98/SIGERHSis/Interface/ModuloOrganizacion/WFDRHEstructura.aspx");
         }
+=======
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
     }
 }

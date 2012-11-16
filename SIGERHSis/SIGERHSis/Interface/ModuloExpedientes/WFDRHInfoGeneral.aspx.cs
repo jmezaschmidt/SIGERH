@@ -20,7 +20,11 @@ namespace SIGERHSis.Interface.ModuloExpedientes
 
         private void obtenerInformacionGeneral(String pCedula)
         {
+<<<<<<< HEAD
             Colaborador colaborador = controladorExpediente.obtenerInformacionGeneral();
+=======
+            Colaborador colaborador = controladorExpediente.obtenerInformacionGeneral(int.Parse(pCedula));
+>>>>>>> c644c5d97d3426adfef5ab5ba77c67c367e69682
             LabelInfoNombre.Text = colaborador.Nombre;
             LabelInfoCedula.Text = colaborador.Cedula+"";
             LabelInfoNacimiento.Text = colaborador.FechaNacimiento.Day + "-" + colaborador.FechaNacimiento.Month + "-" + colaborador.FechaNacimiento.Year;
